@@ -167,12 +167,18 @@ button{font-family:inherit;color:inherit}
    bars. 100svh (small viewport — assumes browser chrome fully expanded) is
    the safe floor that's never larger than what's visible in either browser;
    100dvh is layered in first for Safari's nicer expand-on-scroll behavior
-   where it's reliable, with 100vh as the oldest fallback. Every .screen is
-   position:absolute;inset:0 against this element, so fixing the height here
-   fixes their sizing too. */
+   where it's reliable, with 100vh as the oldest fallback. On top of that,
+   --app-viewport-height (set from window.visualViewport in main.jsx, which
+   reflects the real rendering surface size regardless of which browser's
+   chrome is drawn around it) wins wherever JS has run, since it's measured
+   truth rather than a CSS engine's best guess — the vh/dvh/svh chain above
+   still covers the brief pre-JS paint and any environment without
+   visualViewport. Every .screen is position:absolute;inset:0 against this
+   element, so fixing the height here fixes their sizing too. */
 .app-root{
   position:fixed;top:0;left:0;right:0;
   height:100vh;height:100dvh;height:100svh;
+  height:var(--app-viewport-height,100svh);
   overflow:hidden;isolation:isolate;
 }
 .aurora{position:fixed;inset:-20%;z-index:-2;pointer-events:none;filter:blur(60px);opacity:.9}
@@ -3740,8 +3746,12 @@ body:not(.light) .home-icon-btn:hover{
   /* Explicit height (not inset:0's implicit one) for the same reason as
      .app-root above: this is itself position:fixed, so on iOS Chrome its
      box can otherwise be computed against a taller-than-visible viewport,
-     independently of whatever .app-root/.screen do. */
+     independently of whatever .app-root/.screen do. --app-viewport-height
+     (measured live from window.visualViewport, see main.jsx) wins last,
+     since it's the real rendering-surface size rather than a CSS engine's
+     estimate of it. */
   height:100vh!important;height:100dvh!important;height:100svh!important;
+  height:var(--app-viewport-height,100svh)!important;
   z-index:10000!important;
   display:flex!important;
   align-items:center!important;

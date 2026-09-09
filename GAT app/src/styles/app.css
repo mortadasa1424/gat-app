@@ -144,6 +144,13 @@ body.light{
 }
 
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+/* Prevents mobile browsers' automatic font-boosting (text growing larger
+   than its declared size on rotation/narrow columns) from nudging this
+   fixed-layout UI's measurements out of sync with what the CSS expects.
+   Does not touch the viewport meta tag, so pinch-zoom and user-controlled
+   accessibility text scaling are unaffected — only the browser's own
+   automatic heuristic resize is disabled. */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 html,body,#root,.app-root{height:100%}
 body{
   margin:0;
@@ -582,12 +589,18 @@ body.light .modal p.modal-comment{color:#8d879f}
 .ring svg{transform:rotate(-90deg)}
 .ring .trk{stroke:rgba(255,255,255,.1)}body.light .ring .trk{stroke:rgba(50,40,120,.1)}
 .ring .fil{stroke:url(#grG);stroke-linecap:round;transition:stroke-dashoffset 1.5s var(--ease);filter:drop-shadow(0 0 8px rgba(0,195,225,.5))}
-/* justify-items:center (not just place-content) so the number's and the
-   "%"'s own boxes are sized to their content and centered individually —
-   otherwise the narrower one stretches to match the wider one's grid
-   track and renders left-aligned inside it, reading as off-center. */
-.ring .pct{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;text-align:center;font-size:2.9rem;font-weight:800}
-.ring .pct small{font-size:1rem;color:var(--txt-dim);font-weight:700}
+/* Dedicated absolute+flex layer, independent of grid track sizing or
+   inherited alignment: flex-direction:column stacks the number and the
+   "%" as two items, and align-items:center (flex's cross-axis alignment,
+   not the default stretch) sizes each one to its own content and centers
+   it individually — neither depends on the other's width the way a grid
+   track's stretch default would let happen. */
+.ring .pct{
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;font-size:2.9rem;font-weight:800;line-height:1.1;margin:0;
+}
+.ring .pct small{font-size:1rem;color:var(--txt-dim);font-weight:700;line-height:1;margin:0}
 .score-card h2{margin:6px 0 2px;font-size:1.55rem;font-weight:800}
 .res-badges{display:flex;gap:10px;justify-content:center;margin:18px 0}
 .rbadge{flex:1;max-width:108px;border-radius:var(--r-md);padding:14px;text-align:center;
@@ -3952,6 +3965,19 @@ body:not(.light) .home-icon-btn:hover{
   justify-content:center!important;
   background:#071024!important;
 }
+/* The placeholder (text + "Register Your Interest" button — what actually
+   renders today, since PROMO_ASSETS.openPopupVideo/finishPopupImage are
+   both null) inherits .ad-pop-media's position:absolute;inset:0, so its
+   own content fills the full card. .ad-pop-media clips with overflow:hidden
+   for the video/image variants' rounded corners; the placeholder's text
+   content needs to scroll instead of being silently clipped if it's ever
+   taller than the card, so override just that one property here, scoped
+   to the placeholder specifically (higher specificity than .ad-pop-media
+   alone) rather than changing the shared rule. */
+.ad-pop-media.ad-pop-placeholder{
+  overflow-y:auto!important;
+  -webkit-overflow-scrolling:touch!important;
+}
 .ad-pop-video{
   display:block!important;
   width:100%!important;
@@ -4088,6 +4114,16 @@ body:not(.light) .home-icon-btn:hover{
   max-height:86vh!important;
   max-height:86dvh!important;
   max-height:86svh!important;
+  /* Final, authoritative cap: 100% of .ad-pop-overlay's own content-box
+     height (its real, already-correctly-computed flex-item height, minus
+     its safe-area-aware padding) — not another independent viewport-unit
+     guess. Percentage-of-actual-parent is plain box-model math, not a
+     viewport measurement, so it can't be wrong in the way vh/dvh/svh can
+     be on a given engine/browser. If the aspect-ratio-derived height above
+     would exceed this, the browser reduces height (and re-derives width
+     from it) to fit — the popup can only ever be as tall as its real
+     parent allows, never taller than the visible screen. */
+  max-height:100%!important;
   min-width:0!important;
   min-height:0!important;
 }
@@ -4102,6 +4138,7 @@ body:not(.light) .home-icon-btn:hover{
     max-height:90vh!important;
     max-height:90dvh!important;
     max-height:90svh!important;
+    max-height:100%!important;
   }
 }
 
@@ -4116,6 +4153,8 @@ body:not(.light) .home-icon-btn:hover{
   max-height:86vh!important;
   max-height:86dvh!important;
   max-height:86svh!important;
+  /* Same final percentage-of-real-parent cap as .open-ad above. */
+  max-height:100%!important;
   min-width:0!important;
   min-height:0!important;
   background:#202942!important;
@@ -4154,6 +4193,7 @@ body:not(.light) .home-icon-btn:hover{
     max-height:90vh!important;
     max-height:90dvh!important;
     max-height:90svh!important;
+    max-height:100%!important;
   }
 }
 
@@ -4420,15 +4460,27 @@ body.light .home-lede{color:#342f57}
 }
 
 /* ---- Section/Test selection: heading, responsive test grid, action panel ---- */
-.select-title{text-align:center;margin-bottom:var(--space-4)}
+/* flex:none — .select-title is a child of .screen's flex column; left at
+   the flex default (shrink:1) it was the one item still eligible to be
+   compressed below its own content height whenever .tests-grid/.tile were
+   pinned but this wasn't, which could push its own text past its shrunk
+   box. Pinning every item in this column (see .tests-grid and .tile below)
+   removes shrink as a possible cause of any of them overlapping a sibling. */
+.select-title{text-align:center;margin-bottom:var(--space-4);flex:none}
 .select-title h2{margin:0 0 4px;font-size:var(--fs-section-title);font-weight:800}
 .select-sub{margin:0;color:var(--text-muted);font-size:var(--fs-body-sm)}
 
-/* flex-shrink:0 (not the shorthand flex:1's default shrink:1) — on short
-   mobile viewports the column could otherwise be compressed below its three
-   tiles' natural height, which let the action panel below it (timer +
-   Start Test) render overlapping the last, visually-overflowing tile. */
-.tests-grid{display:flex;flex-direction:column;gap:var(--space-3);min-height:0;flex:1 0 auto}
+/* flex:none (grow:0 shrink:0 basis:auto), not the previous flex:1 0 auto —
+   fully pinned to its own content height, both as a flex child of .screen
+   and for its own tile children below, so nothing in this column can ever
+   be compressed below its natural size (which is what let a shrunk
+   element's content render past its own box, overlapping the next
+   sibling — the reported "TIMER overlapping Test 3" symptom). If the
+   column's total content is ever taller than .screen's available height,
+   .screen's own overflow-y:auto (set elsewhere for this page) scrolls
+   instead of squeezing anything. */
+.tests-grid{display:flex;flex-direction:column;gap:var(--space-3);min-height:0;flex:none}
+.tests-grid .tile{flex:none}
 
 .select-action-panel{
   flex:none;margin-top:var(--space-4);padding:var(--space-4);
@@ -4436,8 +4488,9 @@ body.light .home-lede{color:#342f57}
   display:flex;flex-direction:column;
 }
 .select-action-row{display:flex;flex-direction:column;align-items:stretch;gap:var(--space-3)}
+.timer-toggle-group{flex:none}
 .timer-toggle-compact{align-self:center}
-.select-start-btn{width:100%}
+.select-start-btn{width:100%;flex:none}
 
 @media (min-width:900px){
   .select.exam-select.screen{padding-block:var(--space-6)}

@@ -152,6 +152,22 @@ body.light{
    automatic heuristic resize is disabled. */
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 html,body,#root,.app-root{height:100%}
+/* Explicit, theme-matched background on <html> itself, not just <body>.
+   html/body/#root/.app-root all size via height:100% against the browser's
+   own reported viewport — on iOS Chrome cold-launched from an external
+   deep link (e.g. tapped from WhatsApp), that reported height can be
+   momentarily smaller than the real screen while Chrome's own UI is still
+   settling in. If body's rendered box ends up shorter than the visible
+   screen for that reason, whatever's below it falls through to <html>'s
+   background — which, unset, defaults to plain white, visible as a large
+   blank strip. Giving html the same themed color body already uses (dark
+   by default; the :has() rule mirrors body.light, since a custom property
+   redefined on body doesn't inherit back up to html, its own ancestor)
+   means that same shortfall — should it ever happen, from this or any
+   future cause — shows the correct app background instead of a white gap,
+   regardless of the exact viewport-measurement timing involved. */
+html{background:#120c2e}
+html:has(body.light){background:#eef1fb}
 body{
   margin:0;
   font-family:Tajawal,system-ui,sans-serif;
@@ -3959,37 +3975,31 @@ body:not(.light) .home-icon-btn:hover{
   border:1px solid rgba(255,255,255,.55)!important;
   box-shadow:0 14px 32px -18px rgba(0,0,0,.85)!important;
 }
-/* Normal document flow by default — width:100%, no forced height — so the
-   card (now height:auto, sized to its content) actually gets a real
-   content height to size itself against. An absolutely-positioned-only
-   child contributes nothing to an ancestor's auto height, which is
-   exactly what made the card collapse/inflate unpredictably before: this
-   was position:absolute;inset:0, so .ad-pop-card's real content was
-   entirely out of flow. .has-media (an actual video/image asset) is the
-   one case that still wants an edge-to-edge, full-bleed fill — see the
-   .has-media override below. */
+/* Restored to full-bleed fill: the card keeps its large, media-ready
+   aspect-ratio-locked size (see .ad-pop-card.open-ad/.finish-ad below) so
+   it's ready for a future vertical promo video, and this fills that box
+   edge to edge exactly as a video would. */
 .ad-pop-media{
-  position:relative;
-  width:100%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-  background:#071024;
-}
-.ad-pop-card.has-media .ad-pop-media{
   position:absolute!important;
   inset:0!important;
+  width:100%!important;
   height:100%!important;
+  overflow:hidden!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  background:#071024!important;
 }
 /* The placeholder (text + "Register Your Interest" button — what actually
    renders today, since PROMO_ASSETS.openPopupVideo/finishPopupImage are
-   both null): padding-top clears the close button (top:14px, 42px tall)
-   instead of letting the placeholder's own panel start underneath it, and
-   overflow-y:auto scrolls this content instead of clipping it if it's
-   ever taller than the card's max-height safety cap allows. */
+   both null) inherits .ad-pop-media's position:absolute;inset:0, so its
+   own content fills the full card. .ad-pop-media clips with overflow:hidden
+   for the video/image variants' rounded corners; the placeholder's text
+   content needs to scroll instead of being silently clipped if it's ever
+   taller than the card, so override just that one property here, scoped
+   to the placeholder specifically (higher specificity than .ad-pop-media
+   alone) rather than changing the shared rule. */
 .ad-pop-media.ad-pop-placeholder{
-  padding-top:64px!important;
   overflow-y:auto!important;
   -webkit-overflow-scrolling:touch!important;
 }
@@ -4119,43 +4129,46 @@ body:not(.light) .home-icon-btn:hover{
   outline:2px solid #ffffff!important;
   outline-offset:3px!important;
 }
-/* Live today (has-media not present, since PROMO_ASSETS.openPopupVideo/
-   finishPopupImage are both null): plain content-based sizing. No
-   viewport-height unit anywhere — width is a simple vw/px cap, height is
-   auto (sized to the small placeholder text + button), and max-height is
-   purely a safety ceiling (100% of .ad-pop-overlay's own real, already-
-   correctly-computed box — plain box-model percentage math, not a
-   viewport-unit guess) that this content should essentially never reach.
-   overflow-y:auto on the card itself is the actual safety net if it ever
-   does. This intentionally does not depend on precise viewport-height
-   measurement being correct for its EVERYDAY sizing — only as a rarely-
-   invoked ceiling — which is what actually fixes rendering too tall when
-   a cold-launched browser's initial viewport reading is briefly wrong
-   (e.g. iOS Chrome opened via an external deep link), instead of trying
-   to make that measurement itself more correct. */
+/* Large, media-ready portrait size — restored (not the content-based
+   min(92vw,420px)/height:auto sizing from the previous commit): this
+   popup is meant to hold a future vertical promo video, so it keeps its
+   9:16 aspect-ratio shape regardless of whether the current placeholder
+   text is small. max-height:100% (of .ad-pop-overlay's own real box) is
+   kept as a safety ceiling only — it doesn't shrink the card under normal
+   conditions, it just guarantees the card can never render taller than
+   the actually-visible overlay. overflow-y:auto on the card is the actual
+   fallback if content ever does exceed that ceiling. */
 .ad-pop-card.open-ad,
 .ad-pop-card.finish-ad{
-  width:min(92vw,420px)!important;
+  width:min(92vw,48.375vh,540px)!important;
+  width:min(92vw,48.375dvh,540px)!important;
+  width:min(92vw,48.375svh,540px)!important;
   height:auto!important;
-  max-width:420px!important;
+  aspect-ratio:9/16!important;
+  max-width:540px!important;
+  max-height:86vh!important;
+  max-height:86dvh!important;
+  max-height:86svh!important;
   max-height:100%!important;
   min-width:0!important;
   min-height:0!important;
   overflow-y:auto!important;
   -webkit-overflow-scrolling:touch!important;
 }
-
-/* has-media: an actual video/image asset is present — the fixed 9:16
-   portrait shape only makes sense for that. Not live in production right
-   now (see above), kept for when a real asset is provided. */
-.ad-pop-card.open-ad.has-media,
-.ad-pop-card.finish-ad.has-media{
-  width:min(92vw,420px)!important;
-  aspect-ratio:9/16!important;
-  max-width:420px!important;
-}
 .ad-pop-card.open-ad .ad-pop-video{
   object-fit:cover!important;
+}
+@media (max-width:420px){
+  .ad-pop-card.open-ad,
+  .ad-pop-card.finish-ad{
+    width:min(94vw,50.625vh)!important;
+    width:min(94vw,50.625dvh)!important;
+    width:min(94vw,50.625svh)!important;
+    max-height:90vh!important;
+    max-height:90dvh!important;
+    max-height:90svh!important;
+    max-height:100%!important;
+  }
 }
 .ad-pop-card.finish-ad{
   background:#202942!important;

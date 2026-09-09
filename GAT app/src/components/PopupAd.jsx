@@ -26,12 +26,7 @@ export default function PopupAd({ variant = "open", onClose }) {
 
   return createPortal(
     <div className="ad-pop-overlay" role="dialog" aria-modal="true" aria-label="Advertisement">
-      {/* has-media only when there's an actual video/image asset — that's
-          the one case the fixed 9:16 aspect-ratio below makes sense for.
-          Right now PROMO_ASSETS.openPopupVideo/finishPopupImage are both
-          null, so every live popup is the plain-text placeholder branch,
-          which sizes to its own (small) content instead. */}
-      <div className={`ad-pop-card ${variant === "finish" ? "finish-ad" : "open-ad"}${asset ? " has-media" : ""}`}>
+      <div className={`ad-pop-card ${variant === "finish" ? "finish-ad" : "open-ad"}`}>
         <button className="ad-pop-close" type="button" aria-label="Close ad" onClick={closeAd}>
           <X size={20} aria-hidden="true" />
         </button>

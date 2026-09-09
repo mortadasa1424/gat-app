@@ -18,5 +18,13 @@ syncViewportHeight();
 window.addEventListener("resize", syncViewportHeight);
 window.visualViewport?.addEventListener("resize", syncViewportHeight);
 window.visualViewport?.addEventListener("scroll", syncViewportHeight);
+// A couple of short re-checks after first load, in addition to the resize
+// listeners above: a cold-launched browser (e.g. iOS Chrome opened from an
+// external deep link) can report a still-settling viewport size on that
+// very first frame, before its own UI has finished animating in — often
+// without firing a resize event once it does settle. These catch that
+// case a moment later without waiting on an event that may not come.
+setTimeout(syncViewportHeight, 300);
+setTimeout(syncViewportHeight, 1200);
 
 ReactDOM.createRoot(document.getElementById("root")).render(<App />);

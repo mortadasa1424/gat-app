@@ -55,12 +55,21 @@ export default function App() {
   // Skipped whenever there's an unfinished attempt to resume (below) — the ad's
   // overlay sits above the resume modal (z-popup > z-overlay) and would otherwise
   // hide the "continue your test?" prompt every time it's due to appear.
+  //
+  // Eligibility (the sessionStorage flag + active-attempt check) is decided
+  // immediately, same as before — only the actual reveal is delayed 2s, so
+  // the page has time to finish its first render/settle before the popup
+  // shows. This matters most for iOS Chrome cold-launched from an external
+  // deep link (e.g. a WhatsApp link tap), where the browser's own viewport
+  // is still settling on that very first frame; the post-test popup below
+  // already uses this same delayed-reveal principle at 5s.
   useEffect(() => {
     if (getSessionStr(LS.openAdShown, "") === "true") return;
     const saved = getJSON(LS.active, null);
     if (saved && saved.questionIds?.length) return;
     setSessionStr(LS.openAdShown, "true");
-    setShowOpenAd(true);
+    const t = setTimeout(() => setShowOpenAd(true), 2000);
+    return () => clearTimeout(t);
   }, []);
 
   // Resume-interrupted-attempt prompt — checked fresh on every app load (not

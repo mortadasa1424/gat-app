@@ -1,6 +1,6 @@
-// Normalizes the mock question banks into fixed-form test sets. GAT tests are
+// Normalizes the raw question banks into fixed-form test sets. GAT tests are
 // always the same question set in the same order for every attempt — no
-// randomization or seen-history rotation (unlike ITC's vocab trainer).
+// randomization or seen-history rotation.
 import quant1Real from "./quant/test-1.json";
 import quant2Real from "./quant/test-2.json";
 import quant3Real from "./quant/test-3.json";
@@ -10,19 +10,17 @@ import verbal2Real from "./verbal/test-2.json";
 import verbal2Passages from "./verbal/passages-2.json";
 import verbal3Real from "./verbal/test-3.json";
 import verbal3Passages from "./verbal/passages-3.json";
-import passagesRaw from "./mock/passages.json";
 import { TEST_META, SPECIFIC_TO_GENERAL } from "./schema.js";
 
 export { TEST_META, GENERAL_CATEGORIES } from "./schema.js";
 
 export const passages = Object.fromEntries(
-  [...passagesRaw, ...verbal1Passages, ...verbal2Passages, ...verbal3Passages].map((p) => [p.id, p])
+  [...verbal1Passages, ...verbal2Passages, ...verbal3Passages].map((p) => [p.id, p])
 );
 
 // Every GAT test is namespaced with its testKey so ids stay unique across the
-// six slots (quant2/3 and verbal2/3 still share small mock content until
-// their real imports land). Each test's own question count is used
-// everywhere (quiz, scoring, review, etc.) — nothing assumes a fixed length.
+// six slots. Each test's own question count is used everywhere (quiz,
+// scoring, review, etc.) — nothing assumes a fixed length.
 // generalCategory is derived centrally from specificCategory via
 // SPECIFIC_TO_GENERAL (falling back to a question's own generalCategory for
 // mock data, which sets it directly since it has no real specificCategory).

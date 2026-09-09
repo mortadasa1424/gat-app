@@ -14,7 +14,7 @@
 //
 //   kind: "text" | "text-passage" | "image" | "svg",
 //   prompt: [ { type: "ar"|"en"|"tex"|"block", text: "" } ],
-//   passageId: null,                   // Verbal Reading Comprehension -> data/mock/passages.json
+//   passageId: null,                   // Verbal Reading Comprehension -> data/verbal/passages-N.json
 //   image: null,                       // extracted asset path, used when kind === "image"
 //   svg: null,                         // vector diagram markup, used when kind === "svg"
 //

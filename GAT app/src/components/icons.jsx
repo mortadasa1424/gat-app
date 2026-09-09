@@ -19,7 +19,6 @@ export {
   RotateCcw,
   Calculator,
   BookOpen,
-  ListChecks,
   Eye,
   Pause,
 } from "lucide-react";

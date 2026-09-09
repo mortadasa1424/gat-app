@@ -137,6 +137,9 @@ function ImageFigure({ q }) {
 }
 
 // ---- inline vector diagram question ----
+// q.svg comes from the static, source-controlled question datasets — never
+// from user input — so raw injection here is safe. Do not wire this to any
+// user- or network-supplied string without sanitizing it first.
 function SvgFigure({ q }) {
   return (
     <div className="q-figure">

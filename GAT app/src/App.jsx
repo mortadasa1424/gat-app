@@ -33,8 +33,12 @@ export default function App() {
   const [leaveConfirm, setLeaveConfirm] = useState(false);
   const [homeReturnConfirm, setHomeReturnConfirm] = useState(null);
   const [practiceMistakesPrompt, setPracticeMistakesPrompt] = useState(null);
-  const [showOpenAd, setShowOpenAd] = useState(false);
-  const [showFinishAd, setShowFinishAd] = useState(false);
+  // One shared piece of state for the promo popup — null | "open" | "finish"
+  // — instead of two independent booleans, so there is exactly one place in
+  // the render tree that ever mounts <PopupAd> (below) and both the
+  // first-visit and post-test triggers provably go through the same
+  // component/portal/CSS, not two parallel copies of it.
+  const [adPopup, setAdPopup] = useState(null);
 
   // First visit (no saved preference) always starts Light, regardless of
   // the device/browser's prefers-color-scheme — only an explicit saved
@@ -68,7 +72,7 @@ export default function App() {
     const saved = getJSON(LS.active, null);
     if (saved && saved.questionIds?.length) return;
     setSessionStr(LS.openAdShown, "true");
-    const t = setTimeout(() => setShowOpenAd(true), 2000);
+    const t = setTimeout(() => setAdPopup("open"), 2000);
     return () => clearTimeout(t);
   }, []);
 
@@ -86,7 +90,7 @@ export default function App() {
   // re-trigger it — and the timeout is cleaned up on unmount or a new attempt.
   useEffect(() => {
     if (!attempt) return;
-    const t = setTimeout(() => setShowFinishAd(true), 5000);
+    const t = setTimeout(() => setAdPopup("finish"), 5000);
     return () => clearTimeout(t);
   }, [attempt]);
 
@@ -264,8 +268,7 @@ export default function App() {
         />
       )}
 
-      {showOpenAd && <PopupAd variant="open" onClose={() => setShowOpenAd(false)} />}
-      {showFinishAd && <PopupAd variant="finish" onClose={() => setShowFinishAd(false)} />}
+      {adPopup && <PopupAd variant={adPopup} onClose={() => setAdPopup(null)} />}
 
       {resumePrompt && (
         <Modal title="Resume Attempt" body={`You left ${resumePrompt.testTitle} unfinished. Would you like to continue your attempt?`}

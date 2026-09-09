@@ -151,21 +151,19 @@ body.light{
    accessibility text scaling are unaffected — only the browser's own
    automatic heuristic resize is disabled. */
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
-html,body,#root,.app-root{height:100%}
-/* Explicit, theme-matched background on <html> itself, not just <body>.
-   html/body/#root/.app-root all size via height:100% against the browser's
-   own reported viewport — on iOS Chrome cold-launched from an external
-   deep link (e.g. tapped from WhatsApp), that reported height can be
-   momentarily smaller than the real screen while Chrome's own UI is still
-   settling in. If body's rendered box ends up shorter than the visible
-   screen for that reason, whatever's below it falls through to <html>'s
-   background — which, unset, defaults to plain white, visible as a large
-   blank strip. Giving html the same themed color body already uses (dark
-   by default; the :has() rule mirrors body.light, since a custom property
-   redefined on body doesn't inherit back up to html, its own ancestor)
-   means that same shortfall — should it ever happen, from this or any
-   future cause — shows the correct app background instead of a white gap,
-   regardless of the exact viewport-measurement timing involved. */
+/* min-height, not height: a floor the page can never be compressed below,
+   not a cap that could ever shrink it. html/body/#root/.app-root no longer
+   depend on any JS-measured pixel value (see .app-root below) — a
+   temporarily wrong viewport reading, from any browser, can at most affect
+   how much (harmless) blank space trails past real content; it can never
+   compress or hide anything, because nothing here is forced to an explicit
+   height derived from that reading any more. */
+html,body,#root{width:100%;min-height:100%}
+/* Explicit, theme-matched background on <html> itself, not just <body>, as
+   a defensive fallback in case some future change ever leaves a gap below
+   body's box — see the fuller reasoning where .app-root used to depend on
+   a JS-measured height, now removed. Kept because it's still correct and
+   harmless, not because it's still load-bearing the way it briefly was. */
 html{background:#120c2e}
 html:has(body.light){background:#eef1fb}
 body{
@@ -173,7 +171,7 @@ body{
   font-family:Tajawal,system-ui,sans-serif;
   color:var(--txt);
   background:var(--bg-1);
-  overflow:hidden;
+  overflow-x:hidden;
   -webkit-font-smoothing:antialiased;
 }
 button{font-family:inherit;color:inherit}
@@ -182,27 +180,30 @@ button{font-family:inherit;color:inherit}
    AMBIENT ANIMATED BACKGROUND (always on)
    Layered aurora blobs that slowly drift + grain overlay
    ============================================================ */
-/* Explicit height instead of relying on inset:0's implicit top+bottom sizing:
-   iOS Chrome (CriOS) draws its own browser chrome outside WebKit's private
-   dynamic-toolbar API (only Safari itself gets that), so a plain
-   position:fixed;inset:0 box can compute against a taller "viewport" than
-   what's actually visible there, pushing screen content behind Chrome's own
-   bars. 100svh (small viewport — assumes browser chrome fully expanded) is
-   the safe floor that's never larger than what's visible in either browser;
-   100dvh is layered in first for Safari's nicer expand-on-scroll behavior
-   where it's reliable, with 100vh as the oldest fallback. On top of that,
-   --app-viewport-height (set from window.visualViewport in main.jsx, which
-   reflects the real rendering surface size regardless of which browser's
-   chrome is drawn around it) wins wherever JS has run, since it's measured
-   truth rather than a CSS engine's best guess — the vh/dvh/svh chain above
-   still covers the brief pre-JS paint and any environment without
-   visualViewport. Every .screen is position:absolute;inset:0 against this
-   element, so fixing the height here fixes their sizing too. */
+/* Normal document flow, not a fixed-and-JS-measured viewport box: position:
+   relative (not fixed) so this participates in the page's natural height
+   instead of being pinned to a pixel value read from window.visualViewport
+   at some earlier moment (that mechanism — the JS in main.jsx that used to
+   write --app-viewport-height, and the CSS here that used it as an
+   explicit height — has been removed entirely, not just tuned again).
+   min-height:100dvh/100svh (CSS-native, not JS-measured) is a FLOOR so the
+   app fills at least the visible screen on a normal short page; height:auto
+   lets it grow taller when a screen's actual content needs more room — see
+   the mobile .screen reset further down, which is what lets Home/Section
+   Selection's content genuinely participate in that growth instead of
+   staying pinned to whatever this box's minimum happens to be. A
+   momentarily-wrong dvh/svh reading during a browser's cold-launch can
+   only affect that floor, never force content into a box smaller than it
+   needs — the failure mode this whole page shifted away from. */
 .app-root{
-  position:fixed;top:0;left:0;right:0;
-  height:100vh;height:100dvh;height:100svh;
-  height:var(--app-viewport-height,100svh);
-  overflow:hidden;isolation:isolate;
+  position:relative;
+  width:100%;
+  min-height:100vh;
+  min-height:100dvh;
+  min-height:100svh;
+  height:auto;
+  overflow-x:hidden;
+  isolation:isolate;
 }
 .aurora{position:fixed;inset:-20%;z-index:-2;pointer-events:none;filter:blur(60px);opacity:.9}
 .aurora span{position:absolute;border-radius:50%;mix-blend-mode:screen;will-change:transform}
@@ -5158,4 +5159,36 @@ body:not(.light) .home-icon-btn:hover{background:var(--btn-icon-bg-hover)!import
 @media (max-width:599px){
   .quiz-tool-btn,.card-grid-btn,.flag-btn.compact,.hint-icon,.tool-speak,
   .review-filters button,.lead-chips button{min-height:44px!important}
+}
+
+/* ============================================================
+   MOBILE APP SHELL — Home & Section Selection: normal document flow
+   ============================================================
+   .screen's base rule (and every override this file has accumulated for
+   it — the "full-height shells" pass, the exam-select-specific 100%
+   overrides, etc.) makes it position:absolute;inset:0, sized against
+   .app-root. That's an intentional, working design for Quiz/Results/
+   Report/Review/Lead, which are deliberately fixed, non-scrolling shells
+   with their own internal scroll regions — left untouched here.
+   For Home and Section Selection specifically, that model made their
+   content's real height irrelevant to how tall the page actually was:
+   .app-root's own box (a floor now, not a JS-measured lock — see above)
+   was the only thing deciding it, and a screen taller than that floor had
+   nowhere to go but get compressed/overlapped instead of the page simply
+   growing and scrolling, exactly as reported before/during a browser
+   cold-launch. Declared last in the file, !important throughout, to
+   reliably win over every earlier position/height/overflow declaration
+   for these two selectors specifically — see the file history for the
+   exact rules being overridden here if auditing this later. */
+@media (max-width:899px){
+  .home.screen,
+  .select.exam-select.screen{
+    position:relative!important;
+    top:auto!important;right:auto!important;bottom:auto!important;left:auto!important;
+    height:auto!important;
+    min-height:100vh!important;
+    min-height:100dvh!important;
+    overflow-x:hidden!important;
+    overflow-y:visible!important;
+  }
 }

@@ -3959,27 +3959,37 @@ body:not(.light) .home-icon-btn:hover{
   border:1px solid rgba(255,255,255,.55)!important;
   box-shadow:0 14px 32px -18px rgba(0,0,0,.85)!important;
 }
+/* Normal document flow by default — width:100%, no forced height — so the
+   card (now height:auto, sized to its content) actually gets a real
+   content height to size itself against. An absolutely-positioned-only
+   child contributes nothing to an ancestor's auto height, which is
+   exactly what made the card collapse/inflate unpredictably before: this
+   was position:absolute;inset:0, so .ad-pop-card's real content was
+   entirely out of flow. .has-media (an actual video/image asset) is the
+   one case that still wants an edge-to-edge, full-bleed fill — see the
+   .has-media override below. */
 .ad-pop-media{
+  position:relative;
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  background:#071024;
+}
+.ad-pop-card.has-media .ad-pop-media{
   position:absolute!important;
   inset:0!important;
-  width:100%!important;
   height:100%!important;
-  overflow:hidden!important;
-  display:flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-  background:#071024!important;
 }
 /* The placeholder (text + "Register Your Interest" button — what actually
    renders today, since PROMO_ASSETS.openPopupVideo/finishPopupImage are
-   both null) inherits .ad-pop-media's position:absolute;inset:0, so its
-   own content fills the full card. .ad-pop-media clips with overflow:hidden
-   for the video/image variants' rounded corners; the placeholder's text
-   content needs to scroll instead of being silently clipped if it's ever
-   taller than the card, so override just that one property here, scoped
-   to the placeholder specifically (higher specificity than .ad-pop-media
-   alone) rather than changing the shared rule. */
+   both null): padding-top clears the close button (top:14px, 42px tall)
+   instead of letting the placeholder's own panel start underneath it, and
+   overflow-y:auto scrolls this content instead of clipping it if it's
+   ever taller than the card's max-height safety cap allows. */
 .ad-pop-media.ad-pop-placeholder{
+  padding-top:64px!important;
   overflow-y:auto!important;
   -webkit-overflow-scrolling:touch!important;
 }
@@ -4109,59 +4119,45 @@ body:not(.light) .home-icon-btn:hover{
   outline:2px solid #ffffff!important;
   outline-offset:3px!important;
 }
-.ad-pop-card.open-ad{
-  width:min(92vw,48.375vh,540px)!important;
-  width:min(92vw,48.375dvh,540px)!important;
-  width:min(92vw,48.375svh,540px)!important;
+/* Live today (has-media not present, since PROMO_ASSETS.openPopupVideo/
+   finishPopupImage are both null): plain content-based sizing. No
+   viewport-height unit anywhere — width is a simple vw/px cap, height is
+   auto (sized to the small placeholder text + button), and max-height is
+   purely a safety ceiling (100% of .ad-pop-overlay's own real, already-
+   correctly-computed box — plain box-model percentage math, not a
+   viewport-unit guess) that this content should essentially never reach.
+   overflow-y:auto on the card itself is the actual safety net if it ever
+   does. This intentionally does not depend on precise viewport-height
+   measurement being correct for its EVERYDAY sizing — only as a rarely-
+   invoked ceiling — which is what actually fixes rendering too tall when
+   a cold-launched browser's initial viewport reading is briefly wrong
+   (e.g. iOS Chrome opened via an external deep link), instead of trying
+   to make that measurement itself more correct. */
+.ad-pop-card.open-ad,
+.ad-pop-card.finish-ad{
+  width:min(92vw,420px)!important;
   height:auto!important;
-  aspect-ratio:9/16!important;
-  max-width:540px!important;
-  max-height:86vh!important;
-  max-height:86dvh!important;
-  max-height:86svh!important;
-  /* Final, authoritative cap: 100% of .ad-pop-overlay's own content-box
-     height (its real, already-correctly-computed flex-item height, minus
-     its safe-area-aware padding) — not another independent viewport-unit
-     guess. Percentage-of-actual-parent is plain box-model math, not a
-     viewport measurement, so it can't be wrong in the way vh/dvh/svh can
-     be on a given engine/browser. If the aspect-ratio-derived height above
-     would exceed this, the browser reduces height (and re-derives width
-     from it) to fit — the popup can only ever be as tall as its real
-     parent allows, never taller than the visible screen. */
+  max-width:420px!important;
   max-height:100%!important;
   min-width:0!important;
   min-height:0!important;
+  overflow-y:auto!important;
+  -webkit-overflow-scrolling:touch!important;
+}
+
+/* has-media: an actual video/image asset is present — the fixed 9:16
+   portrait shape only makes sense for that. Not live in production right
+   now (see above), kept for when a real asset is provided. */
+.ad-pop-card.open-ad.has-media,
+.ad-pop-card.finish-ad.has-media{
+  width:min(92vw,420px)!important;
+  aspect-ratio:9/16!important;
+  max-width:420px!important;
 }
 .ad-pop-card.open-ad .ad-pop-video{
   object-fit:cover!important;
 }
-@media (max-width:420px){
-  .ad-pop-card.open-ad{
-    width:min(94vw,50.625vh)!important;
-    width:min(94vw,50.625dvh)!important;
-    width:min(94vw,50.625svh)!important;
-    max-height:90vh!important;
-    max-height:90dvh!important;
-    max-height:90svh!important;
-    max-height:100%!important;
-  }
-}
-
-/* 2026-06-10 — finish exam popup uses full static ad image */
 .ad-pop-card.finish-ad{
-  width:min(92vw,48.375vh,540px)!important;
-  width:min(92vw,48.375dvh,540px)!important;
-  width:min(92vw,48.375svh,540px)!important;
-  height:auto!important;
-  aspect-ratio:9/16!important;
-  max-width:540px!important;
-  max-height:86vh!important;
-  max-height:86dvh!important;
-  max-height:86svh!important;
-  /* Same final percentage-of-real-parent cap as .open-ad above. */
-  max-height:100%!important;
-  min-width:0!important;
-  min-height:0!important;
   background:#202942!important;
 }
 .ad-pop-image-ad{
@@ -4190,18 +4186,6 @@ body:not(.light) .home-icon-btn:hover{
   user-select:none!important;
   -webkit-user-drag:none!important;
 }
-@media (max-width:420px){
-  .ad-pop-card.finish-ad{
-    width:min(94vw,50.625vh)!important;
-    width:min(94vw,50.625dvh)!important;
-    width:min(94vw,50.625svh)!important;
-    max-height:90vh!important;
-    max-height:90dvh!important;
-    max-height:90svh!important;
-    max-height:100%!important;
-  }
-}
-
 /* 2026-06-10 — footer banner sharpness + finish ad close-on-click */
 .footer-ad-banner,
 .footer-ad-img{

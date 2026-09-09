@@ -4642,6 +4642,30 @@ body:not(.light) .quiz .q-compare-table th{
   .review-head{max-width:640px;margin-inline:auto}
 }
 
+/* ---- Review: tighter desktop density so a full question with all of its
+   answer choices fits inside the viewport wherever reasonably possible.
+   Scoped to .review only — Quiz and every other screen keep their own
+   sizing untouched. Image/SVG diagram rules are not touched here, so
+   aspect ratio is unaffected. ---- */
+@media (min-width:1024px){
+  .review.screen{padding-top:8px!important}
+  .review .main-logo{margin-top:0!important;margin-bottom:4px!important}
+  .review .main-logo img{width:64px!important}
+  .review-head{padding:0 0 8px!important}
+  .review-head h2{font-size:1.05rem!important;margin:0 0 6px!important}
+  .review-filters button{padding:7px!important}
+  .review-item{margin-bottom:10px!important}
+  .review-ihead{margin-bottom:6px!important}
+  .review .card{padding:14px!important}
+  .review .card-body{gap:2px!important}
+  .review .opts{gap:7px!important;margin-top:10px!important}
+  .review .opt{min-height:46px!important;padding:9px 13px!important;line-height:1.5!important}
+  .review .q-prompt{font-size:1.05rem!important;line-height:1.55!important}
+  .review .q-text{font-size:1.02rem!important;line-height:1.5!important}
+  .review .q-passage{padding:11px!important;margin-bottom:10px!important}
+  .review .q-passage-b{line-height:1.55!important}
+}
+
 /* ---- dark-mode fix for QuestionCard when reused inside Review (revealed
    mode) — the .card/.opt/.q-passage paper tokens are Quiz-scoped by
    design (Phase 3.1); Review renders the same component outside .quiz,

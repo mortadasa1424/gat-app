@@ -91,8 +91,8 @@ function highlightSentence(text, word) {
 function sanitizePassageText(text) {
   return String(text || "")
     .replace(/\\r\\n|\\n|\\r/g, "\n")
-    .replace(/\s+\n/g, "\n")
-    .replace(/\n{3,}/g, "\n\n")
+    .replace(/[ \t]+\n/g, "\n")
+    .replace(/\n+/g, "\n\n")
     .trim();
 }
 

@@ -2533,9 +2533,9 @@ body.light .nav-cell.ans.mrk:not(.cur){background:linear-gradient(135deg,var(--b
   column-gap:12px!important;
   row-gap:0!important;
   height:auto!important;
-  min-height:64px!important;
+  min-height:92px!important;
   max-height:none!important;
-  padding:11px 14px!important;
+  padding:12px 14px!important;
   border-radius:20px!important;
   overflow:hidden!important;
   text-align:left!important;
@@ -2609,7 +2609,12 @@ body.light .nav-cell.ans.mrk:not(.cur){background:linear-gradient(135deg,var(--b
   .select.vocab-select.screen{max-width:100%!important}
   .select.exam-select .tile{
     grid-template-columns:minmax(56px,auto) minmax(0,1fr) 38px!important;
-    column-gap:9px!important;padding:9px 12px!important;min-height:56px!important;
+    column-gap:9px!important;
+    /* padding/min-height intentionally match the unconditional mobile
+       value set in the Section/Test selection block (not re-narrowed
+       here) — kept in one place so there's a single number to audit
+       instead of two different values that happen to agree by luck. */
+    padding:12px 14px!important;min-height:92px!important;
   }
   .select.exam-select .tile-icon{width:34px!important;height:34px!important;flex-basis:34px!important;font-size:1.05rem!important}
   .select.exam-select .tile-timer{min-width:54px!important;padding:6px 8px!important;font-size:.64rem!important}
@@ -4459,44 +4464,73 @@ body.light .home-lede{color:#342f57}
   .entry-option{padding:var(--space-6)}
 }
 
-/* ---- Section/Test selection: heading, responsive test grid, action panel ---- */
-/* flex:none — .select-title is a child of .screen's flex column; left at
-   the flex default (shrink:1) it was the one item still eligible to be
-   compressed below its own content height whenever .tests-grid/.tile were
-   pinned but this wasn't, which could push its own text past its shrunk
-   box. Pinning every item in this column (see .tests-grid and .tile below)
-   removes shrink as a possible cause of any of them overlapping a sibling. */
+/* ---- Section/Test selection: heading, responsive test grid, action panel ----
+   MOBILE (below 900px): plain, single-direction normal document flow —
+   Test 1 -> Test 2 -> Test 3 -> Timer row -> Start Test, top to bottom,
+   nothing overlapping. Every rule below is `flex:none`/`position:static`
+   and there are no negative margins, no absolute positioning, and no
+   transforms anywhere in this block, so no element here can be pulled out
+   of flow or compressed below its own content height — which is the only
+   way a later sibling (the action panel) could ever render starting
+   before an earlier one (Test 3) has visually ended. All of
+   .timer-toggle-group's layout (previously split into a separate rule
+   ~400 lines away, which made this harder to audit as one unit) now
+   lives in this same block. .select.exam-select.screen (the parent) is
+   already position:absolute;inset:0;overflow-y:auto elsewhere in this
+   file — untouched here — so if content is ever taller than the screen,
+   the page scrolls; nothing needs to shrink or reposition to compensate. */
 .select-title{text-align:center;margin-bottom:var(--space-4);flex:none}
 .select-title h2{margin:0 0 4px;font-size:var(--fs-section-title);font-weight:800}
 .select-sub{margin:0;color:var(--text-muted);font-size:var(--fs-body-sm)}
 
-/* flex:none (grow:0 shrink:0 basis:auto), not the previous flex:1 0 auto —
-   fully pinned to its own content height, both as a flex child of .screen
-   and for its own tile children below, so nothing in this column can ever
-   be compressed below its natural size (which is what let a shrunk
-   element's content render past its own box, overlapping the next
-   sibling — the reported "TIMER overlapping Test 3" symptom). If the
-   column's total content is ever taller than .screen's available height,
-   .screen's own overflow-y:auto (set elsewhere for this page) scrolls
-   instead of squeezing anything. */
-.tests-grid{display:flex;flex-direction:column;gap:var(--space-2);min-height:0;flex:none}
+.tests-grid{
+  display:flex;flex-direction:column;
+  height:auto;min-height:0;
+  gap:var(--space-2);
+  flex:none;
+}
+/* min-height/padding for .select.exam-select .tile are set directly on
+   its own rule further up this file (92px / 12px 14px, mobile-wide) —
+   edited in place rather than overridden again here. flex:none is the one
+   property that rule didn't already have, needed so no tile can be
+   compressed below that height as a flex child of .tests-grid. */
 .tests-grid .tile{flex:none}
 
 .select-action-panel{
-  flex:none;margin-top:var(--space-3);padding:var(--space-3);
+  position:static;
+  flex:none;
+  margin:var(--space-3) 0 0;
+  padding:var(--space-3);
   border-radius:var(--radius-lg);background:var(--surface-2);border:1px solid var(--border);
   display:flex;flex-direction:column;
 }
-.select-action-row{display:flex;flex-direction:column;align-items:stretch;gap:var(--space-2)}
-.timer-toggle-group{flex:none}
+/* gap:0 on mobile — .timer-toggle-group and .select-start-btn each carry
+   their own explicit margin-top below, so a flex gap here would stack on
+   top of those and double the spacing between them. */
+.select-action-row{display:flex;flex-direction:column;align-items:stretch;gap:0}
+
+.timer-toggle-group{
+  position:static;
+  flex:none;
+  margin:14px auto 0;
+  display:flex;flex-direction:row;align-items:center;justify-content:center;
+  gap:10px;
+  height:auto;
+}
 .timer-toggle-compact{align-self:center}
-.select-start-btn{width:100%;flex:none}
+
+.select-start-btn{
+  position:static;
+  width:100%;
+  flex:none;
+  margin-top:14px;
+  min-height:50px;
+}
 @media (max-width:899px){
-  /* Comfortable touch target kept well within reach of 44-48px while
-     shortening the button from the global .btn-primary --btn-h (50px) —
-     scoped to mobile/tablet only; desktop's own min-width:220px override
-     below is untouched, so it keeps using the standard button height. */
-  .select-start-btn{min-height:46px!important;padding:12px 20px!important}
+  /* Comfortable touch target within the 44-48px range while shortening
+     the button slightly from the global .btn-primary --btn-h (50px) —
+     scoped to mobile/tablet only. */
+  .select-start-btn{min-height:48px!important;padding:12px 20px!important}
 }
 
 @media (min-width:900px){
@@ -4504,14 +4538,15 @@ body.light .home-lede{color:#342f57}
   .select-title{text-align:start;margin-bottom:var(--space-6)}
   .select-title h2{font-size:var(--fs-page-title)}
 
-  .tests-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-4);align-items:start;flex:none!important}
+  .tests-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-4);align-items:start;flex:none!important;height:auto}
   .select.exam-select .tile{min-height:120px!important;height:auto!important;padding:14px 16px!important}
 
   .select-action-panel{margin-top:var(--space-4);padding:var(--space-5) var(--space-6)}
   .select-action-row{
     flex-direction:row;align-items:center;justify-content:center;gap:var(--space-4);
   }
-  .select-start-btn{width:auto;min-width:220px}
+  .timer-toggle-group{margin:0;flex-direction:column;gap:4px}
+  .select-start-btn{width:auto;min-width:220px;margin-top:0}
 }
 
 /* ============================================================
@@ -4897,15 +4932,12 @@ body:not(.light) .review .opt.wrong{background:rgba(255,90,106,.16)}
   .quiz .course-footer{ padding-right:72px!important; }
 }
 
-/* "Timer" caption immediately to the left of the compact toggle, both
-   vertically centered on one row — mobile only; the desktop
-   (min-width:900px) override below restores the stacked caption-above-
-   toggle layout it already had, unchanged. */
-.timer-toggle-group{display:flex;flex-direction:row;align-items:center;gap:8px}
+/* .timer-toggle-group's own layout (row on mobile, column on desktop) is
+   defined once, together with the rest of the mobile action-area rebuild,
+   in the "Section/Test selection" block above — not here, to avoid two
+   separate rules for the same element fighting over source order. Only
+   the caption's typography lives here. */
 .timer-toggle-caption{font-size:var(--fs-caption);font-weight:700;color:var(--txt-mute);text-transform:uppercase;letter-spacing:.04em}
-@media (min-width:900px){
-  .timer-toggle-group{flex-direction:column;gap:4px}
-}
 
 /* ============================================================
    UNIFIED GLASS-PURPLE BUTTON SYSTEM

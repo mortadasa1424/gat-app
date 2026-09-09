@@ -88,7 +88,7 @@ export default function Results({ attempt, dark, onToggleDark, soundOn, onToggle
               </button>
               {help && (
                 <div className="expander-body help-body">
-                  <a className="help-link" href={COURSE_URL} target="_blank" rel="noreferrer">Enroll in the GAT prep course</a>
+                  <a className="help-link" href={COURSE_URL} target="_blank" rel="noopener noreferrer">Enroll in the GAT prep course</a>
                   <a className="help-link wa-action" href={WHATSAPP_URL} target="_blank" rel="noreferrer">
                     <MessageCircle size={16} aria-hidden="true" /> Contact us on WhatsApp
                   </a>

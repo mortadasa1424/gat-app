@@ -549,7 +549,7 @@ body.light .aurora span{mix-blend-mode:multiply;opacity:.5}
 /* ============================================================
    OVERLAYS (nav grid, modals, pause)
    ============================================================ */
-.overlay{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:24px;
+.overlay{position:fixed;inset:0;width:100vw;height:100vh;height:100dvh;z-index:100;display:grid;place-items:center;padding:24px;
   background:rgba(8,5,22,.7);backdrop-filter:blur(8px);animation:fadeIn .25s}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 .overlay-sheet{position:fixed;inset:0;z-index:100;background:rgba(8,5,22,.6);backdrop-filter:blur(6px);animation:fadeIn .25s}
@@ -4587,6 +4587,37 @@ body.light .home-lede{color:#342f57}
   .quiz-workspace{display:grid;grid-template-columns:1fr 300px;gap:var(--space-6);align-items:start}
   .quiz-sidebar{display:block;position:sticky;top:calc(46px + var(--space-3) + var(--space-2));max-height:calc(100vh - 46px - var(--space-6));overflow-y:auto}
   .mobile-only-nav-btn{display:none}
+}
+/* Mobile timer relocation: below 1024px the countdown moves out of the
+   header and into the card-tools action row (between View All Questions
+   and Mark for Review) so the header stops feeling cramped. The header
+   timer (.quiz-header-right .quiz-overall) is hidden here; the inline
+   .quiz-timer-inline pill (which reuses .mobile-only-nav-btn's own
+   min-width:1024px{display:none} rule above to disappear on desktop)
+   takes over. Countdown logic/state is untouched — this only moves where
+   the same value renders. */
+@media (max-width:1023px){
+  .quiz-header-right .quiz-overall{display:none!important}
+}
+.quiz-timer-inline{
+  gap:5px!important;
+  cursor:default!important;
+  padding-left:9px!important;
+  padding-right:9px!important;
+}
+.quiz-timer-inline.warn{
+  color:var(--brand-coral)!important;
+  background:rgba(253,95,109,.16)!important;
+  border-color:rgba(253,95,109,.35)!important;
+  animation:warnPulse 1s infinite;
+}
+@media (max-width:420px){
+  .quiz-timer-inline{padding-left:7px!important;padding-right:7px!important;}
+}
+/* Safety net for very narrow screens (~320px): let the row wrap instead of
+   clipping/overflowing if all three controls can't fit on one line. */
+@media (max-width:359px){
+  .card-tools{flex-wrap:wrap!important;row-gap:6px!important}
 }
 @media (min-width:1280px){ .quiz-workspace{grid-template-columns:1fr 320px} }
 

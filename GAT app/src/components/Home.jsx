@@ -87,7 +87,7 @@ export function Footer() {
   if (!PROMO_ASSETS.footerBanner) return <CourseFooter />;
   return (
     <footer className="appfooter ad-footer" aria-label="GAT course ad">
-      <a className="footer-ad-banner" href={COURSE_URL} target="_blank" rel="noreferrer" aria-label="Enroll in the GAT course now">
+      <a className="footer-ad-banner" href={COURSE_URL} target="_blank" rel="noopener noreferrer" aria-label="Enroll in the GAT course now">
         <img className="footer-ad-img" src={PROMO_ASSETS.footerBanner} alt="GAT course" loading="eager" decoding="async" draggable="false" />
       </a>
     </footer>
@@ -98,7 +98,7 @@ export function CourseFooter() {
   return (
     <footer className="appfooter clean-footer course-footer">
       <span>To enroll in the GAT prep course, click </span>
-      <a href={COURSE_URL} target="_blank" rel="noreferrer">here</a>
+      <a href={COURSE_URL} target="_blank" rel="noopener noreferrer">here</a>
     </footer>
   );
 }

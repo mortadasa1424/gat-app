@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from "react";
+import { createPortal } from "react-dom";
 import QuestionCard from "./QuestionCard.jsx";
 import NavOverlay from "./NavOverlay.jsx";
 import { CourseFooter, getLeenLogoSrc } from "./Home.jsx";
@@ -105,6 +106,11 @@ export default function Quiz({
       <button className="quiz-tool-btn card-grid-btn mobile-only-nav-btn" onClick={() => { if (!timeUp) { Sound.tap(); setShowNav(true); } }} aria-label="View All Questions" type="button">
         <LayoutGrid size={16} aria-hidden="true" /> View All Questions
       </button>
+      {deadline != null && (
+        <div className={`quiz-tool-btn quiz-timer-inline mobile-only-nav-btn ${overall <= 60 ? "warn" : ""}`} aria-label="Time remaining" role="timer">
+          <Clock size={14} aria-hidden="true" /> {overallStr}
+        </div>
+      )}
       <button className={`quiz-tool-btn flag-btn compact ${marked[idx] ? "on" : ""}`} onClick={toggleMark} aria-label="Mark for Review" type="button">
         <Flag size={16} aria-hidden="true" /> Mark for Review
       </button>
@@ -171,7 +177,13 @@ export default function Quiz({
         </div>
       )}
 
-      {submitConfirm && !timeUp && (
+      {submitConfirm && !timeUp && createPortal(
+        // Rendered via a portal straight onto document.body (not inside
+        // .app-root/.screen) so its position:fixed backdrop is always
+        // anchored to the true viewport, edge-to-edge, independent of the
+        // .screen container's own max-width/centering and of any ancestor
+        // CSS between here and <body> — the same fix already used for
+        // PopupAd's overlay (see PopupAd.jsx).
         <div className="overlay">
           <div className="modal">
             <div className="modal-icon"><Check size={26} aria-hidden="true" /></div>
@@ -186,7 +198,8 @@ export default function Quiz({
               <button className="btn-ghost" onClick={() => { Sound.tap(); setSubmitConfirm(false); }}>Continue Test</button>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
       <CourseFooter />
 

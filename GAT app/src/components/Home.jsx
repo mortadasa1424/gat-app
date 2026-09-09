@@ -1,6 +1,6 @@
 import { Sound } from "../lib/sound.js";
 import { COURSE_URL, PROMO_ASSETS } from "../config/marketing.js";
-import { Home as HomeIcon, Sun, Moon, Volume2, VolumeX, ChevronLeft, ChevronRight, Calculator, BookOpen } from "./icons.jsx";
+import { Home as HomeIcon, Sun, Moon, Volume2, VolumeX, ChevronRight, Calculator, BookOpen } from "./icons.jsx";
 
 const LIGHT_LOGO_URL = "/assets/brand/leen-logo.png";
 const DARK_LOGO_URL = "/assets/brand/leen-logo-dark.png";
@@ -68,7 +68,7 @@ export function Header({ dark, onToggleDark, soundOn, onToggleSound, showHome = 
       </div>
       {showBack && (
         <button className="icon-btn return-top" onClick={() => { Sound.tap(); onBack?.(); }} aria-label="Back">
-          <ChevronLeft size={20} aria-hidden="true" />
+          <ChevronRight size={20} aria-hidden="true" />
         </button>
       )}
     </header>

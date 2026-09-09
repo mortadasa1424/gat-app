@@ -561,7 +561,11 @@ body.light .modal p.modal-comment{color:#8d879f}
 .ring svg{transform:rotate(-90deg)}
 .ring .trk{stroke:rgba(255,255,255,.1)}body.light .ring .trk{stroke:rgba(50,40,120,.1)}
 .ring .fil{stroke:url(#grG);stroke-linecap:round;transition:stroke-dashoffset 1.5s var(--ease);filter:drop-shadow(0 0 8px rgba(0,195,225,.5))}
-.ring .pct{position:absolute;inset:0;display:grid;place-content:center;font-size:2.9rem;font-weight:800}
+/* justify-items:center (not just place-content) so the number's and the
+   "%"'s own boxes are sized to their content and centered individually —
+   otherwise the narrower one stretches to match the wider one's grid
+   track and renders left-aligned inside it, reading as off-center. */
+.ring .pct{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;text-align:center;font-size:2.9rem;font-weight:800}
 .ring .pct small{font-size:1rem;color:var(--txt-dim);font-weight:700}
 .score-card h2{margin:6px 0 2px;font-size:1.55rem;font-weight:800}
 .res-badges{display:flex;gap:10px;justify-content:center;margin:18px 0}
@@ -3719,9 +3723,12 @@ body:not(.light) .home-icon-btn:hover{
   position:fixed!important;
   inset:0!important;
   z-index:10000!important;
-  display:grid!important;
-  place-items:center!important;
-  padding:18px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  overflow-y:auto!important;
+  -webkit-overflow-scrolling:touch!important;
+  padding:max(18px,env(safe-area-inset-top)) max(18px,env(safe-area-inset-right)) max(18px,env(safe-area-inset-bottom)) max(18px,env(safe-area-inset-left))!important;
   background:rgba(6,4,18,.56)!important;
   backdrop-filter:blur(12px) saturate(130%)!important;
   -webkit-backdrop-filter:blur(12px) saturate(130%)!important;
@@ -3730,10 +3737,19 @@ body:not(.light) .home-icon-btn:hover{
 .ad-pop-card{
   width:min(80vw,640px)!important;
   height:min(80vh,760px)!important;
+  height:min(80dvh,760px)!important;
   max-width:640px!important;
   max-height:760px!important;
+  max-height:min(760px,90dvh)!important;
   min-width:min(80vw,300px)!important;
   min-height:min(80vh,420px)!important;
+  min-height:min(70dvh,420px)!important;
+  /* Auto vertical margin (not align-items:center) so that if the card is
+     ever taller than the visible viewport, it aligns to the top of the
+     scrollable overlay instead of centering-and-clipping off both edges —
+     the close button (top:14px inside the card) always stays reachable
+     by scrolling. */
+  margin:auto!important;
   position:relative!important;
   overflow:hidden!important;
   border-radius:30px!important;
@@ -3789,6 +3805,8 @@ body:not(.light) .home-icon-btn:hover{
   gap:18px!important;
   padding:72px clamp(22px,5vw,54px) 38px!important;
   text-align:center!important;
+  overflow-y:auto!important;
+  -webkit-overflow-scrolling:touch!important;
 }
 .ad-pop-kicker{
   position:absolute!important;
@@ -3823,7 +3841,7 @@ body:not(.light) .home-icon-btn:hover{
 .ad-pop-timer{font-size:.82rem!important;font-weight:800!important;color:var(--txt-mute)!important;}
 @keyframes adOverlayIn{from{opacity:0}to{opacity:1}}
 @keyframes adCardIn{from{opacity:0;transform:translateY(22px) scale(.94);filter:blur(10px)}to{opacity:1;transform:none;filter:none}}
-@media (max-width:420px){.ad-pop-card{width:80vw!important;height:80vh!important;border-radius:24px!important}.ad-pop-content{padding:70px 18px 30px!important}.ad-pop-close{width:38px!important;height:38px!important}.ad-pop-placeholder{border-radius:22px!important;padding:24px 14px!important}}
+@media (max-width:420px){.ad-pop-card{width:80vw!important;height:80vh!important;height:80dvh!important;border-radius:24px!important}.ad-pop-content{padding:70px 18px 30px!important;overflow-y:auto!important;max-height:100%!important}.ad-pop-close{width:38px!important;height:38px!important}.ad-pop-placeholder{border-radius:22px!important;padding:24px 14px!important}}
 
 /* 2026-06-10 — final image footer banner */
 .footer-ad-banner{
@@ -4029,10 +4047,12 @@ body:not(.light) .home-icon-btn:hover{
 }
 .ad-pop-card.open-ad{
   width:min(92vw,48.375vh,540px)!important;
+  width:min(92vw,48.375dvh,540px)!important;
   height:auto!important;
   aspect-ratio:9/16!important;
   max-width:540px!important;
   max-height:86vh!important;
+  max-height:86dvh!important;
   min-width:0!important;
   min-height:0!important;
 }
@@ -4042,17 +4062,21 @@ body:not(.light) .home-icon-btn:hover{
 @media (max-width:420px){
   .ad-pop-card.open-ad{
     width:min(94vw,50.625vh)!important;
+    width:min(94vw,50.625dvh)!important;
     max-height:90vh!important;
+    max-height:90dvh!important;
   }
 }
 
 /* 2026-06-10 — finish exam popup uses full static ad image */
 .ad-pop-card.finish-ad{
   width:min(92vw,48.375vh,540px)!important;
+  width:min(92vw,48.375dvh,540px)!important;
   height:auto!important;
   aspect-ratio:9/16!important;
   max-width:540px!important;
   max-height:86vh!important;
+  max-height:86dvh!important;
   min-width:0!important;
   min-height:0!important;
   background:#202942!important;
@@ -4086,7 +4110,9 @@ body:not(.light) .home-icon-btn:hover{
 @media (max-width:420px){
   .ad-pop-card.finish-ad{
     width:min(94vw,50.625vh)!important;
+    width:min(94vw,50.625dvh)!important;
     max-height:90vh!important;
+    max-height:90dvh!important;
   }
 }
 
@@ -4357,7 +4383,11 @@ body.light .home-lede{color:#342f57}
 .select-title h2{margin:0 0 4px;font-size:var(--fs-section-title);font-weight:800}
 .select-sub{margin:0;color:var(--text-muted);font-size:var(--fs-body-sm)}
 
-.tests-grid{display:flex;flex-direction:column;gap:var(--space-3);min-height:0;flex:1}
+/* flex-shrink:0 (not the shorthand flex:1's default shrink:1) — on short
+   mobile viewports the column could otherwise be compressed below its three
+   tiles' natural height, which let the action panel below it (timer +
+   Start Test) render overlapping the last, visually-overflowing tile. */
+.tests-grid{display:flex;flex-direction:column;gap:var(--space-3);min-height:0;flex:1 0 auto}
 
 .select-action-panel{
   flex:none;margin-top:var(--space-4);padding:var(--space-4);

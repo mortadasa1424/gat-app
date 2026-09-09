@@ -36,7 +36,10 @@ export default function App() {
   const [showOpenAd, setShowOpenAd] = useState(false);
   const [showFinishAd, setShowFinishAd] = useState(false);
 
-  const [dark, setDark] = useState(() => getStr(LS.theme, "dark") !== "light");
+  // First visit (no saved preference) always starts Light, regardless of
+  // the device/browser's prefers-color-scheme — only an explicit saved
+  // "dark" value (set by the toggle below) switches this to dark.
+  const [dark, setDark] = useState(() => getStr(LS.theme, "light") === "dark");
   const [soundOn, setSoundOn] = useState(true);
 
   useEffect(() => { Sound.setEnabled(soundOn); }, [soundOn]);

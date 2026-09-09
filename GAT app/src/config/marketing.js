@@ -6,7 +6,7 @@ export const COURSE_URL_BASE = "https://leen.sa/courses/gat"; // TODO: confirm f
 export const UTM_PARAMS = "utm_source=Exam&utm_medium=APP&utm_campaign=GAT26"; // TODO: confirm final UTM naming
 export const COURSE_URL = `${COURSE_URL_BASE}?${UTM_PARAMS}`;
 
-export const WHATSAPP_NUMBER = "966557841489"; // TODO: confirm GAT WhatsApp number (reusing ITC's for now)
+export const WHATSAPP_NUMBER = "966557841489";
 export const WHATSAPP_URL = `https://api.whatsapp.com/send/?phone=${WHATSAPP_NUMBER}&text&type=phone_number&app_absent=0`;
 
 export const PROMO_ASSETS = {

@@ -159,6 +159,6 @@ duplicate the same rules for platforms that read those files instead of
   its response) — it does not affect the production build. Fixing it
   requires a Vite 8 major upgrade; left alone intentionally for this
   release. Re-evaluate before the next major version bump.
-- `WHATSAPP_NUMBER` and the course URL in `marketing.js` are marked with
-  `TODO` comments pending confirmation from Leen — update them there, not
-  at the call sites.
+- `COURSE_URL_BASE` in `marketing.js` is still marked `TODO` pending the
+  final GAT course URL from Leen — update it there, not at the call sites.
+  `WHATSAPP_NUMBER` is already the confirmed, live number.

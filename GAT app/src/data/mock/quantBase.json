@@ -1,0 +1,99 @@
+[
+  {
+    "id": "Q-ARITH-1",
+    "generalCategory": "Arithmetic",
+    "specificCategory": "",
+    "kind": "text",
+    "prompt": [
+      { "type": "ar", "text": "ما ناتج 48 ÷ 6 + 7 × 2؟" }
+    ],
+    "options": [
+      { "label": "A", "text": "22" },
+      { "label": "B", "text": "20" },
+      { "label": "C", "text": "18" },
+      { "label": "D", "text": "26" }
+    ],
+    "answerLabels": ["A", "B", "C", "D"],
+    "correctAnswer": "A",
+    "sourceRef": "mock",
+    "reviewStatus": "mock"
+  },
+  {
+    "id": "Q-ALG-1",
+    "generalCategory": "Algebra",
+    "specificCategory": "",
+    "kind": "text",
+    "prompt": [
+      { "type": "ar", "text": "أوجد قيمة x في المعادلة:" },
+      { "type": "block", "text": "2x + 5 = 17" }
+    ],
+    "options": [
+      { "label": "A", "tex": "x = 6" },
+      { "label": "B", "tex": "x = 5" },
+      { "label": "C", "tex": "x = 11" },
+      { "label": "D", "tex": "x = 7" }
+    ],
+    "answerLabels": ["A", "B", "C", "D"],
+    "correctAnswer": "A",
+    "sourceRef": "mock",
+    "reviewStatus": "mock"
+  },
+  {
+    "id": "Q-GEO-1",
+    "generalCategory": "Geometry",
+    "specificCategory": "",
+    "kind": "image",
+    "prompt": [
+      { "type": "ar", "text": "المستطيل في الشكل طوله 12 سم وعرضه 5 سم. ما مساحته؟" }
+    ],
+    "image": "/assets/questions/quant/mock-rectangle-diagram.svg",
+    "options": [
+      { "label": "A", "text": "60 سم²" },
+      { "label": "B", "text": "34 سم²" },
+      { "label": "C", "text": "17 سم²" },
+      { "label": "D", "text": "70 سم²" }
+    ],
+    "answerLabels": ["A", "B", "C", "D"],
+    "correctAnswer": "A",
+    "sourceRef": "mock",
+    "reviewStatus": "mock"
+  },
+  {
+    "id": "Q-STAT-1",
+    "generalCategory": "Statistics & Data Analysis",
+    "specificCategory": "",
+    "kind": "text",
+    "prompt": [
+      { "type": "ar", "text": "ما المتوسط الحسابي للأعداد التالية: 4، 8، 6، 10، 12؟" }
+    ],
+    "options": [
+      { "label": "A", "text": "8" },
+      { "label": "B", "text": "7" },
+      { "label": "C", "text": "9" },
+      { "label": "D", "text": "10" }
+    ],
+    "answerLabels": ["A", "B", "C", "D"],
+    "correctAnswer": "A",
+    "sourceRef": "mock",
+    "reviewStatus": "mock"
+  },
+  {
+    "id": "Q-MISC-1",
+    "generalCategory": "Miscellaneous Topics",
+    "specificCategory": "",
+    "kind": "text",
+    "prompt": [
+      { "type": "ar", "text": "إذا كانت سرعة سيارة 90 كم/ساعة، فكم كيلومترًا تقطع خلال 20 دقيقة؟" }
+    ],
+    "options": [
+      { "label": "A", "text": "30 كم" },
+      { "label": "B", "text": "18 كم" },
+      { "label": "C", "text": "45 كم" },
+      { "label": "D", "text": "20 كم" }
+    ],
+    "answerLabels": ["A", "B", "C", "D"],
+    "correctAnswer": "A",
+    "sourceRef": "mock",
+    "reviewStatus": "mock"
+  }
+]

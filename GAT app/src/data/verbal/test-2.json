@@ -1,0 +1,2014 @@
+[
+  {
+    "id": "V2-001",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Airplane: Fly",
+    "options": [
+      {
+        "label": "A",
+        "text": "Teacher: School"
+      },
+      {
+        "label": "B",
+        "text": "Kitchen: Cook"
+      },
+      {
+        "label": "C",
+        "text": "Hospital: Treat"
+      },
+      {
+        "label": "D",
+        "text": "Driver: Road"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-2.docx#Q1",
+    "sourceQuestionNumber": 1,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-002",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Small: Tiny",
+    "options": [
+      {
+        "label": "A",
+        "text": "Tall: Short"
+      },
+      {
+        "label": "B",
+        "text": "Tall: High"
+      },
+      {
+        "label": "C",
+        "text": "Tall: Ladder"
+      },
+      {
+        "label": "D",
+        "text": "Height: Measure"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-2.docx#Q2",
+    "sourceQuestionNumber": 2,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-003",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Bird: Eagle",
+    "options": [
+      {
+        "label": "A",
+        "text": "Camel: Desert"
+      },
+      {
+        "label": "B",
+        "text": "Mammal: Spider"
+      },
+      {
+        "label": "C",
+        "text": "Zoo: Animal"
+      },
+      {
+        "label": "D",
+        "text": "Mammal: Camel"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "verbal-2.docx#Q3",
+    "sourceQuestionNumber": 3,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-004",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Bees: Honey",
+    "options": [
+      {
+        "label": "A",
+        "text": "Snake: Forest"
+      },
+      {
+        "label": "B",
+        "text": "Snake: Poison"
+      },
+      {
+        "label": "C",
+        "text": "Milk: Cow"
+      },
+      {
+        "label": "D",
+        "text": "Juice: Orange"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-2.docx#Q4",
+    "sourceQuestionNumber": 4,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-005",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Hot: Cold",
+    "options": [
+      {
+        "label": "A",
+        "text": "Friend: Person"
+      },
+      {
+        "label": "B",
+        "text": "Enemy: War"
+      },
+      {
+        "label": "C",
+        "text": "Friend: Enemy"
+      },
+      {
+        "label": "D",
+        "text": "Friend: Colleague"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-2.docx#Q5",
+    "sourceQuestionNumber": 5,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-006",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Sun: Heat",
+    "options": [
+      {
+        "label": "A",
+        "text": "Food: Plate"
+      },
+      {
+        "label": "B",
+        "text": "Doctor: Hospital"
+      },
+      {
+        "label": "C",
+        "text": "Sleep: Bed"
+      },
+      {
+        "label": "D",
+        "text": "Exercise: Health"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "verbal-2.docx#Q6",
+    "sourceQuestionNumber": 6,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-007",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Sandstorm: Weather",
+    "options": [
+      {
+        "label": "A",
+        "text": "Lizard: Reptile"
+      },
+      {
+        "label": "B",
+        "text": "Reptile: Scale"
+      },
+      {
+        "label": "C",
+        "text": "Desert: Lizard"
+      },
+      {
+        "label": "D",
+        "text": "Animal: Zoo"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-2.docx#Q7",
+    "sourceQuestionNumber": 7,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-008",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Take: Snatch",
+    "options": [
+      {
+        "label": "A",
+        "text": "Look: Hear"
+      },
+      {
+        "label": "B",
+        "text": "Look: Stare"
+      },
+      {
+        "label": "C",
+        "text": "Eye: Vision"
+      },
+      {
+        "label": "D",
+        "text": "Watch: TV"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-2.docx#Q8",
+    "sourceQuestionNumber": 8,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-009",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Hunger: Food",
+    "options": [
+      {
+        "label": "A",
+        "text": "Sick: Doctor"
+      },
+      {
+        "label": "B",
+        "text": "Patience: Hospital"
+      },
+      {
+        "label": "C",
+        "text": "Fever: Thermometer"
+      },
+      {
+        "label": "D",
+        "text": "Nurse: Clinic"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-2.docx#Q9",
+    "sourceQuestionNumber": 9,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-010",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Lamb: Sheep",
+    "options": [
+      {
+        "label": "A",
+        "text": "Seed: Tree"
+      },
+      {
+        "label": "B",
+        "text": "Lion: pride"
+      },
+      {
+        "label": "C",
+        "text": "Egg: flour"
+      },
+      {
+        "label": "D",
+        "text": "Foot: shoe"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-2.docx#Q10",
+    "sourceQuestionNumber": 10,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-011",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Sugar: Cane",
+    "options": [
+      {
+        "label": "A",
+        "text": "Pearl: Necklace"
+      },
+      {
+        "label": "B",
+        "text": "Pearl: Oyster"
+      },
+      {
+        "label": "C",
+        "text": "Pearl: Shine"
+      },
+      {
+        "label": "D",
+        "text": "Pearl: White"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-2.docx#Q11",
+    "sourceQuestionNumber": 11,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-012",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Toe: Foot",
+    "options": [
+      {
+        "label": "A",
+        "text": "Apple: Forest"
+      },
+      {
+        "label": "B",
+        "text": "Grape: Vines"
+      },
+      {
+        "label": "C",
+        "text": "Basket: Fruit"
+      },
+      {
+        "label": "D",
+        "text": "Knife: Kitchen"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-2.docx#Q12",
+    "sourceQuestionNumber": 12,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-013",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Combination: Separation",
+    "options": [
+      {
+        "label": "A",
+        "text": "Safety: Helmet"
+      },
+      {
+        "label": "B",
+        "text": "Danger: Warning"
+      },
+      {
+        "label": "C",
+        "text": "Safety: Danger"
+      },
+      {
+        "label": "D",
+        "text": "Secure: Lock"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-2.docx#Q13",
+    "sourceQuestionNumber": 13,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-014",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Touch: Hit",
+    "options": [
+      {
+        "label": "A",
+        "text": "Talk: Sing"
+      },
+      {
+        "label": "B",
+        "text": "Angry: Shout"
+      },
+      {
+        "label": "C",
+        "text": "Sing: Dance"
+      },
+      {
+        "label": "D",
+        "text": "Talk: Shout"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "verbal-2.docx#Q14",
+    "sourceQuestionNumber": 14,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-015",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Knife: Fork",
+    "options": [
+      {
+        "label": "A",
+        "text": "Plate: Spoon"
+      },
+      {
+        "label": "B",
+        "text": "Cup: Kitchen"
+      },
+      {
+        "label": "C",
+        "text": "Salt: Pepper"
+      },
+      {
+        "label": "D",
+        "text": "Spoon: Metal"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-2.docx#Q15",
+    "sourceQuestionNumber": 15,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-016",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Orange: Citrus",
+    "options": [
+      {
+        "label": "A",
+        "text": "Laptop: Computer"
+      },
+      {
+        "label": "B",
+        "text": "Fruit: Vegetable"
+      },
+      {
+        "label": "C",
+        "text": "Glass: Plastic"
+      },
+      {
+        "label": "D",
+        "text": "Dog: Puppy"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-2.docx#Q16",
+    "sourceQuestionNumber": 16,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-017",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Bitcoin as a ______ started in 2009. In ______ to real money, it has no company.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(currency / contrast)"
+      },
+      {
+        "label": "B",
+        "text": "(company / addition)"
+      },
+      {
+        "label": "C",
+        "text": "(bank / relation)"
+      },
+      {
+        "label": "D",
+        "text": "(market / front)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-2.docx#Q17",
+    "sourceQuestionNumber": 17,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-018",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Wadi Tayyib Al Ism is one of the many natural ______ of Tabuk, Saudi Arabia. Nestled in the middle of the mountains, this valley is ______ in the Tabuk province.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(landmarks / desert)"
+      },
+      {
+        "label": "B",
+        "text": "(wonders / located)"
+      },
+      {
+        "label": "C",
+        "text": "(resorts / coastline)"
+      },
+      {
+        "label": "D",
+        "text": "(villages / plains)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-2.docx#Q18",
+    "sourceQuestionNumber": 18,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-019",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "John went to several job ______, and he never found any of the offers ______,",
+    "options": [
+      {
+        "label": "A",
+        "text": "(meetings / interesting)"
+      },
+      {
+        "label": "B",
+        "text": "(applications / suitable)"
+      },
+      {
+        "label": "C",
+        "text": "(interviews / exciting)"
+      },
+      {
+        "label": "D",
+        "text": "(offices / permanent)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-2.docx#Q19",
+    "sourceQuestionNumber": 19,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-020",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "The rhythm of life was ______ by the sunrise and sunset; compared to our time, we have electricity and can achieve our work in the ______ of night.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(guided / middle)"
+      },
+      {
+        "label": "B",
+        "text": "(changed / light)"
+      },
+      {
+        "label": "C",
+        "text": "(controlled / silence)"
+      },
+      {
+        "label": "D",
+        "text": "(determined / darkness)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "verbal-2.docx#Q20",
+    "sourceQuestionNumber": 20,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-021",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Taking the bus to ______ is a good thing because it helps ______ the environment.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(home / clean)"
+      },
+      {
+        "label": "B",
+        "text": "(school / pollute)"
+      },
+      {
+        "label": "C",
+        "text": "(work / harm)"
+      },
+      {
+        "label": "D",
+        "text": "(work / protect)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "verbal-2.docx#Q21",
+    "sourceQuestionNumber": 21,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-022",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "During the winter, it's necessary to ______ in clothes before spending ______ outdoors.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(dress / money)"
+      },
+      {
+        "label": "B",
+        "text": "(bundle up / time)"
+      },
+      {
+        "label": "C",
+        "text": "(change / energy)"
+      },
+      {
+        "label": "D",
+        "text": "(sleep / hours)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-2.docx#Q22",
+    "sourceQuestionNumber": 22,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-023",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Mom taught me not to ______ others for my problems and to look at ______ instead.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(forgive / myself)"
+      },
+      {
+        "label": "B",
+        "text": "(blame / myself)"
+      },
+      {
+        "label": "C",
+        "text": "(blame / them)"
+      },
+      {
+        "label": "D",
+        "text": "(avoid / others)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-2.docx#Q23",
+    "sourceQuestionNumber": 23,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-024",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "In the largest ______ of its kind, a group of psychologists conducted personality tests to look for similar ______ between 49 different nationalities.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(study / habits)"
+      },
+      {
+        "label": "B",
+        "text": "(research / values)"
+      },
+      {
+        "label": "C",
+        "text": "(survey / traits)"
+      },
+      {
+        "label": "D",
+        "text": "(experiment / cultures)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-2.docx#Q24",
+    "sourceQuestionNumber": 24,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-025",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "I am quite excited about ______ in London, but also, I’m quite ______.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(ready / confident)"
+      },
+      {
+        "label": "B",
+        "text": "(planning / calm)"
+      },
+      {
+        "label": "C",
+        "text": "(willing / relaxed)"
+      },
+      {
+        "label": "D",
+        "text": "(living / nervous)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "verbal-2.docx#Q25",
+    "sourceQuestionNumber": 25,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-026",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "The rector of the university ______ the student for his ______ and hard work.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(criticized / behavior)"
+      },
+      {
+        "label": "B",
+        "text": "(rewarded / absence)"
+      },
+      {
+        "label": "C",
+        "text": "(commended / dedication)"
+      },
+      {
+        "label": "D",
+        "text": "(questioned / opinion)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-2.docx#Q26",
+    "sourceQuestionNumber": 26,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-027",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "There has been ______ about expanding the great mosque in Makkah to make it easy and ______ for everyone.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(discussions / comfortable)"
+      },
+      {
+        "label": "B",
+        "text": "(plans / crowded)"
+      },
+      {
+        "label": "C",
+        "text": "(reports / difficult)"
+      },
+      {
+        "label": "D",
+        "text": "(debate / expensive)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-2.docx#Q27",
+    "sourceQuestionNumber": 27,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-028",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Samy is ______ to Japan, so he began learning about their history and ______.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(moving / struggles)"
+      },
+      {
+        "label": "B",
+        "text": "(traveling / culture)"
+      },
+      {
+        "label": "C",
+        "text": "(flying / economy)"
+      },
+      {
+        "label": "D",
+        "text": "(driving / weather)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-2.docx#Q28",
+    "sourceQuestionNumber": 28,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-029",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Dr. Qahtani was the first antique ______ in the national museum. She is the first ______ to graduate.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(curator / student)"
+      },
+      {
+        "label": "B",
+        "text": "(researcher / person)"
+      },
+      {
+        "label": "C",
+        "text": "(specialist / woman)"
+      },
+      {
+        "label": "D",
+        "text": "(collector / doctor)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-2.docx#Q29",
+    "sourceQuestionNumber": 29,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-030",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Look for happiness in your own ______. Don't look for it in someone else's ______.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(life / house)"
+      },
+      {
+        "label": "B",
+        "text": "(heart / world)"
+      },
+      {
+        "label": "C",
+        "text": "(family / future)"
+      },
+      {
+        "label": "D",
+        "text": "(sphere / horizon)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-2.docx#Q30",
+    "sourceQuestionNumber": 30,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-031",
+    "generalCategory": "Contextual Error",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "A new study has (highlighted) the distressing scope of yet another threat to coral reefs: plastics. Researchers (analyzed) more than 124,000 corals from 159 reefs. Almost everywhere they looked, they saw bits of plastic. “We (rejected) chairs, chip wrappers, Q-tips, garbage bags, water bottles, and old nappies,” said a marine (disease) ecologist and Cornell University.",
+    "options": [
+      {
+        "label": "A",
+        "text": "highlighted"
+      },
+      {
+        "label": "B",
+        "text": "analyzed"
+      },
+      {
+        "label": "C",
+        "text": "rejected"
+      },
+      {
+        "label": "D",
+        "text": "disease"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-2.docx#Q31",
+    "sourceQuestionNumber": 31,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-032",
+    "generalCategory": "Contextual Error",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "To form a (vivid) image of the chaos theory someone came up with an imaginary (law): A butterfly in Japan (flaps) its wings and in course of the events (triggers) an El-Niño in America.",
+    "options": [
+      {
+        "label": "A",
+        "text": "vivid"
+      },
+      {
+        "label": "B",
+        "text": "law"
+      },
+      {
+        "label": "C",
+        "text": "flaps"
+      },
+      {
+        "label": "D",
+        "text": "triggers"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-2.docx#Q32",
+    "sourceQuestionNumber": 32,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-033",
+    "generalCategory": "Contextual Error",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "A group of scientists spent several weeks (diving) with whale sharks in the Galapagos Islands last summer in an attempt to solve some of the most (enduring) mysteries. They tried some never-before-used (focus) on the species in the wild: taking blood (samples) and doing ultrasound exams.",
+    "options": [
+      {
+        "label": "A",
+        "text": "diving"
+      },
+      {
+        "label": "B",
+        "text": "enduring"
+      },
+      {
+        "label": "C",
+        "text": "samples"
+      },
+      {
+        "label": "D",
+        "text": "focus"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "verbal-2.docx#Q33",
+    "sourceQuestionNumber": 33,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-034",
+    "generalCategory": "Contextual Error",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Tokyo is a large city with a (population) of 38 million people and is considered an (isolated) metropolitan area and one trip is not enough for you to (explore) the whole city and is a great city for (wanderers).",
+    "options": [
+      {
+        "label": "A",
+        "text": "population"
+      },
+      {
+        "label": "B",
+        "text": "isolated"
+      },
+      {
+        "label": "C",
+        "text": "explore"
+      },
+      {
+        "label": "D",
+        "text": "wanderers"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-2.docx#Q34",
+    "sourceQuestionNumber": 34,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-035",
+    "generalCategory": "Contextual Error",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Each occupation has its own (weaknesses), (bankers), lawyers, and computer professionals for example, all use among themselves (languages) which outsiders have difficulty (following).",
+    "options": [
+      {
+        "label": "A",
+        "text": "weaknesses"
+      },
+      {
+        "label": "B",
+        "text": "languages"
+      },
+      {
+        "label": "C",
+        "text": "following"
+      },
+      {
+        "label": "D",
+        "text": "bankers"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-2.docx#Q35",
+    "sourceQuestionNumber": 35,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-036",
+    "generalCategory": "Contextual Error",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Although extension networks allow for speedy delivery, there may be (delays) as a result of breakdowns and (robberies). There may also be extra toll (charges), and there is more risk of (damage) to goods while in transit.",
+    "options": [
+      {
+        "label": "A",
+        "text": "robberies"
+      },
+      {
+        "label": "B",
+        "text": "delays"
+      },
+      {
+        "label": "C",
+        "text": "charges"
+      },
+      {
+        "label": "D",
+        "text": "damage"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-2.docx#Q36",
+    "sourceQuestionNumber": 36,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-037",
+    "generalCategory": "Contextual Error",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Choosing the (design) of a bridge (fortunately) depends on how wide the obstacle is - is it a small road or an enormous river? The main difference between the three main types of bridges is the (distances) they can cross in a single (span).",
+    "options": [
+      {
+        "label": "A",
+        "text": "fortunately"
+      },
+      {
+        "label": "B",
+        "text": "span"
+      },
+      {
+        "label": "C",
+        "text": "design"
+      },
+      {
+        "label": "D",
+        "text": "distances"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-2.docx#Q37",
+    "sourceQuestionNumber": 37,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-038",
+    "generalCategory": "Contextual Error",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "When it comes to finding cheap (airfare), (flexibility) is essential. Being (spontaneous) with your plans often leads to the best (transactions) on flights.",
+    "options": [
+      {
+        "label": "A",
+        "text": "spontaneous"
+      },
+      {
+        "label": "B",
+        "text": "transactions"
+      },
+      {
+        "label": "C",
+        "text": "airfare"
+      },
+      {
+        "label": "D",
+        "text": "flexibility"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-2.docx#Q38",
+    "sourceQuestionNumber": 38,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-039",
+    "generalCategory": "Contextual Error",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "If you're in the (purchase) for a vehicle, many people would say that you're at the (mercy) of the (salesperson). But there are ways to make sure you don't pay a (premium).",
+    "options": [
+      {
+        "label": "A",
+        "text": "mercy"
+      },
+      {
+        "label": "B",
+        "text": "purchase"
+      },
+      {
+        "label": "C",
+        "text": "premium"
+      },
+      {
+        "label": "D",
+        "text": "salesperson"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-2.docx#Q39",
+    "sourceQuestionNumber": 39,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-040",
+    "generalCategory": "Contextual Error",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "In the space of a little more than a year, events (provided) that made a mockery of the claim that the (lavish) compensation paid to financiers was justified by their exceptional (skills), particularly in the (realm) of risk management.",
+    "options": [
+      {
+        "label": "A",
+        "text": "lavish"
+      },
+      {
+        "label": "B",
+        "text": "skills"
+      },
+      {
+        "label": "C",
+        "text": "realm"
+      },
+      {
+        "label": "D",
+        "text": "provided"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "verbal-2.docx#Q40",
+    "sourceQuestionNumber": 40,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V2-041",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "What did Herbert think of the European man?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Europeans overcame obstacles with grace and creativity"
+      },
+      {
+        "label": "B",
+        "text": "Europeans aren't moving as they should move"
+      },
+      {
+        "label": "C",
+        "text": "Europeans were physically stronger than indigenous people"
+      },
+      {
+        "label": "D",
+        "text": "Europeans were the best at adapting to unfamiliar routes"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-2.docx#Q45",
+    "sourceQuestionNumber": 45,
+    "reviewStatus": "final",
+    "passageId": "verbal-2-passage-01"
+  },
+  {
+    "id": "V2-042",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Why did the author mention the motto?",
+    "options": [
+      {
+        "label": "A",
+        "text": "To explain why France created military obstacle courses"
+      },
+      {
+        "label": "B",
+        "text": "To show tea-like “balance with nature” was important"
+      },
+      {
+        "label": "C",
+        "text": "To prove indigenous people were naturally athletic"
+      },
+      {
+        "label": "D",
+        "text": "To emphasize that strength must be both physically and mentally"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "verbal-2.docx#Q46",
+    "sourceQuestionNumber": 46,
+    "reviewStatus": "final",
+    "passageId": "verbal-2-passage-01"
+  },
+  {
+    "id": "V2-043",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "What was his job?",
+    "options": [
+      {
+        "label": "A",
+        "text": "A young French naval lieutenant"
+      },
+      {
+        "label": "B",
+        "text": "A French Special Forces commander in the 1950s"
+      },
+      {
+        "label": "C",
+        "text": "The mayor of St. Pierre"
+      },
+      {
+        "label": "D",
+        "text": "A tea merchant from the Han Dynasty"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-2.docx#Q47",
+    "sourceQuestionNumber": 47,
+    "reviewStatus": "final",
+    "passageId": "verbal-2-passage-01"
+  },
+  {
+    "id": "V2-044",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "What role did George Hebert play during the eruption?",
+    "options": [
+      {
+        "label": "A",
+        "text": "He rebuilt the town after the eruption"
+      },
+      {
+        "label": "B",
+        "text": "He studied the cause of the eruption"
+      },
+      {
+        "label": "C",
+        "text": "He trained soldiers to fight the disaster"
+      },
+      {
+        "label": "D",
+        "text": "He helped evacuate people to safety"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "verbal-2.docx#Q48",
+    "sourceQuestionNumber": 48,
+    "reviewStatus": "final",
+    "passageId": "verbal-2-passage-01"
+  },
+  {
+    "id": "V2-045",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "What does “epiphany” mean as used in paragraph 1?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Discovery"
+      },
+      {
+        "label": "B",
+        "text": "Confusion"
+      },
+      {
+        "label": "C",
+        "text": "Tragedy"
+      },
+      {
+        "label": "D",
+        "text": "Training"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-2.docx#Q49",
+    "sourceQuestionNumber": 49,
+    "reviewStatus": "final",
+    "passageId": "verbal-2-passage-01"
+  },
+  {
+    "id": "V2-046",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "When did the volcano hit St. Pierre?",
+    "options": [
+      {
+        "label": "A",
+        "text": "1892"
+      },
+      {
+        "label": "B",
+        "text": "1902"
+      },
+      {
+        "label": "C",
+        "text": "1912"
+      },
+      {
+        "label": "D",
+        "text": "1922"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-2.docx#Q50",
+    "sourceQuestionNumber": 50,
+    "reviewStatus": "final",
+    "passageId": "verbal-2-passage-01"
+  },
+  {
+    "id": "V2-047",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "What did George Hebert’s work on the Natural Method eventually lead to?",
+    "options": [
+      {
+        "label": "A",
+        "text": "The French naval academy"
+      },
+      {
+        "label": "B",
+        "text": "The modern Olympic Games"
+      },
+      {
+        "label": "C",
+        "text": "The path of the warrior"
+      },
+      {
+        "label": "D",
+        "text": "The European evacuation system"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-2.docx#Q51",
+    "sourceQuestionNumber": 51,
+    "reviewStatus": "final",
+    "passageId": "verbal-2-passage-01"
+  },
+  {
+    "id": "V2-048",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "In paragraph one, we know that Hawaiian cowboys are?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Influencers in American cowboy culture"
+      },
+      {
+        "label": "B",
+        "text": "As old as American cowboys"
+      },
+      {
+        "label": "C",
+        "text": "Influenced by American cowboy technique"
+      },
+      {
+        "label": "D",
+        "text": "Traditional cowboys"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "verbal-2.docx#Q52",
+    "sourceQuestionNumber": 52,
+    "reviewStatus": "final",
+    "passageId": "verbal-2-passage-02"
+  },
+  {
+    "id": "V2-049",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Who asked for the vaqueros’ help?",
+    "options": [
+      {
+        "label": "A",
+        "text": "American ranchers"
+      },
+      {
+        "label": "B",
+        "text": "Mexican officials"
+      },
+      {
+        "label": "C",
+        "text": "Hawaiians"
+      },
+      {
+        "label": "D",
+        "text": "Tourists in Waimea"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-2.docx#Q53",
+    "sourceQuestionNumber": 53,
+    "reviewStatus": "final",
+    "passageId": "verbal-2-passage-02"
+  },
+  {
+    "id": "V2-050",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Meaning of mentor in paragraph 5?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Origin"
+      },
+      {
+        "label": "B",
+        "text": "Teach"
+      },
+      {
+        "label": "C",
+        "text": "Relatives"
+      },
+      {
+        "label": "D",
+        "text": "Enemy"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-2.docx#Q54",
+    "sourceQuestionNumber": 54,
+    "reviewStatus": "final",
+    "passageId": "verbal-2-passage-02"
+  },
+  {
+    "id": "V2-051",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "What is said about ranching as a job?",
+    "options": [
+      {
+        "label": "A",
+        "text": "It made cowboys rich quickly"
+      },
+      {
+        "label": "B",
+        "text": "It wasn’t enough for a cowboy to live off"
+      },
+      {
+        "label": "C",
+        "text": "It requires no special skills"
+      },
+      {
+        "label": "D",
+        "text": "It was only done in mainland America"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-2.docx#Q55",
+    "sourceQuestionNumber": 55,
+    "reviewStatus": "final",
+    "passageId": "verbal-2-passage-02"
+  },
+  {
+    "id": "V2-052",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Based on the passage, what is implied about the future of the Paniolo culture?",
+    "options": [
+      {
+        "label": "A",
+        "text": "It will always remain a central part of Hawaiian identity"
+      },
+      {
+        "label": "B",
+        "text": "It has become widely recognized in mainland America"
+      },
+      {
+        "label": "C",
+        "text": "It has been widely adopted by mainland ranchers"
+      },
+      {
+        "label": "D",
+        "text": "It’s likely to be less popular in the future"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "verbal-2.docx#Q56",
+    "sourceQuestionNumber": 56,
+    "reviewStatus": "final",
+    "passageId": "verbal-2-passage-02"
+  },
+  {
+    "id": "V2-053",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Meaning of thrived?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Increased"
+      },
+      {
+        "label": "B",
+        "text": "Nourished"
+      },
+      {
+        "label": "C",
+        "text": "Adapt"
+      },
+      {
+        "label": "D",
+        "text": "Deteriorate"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-2.docx#Q57",
+    "sourceQuestionNumber": 57,
+    "reviewStatus": "final",
+    "passageId": "verbal-2-passage-02"
+  },
+  {
+    "id": "V2-054",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "How is Waimea described?",
+    "options": [
+      {
+        "label": "A",
+        "text": "A crowded modern city"
+      },
+      {
+        "label": "B",
+        "text": "A beach resort town"
+      },
+      {
+        "label": "C",
+        "text": "An unusual Hawaiian town"
+      },
+      {
+        "label": "D",
+        "text": "A desert village"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-2.docx#Q58",
+    "sourceQuestionNumber": 58,
+    "reviewStatus": "final",
+    "passageId": "verbal-2-passage-02"
+  },
+  {
+    "id": "V2-055",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "What is Waimea known for?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Volcano tourism"
+      },
+      {
+        "label": "B",
+        "text": "Cowboy heritage"
+      },
+      {
+        "label": "C",
+        "text": "Tea plantations"
+      },
+      {
+        "label": "D",
+        "text": "Gold diving missions"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-2.docx#Q59",
+    "sourceQuestionNumber": 59,
+    "reviewStatus": "final",
+    "passageId": "verbal-2-passage-02"
+  },
+  {
+    "id": "V2-056",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Who are the Mexican vaqueros?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Priests"
+      },
+      {
+        "label": "B",
+        "text": "Teachers"
+      },
+      {
+        "label": "C",
+        "text": "Divers"
+      },
+      {
+        "label": "D",
+        "text": "Cowboys"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "verbal-2.docx#Q60",
+    "sourceQuestionNumber": 60,
+    "reviewStatus": "final",
+    "passageId": "verbal-2-passage-02"
+  },
+  {
+    "id": "V2-057",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Which of the following is true about Hawaiian cowboys?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Cowboys only originate from Texas, and New Mexico"
+      },
+      {
+        "label": "B",
+        "text": "Hawaiian cowboys are less famous than American cowboys"
+      },
+      {
+        "label": "C",
+        "text": "They were originally brought from Switzerland"
+      },
+      {
+        "label": "D",
+        "text": "Their numbers have increased significantly in recent years"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-2.docx#Q61",
+    "sourceQuestionNumber": 61,
+    "reviewStatus": "final",
+    "passageId": "verbal-2-passage-02"
+  }
+]

@@ -1,0 +1,2519 @@
+[
+  {
+    "specificCategory": "Shaded Areas",
+    "kind": "image",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "If the total area of the circle is "
+      },
+      {
+        "type": "tex",
+        "text": "80\\text{ cm}^{2}"
+      },
+      {
+        "type": "text",
+        "text": ", find the area of the shaded part."
+      }
+    ],
+    "image": "/questions/quantitative/test-1/q01-shaded-circle-sectors.png",
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "tex": "30\\text{ cm}^{2}"
+      },
+      {
+        "label": "B",
+        "tex": "50\\text{ cm}^{2}"
+      },
+      {
+        "label": "C",
+        "tex": "20\\text{ cm}^{2}"
+      },
+      {
+        "label": "D",
+        "tex": "60\\text{ cm}^{2}"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "quantitative-1.docx#Q1",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Shaded Areas",
+    "kind": "image",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "What is the area of the shaded region if the side length of the big square is "
+      },
+      {
+        "type": "tex",
+        "text": "4\\text{ cm}"
+      },
+      {
+        "type": "text",
+        "text": "?"
+      }
+    ],
+    "image": "/questions/quantitative/test-1/q02-shaded-square-quadrants.png",
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "tex": "8\\text{ cm}^{2}"
+      },
+      {
+        "label": "B",
+        "tex": "10\\text{ cm}^{2}"
+      },
+      {
+        "label": "C",
+        "tex": "6\\text{ cm}^{2}"
+      },
+      {
+        "label": "D",
+        "tex": "5\\text{ cm}^{2}"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "quantitative-1.docx#Q2",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Exponents",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "Simplify: "
+      },
+      {
+        "type": "tex",
+        "text": "(-x{)}^{11}"
+      }
+    ],
+    "image": null,
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "tex": "{x}^{11}"
+      },
+      {
+        "label": "B",
+        "tex": "-{x}^{11}"
+      },
+      {
+        "label": "C",
+        "tex": "11x"
+      },
+      {
+        "label": "D",
+        "tex": "11-x"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "quantitative-1.docx#Q3",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Exponents",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "Find the positive value of "
+      },
+      {
+        "type": "tex",
+        "text": "x"
+      },
+      {
+        "type": "text",
+        "text": " where: "
+      },
+      {
+        "type": "tex",
+        "text": "\\frac{1}{(x+8{)}^{4}}=\\frac{1}{10000}"
+      }
+    ],
+    "image": null,
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "3"
+      },
+      {
+        "label": "B",
+        "text": "18"
+      },
+      {
+        "label": "C",
+        "text": "2"
+      },
+      {
+        "label": "D",
+        "text": "6"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "quantitative-1.docx#Q4",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Exponents",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "If "
+      },
+      {
+        "type": "tex",
+        "text": "{7}^{x-4}=1,"
+      },
+      {
+        "type": "text",
+        "text": " then "
+      },
+      {
+        "type": "tex",
+        "text": "x\\text{ is}"
+      }
+    ],
+    "image": null,
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "6"
+      },
+      {
+        "label": "B",
+        "text": "7"
+      },
+      {
+        "label": "C",
+        "text": "5"
+      },
+      {
+        "label": "D",
+        "text": "4"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "quantitative-1.docx#Q5",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Triangles",
+    "kind": "image",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "Compare: "
+      }
+    ],
+    "image": "/questions/quantitative/test-1/q06-triangles-abc-dbc.png",
+    "compareTable": {
+      "columns": [
+        "A",
+        "B"
+      ],
+      "rows": [
+        [
+          {
+            "segments": [
+              {
+                "type": "text",
+                "text": "Area of triangle "
+              },
+              {
+                "type": "tex",
+                "text": "ABC"
+              }
+            ]
+          },
+          {
+            "segments": [
+              {
+                "type": "text",
+                "text": "Area of triangle "
+              },
+              {
+                "type": "tex",
+                "text": "DBC"
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    "options": [
+      {
+        "label": "A",
+        "text": "A"
+      },
+      {
+        "label": "B",
+        "text": "B"
+      },
+      {
+        "label": "C",
+        "text": "Equal"
+      },
+      {
+        "label": "D",
+        "text": "Not enough info"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "quantitative-1.docx#Q6",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Triangles",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "The side lengths of a triangle are in the ratio (2:2:3). What type of triangle is it?"
+      }
+    ],
+    "image": null,
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "Scalene triangle"
+      },
+      {
+        "label": "B",
+        "text": "Isosceles triangle"
+      },
+      {
+        "label": "C",
+        "text": "Equilateral triangle"
+      },
+      {
+        "label": "D",
+        "text": "Right triangle"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "quantitative-1.docx#Q7",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Circles",
+    "kind": "image",
+    "prompt": [
+      {
+        "type": "tex",
+        "text": "A"
+      },
+      {
+        "type": "text",
+        "text": " and "
+      },
+      {
+        "type": "tex",
+        "text": "B"
+      },
+      {
+        "type": "text",
+        "text": " are similar circles with a radius of 6 cm. Find the length of "
+      },
+      {
+        "type": "tex",
+        "text": "AB"
+      },
+      {
+        "type": "text",
+        "text": "."
+      }
+    ],
+    "image": "/questions/quantitative/test-1/q08-overlapping-circles-ab.png",
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "6"
+      },
+      {
+        "label": "B",
+        "text": "9"
+      },
+      {
+        "label": "C",
+        "text": "12"
+      },
+      {
+        "label": "D",
+        "text": "8"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "quantitative-1.docx#Q8",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Numbers & Order of Operations",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "Compare:"
+      }
+    ],
+    "image": null,
+    "compareTable": {
+      "columns": [
+        "A",
+        "B"
+      ],
+      "rows": [
+        [
+          {
+            "segments": [
+              {
+                "type": "text",
+                "text": "The difference between two consecutive even numbers"
+              }
+            ]
+          },
+          {
+            "segments": [
+              {
+                "type": "text",
+                "text": "The difference between two consecutive odd numbers"
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    "options": [
+      {
+        "label": "A",
+        "text": "A is greater"
+      },
+      {
+        "label": "B",
+        "text": "B is greater"
+      },
+      {
+        "label": "C",
+        "text": "Equal"
+      },
+      {
+        "label": "D",
+        "text": "Not enough info"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "quantitative-1.docx#Q9",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Numbers & Order of Operations",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "Complete the sequence: "
+      },
+      {
+        "type": "tex",
+        "text": "3\\frac{1}{2}, 5\\frac{1}{3}, 7\\frac{1}{4}, 9\\frac{1}{5},…."
+      }
+    ],
+    "image": null,
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "tex": "10\\frac{1}{10}"
+      },
+      {
+        "label": "B",
+        "tex": "11\\frac{1}{6}"
+      },
+      {
+        "label": "C",
+        "tex": "12\\frac{1}{4}"
+      },
+      {
+        "label": "D",
+        "tex": "11\\frac{1}{11}"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "quantitative-1.docx#Q10",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Numbers & Order of Operations",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "The sum of 7 odd consecutive numbers is 7. What is the middle number?"
+      }
+    ],
+    "image": null,
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "-1"
+      },
+      {
+        "label": "B",
+        "text": "-2"
+      },
+      {
+        "label": "C",
+        "text": "0"
+      },
+      {
+        "label": "D",
+        "text": "1"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "quantitative-1.docx#Q11",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Numbers & Order of Operations",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "Complete the sequence "
+      },
+      {
+        "type": "tex",
+        "text": "1, 2, 4, 7, 11, 16, …"
+      }
+    ],
+    "image": null,
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "20"
+      },
+      {
+        "label": "B",
+        "text": "22"
+      },
+      {
+        "label": "C",
+        "text": "21"
+      },
+      {
+        "label": "D",
+        "text": "24"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "quantitative-1.docx#Q12",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Numbers & Order of Operations",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "Compare:"
+      }
+    ],
+    "image": null,
+    "compareTable": {
+      "columns": [
+        "A",
+        "B"
+      ],
+      "rows": [
+        [
+          {
+            "segments": [
+              {
+                "type": "text",
+                "text": "The largest prime factor of "
+              },
+              {
+                "type": "tex",
+                "text": "130"
+              }
+            ]
+          },
+          {
+            "segments": [
+              {
+                "type": "tex",
+                "text": "15"
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    "options": [
+      {
+        "label": "A",
+        "text": "A is greater"
+      },
+      {
+        "label": "B",
+        "text": "B is greater"
+      },
+      {
+        "label": "C",
+        "text": "Equal"
+      },
+      {
+        "label": "D",
+        "text": "Not enough info"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "quantitative-1.docx#Q13",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Areas, Perimeters & Volumes",
+    "kind": "image",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "There are 6 cubes with a side length of 1cm in the opposite figure. Compare:"
+      }
+    ],
+    "image": "/questions/quantitative/test-1/q14-cube-with-small-cubes.png",
+    "compareTable": {
+      "columns": [
+        "A",
+        "B"
+      ],
+      "rows": [
+        [
+          {
+            "segments": [
+              {
+                "type": "text",
+                "text": "The number of cubes do we need to fill a cube with edge "
+              },
+              {
+                "type": "tex",
+                "text": "5"
+              },
+              {
+                "type": "text",
+                "text": " cm"
+              }
+            ]
+          },
+          {
+            "segments": [
+              {
+                "type": "tex",
+                "text": "119"
+              },
+              {
+                "type": "text",
+                "text": " cubes"
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    "options": [
+      {
+        "label": "A",
+        "text": "A is greater"
+      },
+      {
+        "label": "B",
+        "text": "B is greater"
+      },
+      {
+        "label": "C",
+        "text": "Equal"
+      },
+      {
+        "label": "D",
+        "text": "Not enough information"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "quantitative-1.docx#Q14",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Areas, Perimeters & Volumes",
+    "kind": "image",
+    "prompt": [
+      {
+        "type": "tex",
+        "text": "ABCD"
+      },
+      {
+        "type": "text",
+        "text": " is a rectangle where "
+      },
+      {
+        "type": "tex",
+        "text": "AB=BH=3\\text{ cm}"
+      },
+      {
+        "type": "text",
+        "text": " and "
+      },
+      {
+        "type": "tex",
+        "text": "HC=3BH"
+      },
+      {
+        "type": "text",
+        "text": ". Find the area of the rectangle?"
+      }
+    ],
+    "image": "/questions/quantitative/test-1/q15-rectangle-diagonal.png",
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "tex": "36\\text{ cm}^{2}"
+      },
+      {
+        "label": "B",
+        "tex": "40\\text{ cm}^{2}"
+      },
+      {
+        "label": "C",
+        "tex": "12\\text{ cm}^{2}"
+      },
+      {
+        "label": "D",
+        "tex": "\\text{24}{\\text{cm}}^{2}"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "quantitative-1.docx#Q15",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Decimals",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "Calculate "
+      },
+      {
+        "type": "tex",
+        "text": "4\\times 0.4\\times 0.04\\times 0.002="
+      }
+    ],
+    "image": null,
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "1280"
+      },
+      {
+        "label": "B",
+        "text": "0.128"
+      },
+      {
+        "label": "C",
+        "text": "0.000128"
+      },
+      {
+        "label": "D",
+        "text": "0.00128"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "quantitative-1.docx#Q16",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Polygons & Quadrilaterals",
+    "kind": "image",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "Find "
+      },
+      {
+        "type": "tex",
+        "text": "x"
+      },
+      {
+        "type": "text",
+        "text": " in the following parallelogram."
+      }
+    ],
+    "image": "/questions/quantitative/test-1/q17-parallelogram-angles.png",
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "tex": "{40}^{^{\\circ}}"
+      },
+      {
+        "label": "B",
+        "tex": "{60}^{^{\\circ}}"
+      },
+      {
+        "label": "C",
+        "tex": "{120}^{^{\\circ}}"
+      },
+      {
+        "label": "D",
+        "tex": "{90}^{^{\\circ}}"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "quantitative-1.docx#Q17",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Ratios & Percentages",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "If the ratio between "
+      },
+      {
+        "type": "tex",
+        "text": "x :{x}^{2}\\text{ is} 2 :20"
+      },
+      {
+        "type": "text",
+        "text": ", what is the value of "
+      },
+      {
+        "type": "tex",
+        "text": "x"
+      },
+      {
+        "type": "text",
+        "text": "?"
+      }
+    ],
+    "image": null,
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "5"
+      },
+      {
+        "label": "B",
+        "text": "10"
+      },
+      {
+        "label": "C",
+        "text": "15"
+      },
+      {
+        "label": "D",
+        "text": "20"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "quantitative-1.docx#Q18",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Ratios & Percentages",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "If zakat is 2.5% of the original amount, and the zakat paid was 160 SR, what was the original amount?"
+      }
+    ],
+    "image": null,
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "6,400 riyals"
+      },
+      {
+        "label": "B",
+        "text": "40,000 riyals"
+      },
+      {
+        "label": "C",
+        "text": "3,200 riyals"
+      },
+      {
+        "label": "D",
+        "text": "4,800 riyals"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "quantitative-1.docx#Q19",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Ratios & Percentages",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "Ali had 2400 SR and now he has 1800 SR, what percent of his original money did he spend?"
+      }
+    ],
+    "image": null,
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "tex": "15\\%"
+      },
+      {
+        "label": "B",
+        "tex": "20\\%"
+      },
+      {
+        "label": "C",
+        "tex": "25\\%"
+      },
+      {
+        "label": "D",
+        "tex": "10\\%"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "quantitative-1.docx#Q20",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Proportions",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "Two circles, the first rotates 5 times per second and the other rotates 9 times per second. If the first rotates 45 times, how many times does the second circle rotate?"
+      }
+    ],
+    "image": null,
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "45"
+      },
+      {
+        "label": "B",
+        "text": "56"
+      },
+      {
+        "label": "C",
+        "text": "81"
+      },
+      {
+        "label": "D",
+        "text": "90"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "quantitative-1.docx#Q21",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Angles",
+    "kind": "image",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "In the opposite figure, compare:"
+      }
+    ],
+    "image": "/questions/quantitative/test-1/q22-triangle-angles.png",
+    "compareTable": {
+      "columns": [
+        "A",
+        "B"
+      ],
+      "rows": [
+        [
+          {
+            "segments": [
+              {
+                "type": "tex",
+                "text": "m(A)+m(B)"
+              }
+            ]
+          },
+          {
+            "segments": [
+              {
+                "type": "tex",
+                "text": "{125}^{^{\\circ}}"
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    "options": [
+      {
+        "label": "A",
+        "text": "A is greater"
+      },
+      {
+        "label": "B",
+        "text": "B is greater"
+      },
+      {
+        "label": "C",
+        "text": "Equal"
+      },
+      {
+        "label": "D",
+        "text": "Not enough info"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "quantitative-1.docx#Q22",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Angles",
+    "kind": "image",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "Compare:"
+      }
+    ],
+    "image": "/questions/quantitative/test-1/q23-parallel-lines-angles.png",
+    "compareTable": {
+      "columns": [
+        "A",
+        "B"
+      ],
+      "rows": [
+        [
+          {
+            "segments": [
+              {
+                "type": "tex",
+                "text": "x^{\\circ}"
+              }
+            ]
+          },
+          {
+            "segments": [
+              {
+                "type": "tex",
+                "text": "y^{\\circ}"
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    "options": [
+      {
+        "label": "A",
+        "text": "A is greater"
+      },
+      {
+        "label": "B",
+        "text": "B is greater"
+      },
+      {
+        "label": "C",
+        "text": "Equal"
+      },
+      {
+        "label": "D",
+        "text": "Not enough information"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "quantitative-1.docx#Q23",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Algebraic Expressions, Equations & Inequalities",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "If "
+      },
+      {
+        "type": "tex",
+        "text": "0.7x+1.8y=2.8"
+      },
+      {
+        "type": "text",
+        "text": ", find the value of "
+      },
+      {
+        "type": "tex",
+        "text": "14x+36y"
+      },
+      {
+        "type": "text",
+        "text": "."
+      }
+    ],
+    "image": null,
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "48"
+      },
+      {
+        "label": "B",
+        "text": "56"
+      },
+      {
+        "label": "C",
+        "text": "45"
+      },
+      {
+        "label": "D",
+        "text": "60"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "quantitative-1.docx#Q24",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Algebraic Expressions, Equations & Inequalities",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "Let "
+      },
+      {
+        "type": "tex",
+        "text": "1+2n>0,"
+      },
+      {
+        "type": "text",
+        "text": " compare:"
+      }
+    ],
+    "image": null,
+    "compareTable": {
+      "columns": [
+        "A",
+        "B"
+      ],
+      "rows": [
+        [
+          {
+            "segments": [
+              {
+                "type": "tex",
+                "text": "n"
+              }
+            ]
+          },
+          {
+            "segments": [
+              {
+                "type": "tex",
+                "text": "\\frac{-3}{4}"
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    "options": [
+      {
+        "label": "A",
+        "text": "A is greater"
+      },
+      {
+        "label": "B",
+        "text": "B is greater"
+      },
+      {
+        "label": "C",
+        "text": "Equal"
+      },
+      {
+        "label": "D",
+        "text": "Not enough info"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "quantitative-1.docx#Q25",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Algebraic Expressions, Equations & Inequalities",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "If "
+      },
+      {
+        "type": "tex",
+        "text": "{x}^{2}=1"
+      },
+      {
+        "type": "text",
+        "text": ", what is the sum of all possible values of x?"
+      }
+    ],
+    "image": null,
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "2"
+      },
+      {
+        "label": "B",
+        "text": "1"
+      },
+      {
+        "label": "C",
+        "text": "0"
+      },
+      {
+        "label": "D",
+        "text": "3"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "quantitative-1.docx#Q26",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Algebraic Expressions, Equations & Inequalities",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "Sahar is 30 years old. She has three sons whose ages are 0, 3, and 5. After 12 years, the total age of Sahar and her husband will be twice the total age of their three children. How old will her husband be after 12 years?"
+      }
+    ],
+    "image": null,
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "45"
+      },
+      {
+        "label": "B",
+        "text": "46"
+      },
+      {
+        "label": "C",
+        "text": "50"
+      },
+      {
+        "label": "D",
+        "text": "52 Years old"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "quantitative-1.docx#Q27",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Algebraic Expressions, Equations & Inequalities",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "If "
+      },
+      {
+        "type": "tex",
+        "text": "x, y\\neq 0"
+      },
+      {
+        "type": "text",
+        "text": ", compare:"
+      }
+    ],
+    "image": null,
+    "compareTable": {
+      "columns": [
+        "A",
+        "B"
+      ],
+      "rows": [
+        [
+          {
+            "segments": [
+              {
+                "type": "tex",
+                "text": "x(y-7)+y(y-7)"
+              }
+            ]
+          },
+          {
+            "segments": [
+              {
+                "type": "tex",
+                "text": "y(x+y)-7(x+y)"
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    "options": [
+      {
+        "label": "A",
+        "text": "A is greater"
+      },
+      {
+        "label": "B",
+        "text": "B is greater"
+      },
+      {
+        "label": "C",
+        "text": "Equal"
+      },
+      {
+        "label": "D",
+        "text": "Not enough info"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "quantitative-1.docx#Q28",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Algebraic Expressions, Equations & Inequalities",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "If "
+      },
+      {
+        "type": "tex",
+        "text": "5-2x<0"
+      },
+      {
+        "type": "text",
+        "text": ", compare:"
+      }
+    ],
+    "image": null,
+    "compareTable": {
+      "columns": [
+        "A",
+        "B"
+      ],
+      "rows": [
+        [
+          {
+            "segments": [
+              {
+                "type": "tex",
+                "text": "x"
+              }
+            ]
+          },
+          {
+            "segments": [
+              {
+                "type": "tex",
+                "text": "\\frac{5}{2}"
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    "options": [
+      {
+        "label": "A",
+        "text": "A is greater"
+      },
+      {
+        "label": "B",
+        "text": "B is greater"
+      },
+      {
+        "label": "C",
+        "text": "Equal"
+      },
+      {
+        "label": "D",
+        "text": "Not enough info"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "quantitative-1.docx#Q29",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Data Analysis",
+    "kind": "image",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "The graph shows the sales of a clothing store. In which month did men’s clothing sales decrease compared with the previous month shown in the graph?"
+      }
+    ],
+    "image": "/questions/quantitative/test-1/q30-bar-chart-clothing-sales.png",
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "Rabi' al-Thani"
+      },
+      {
+        "label": "B",
+        "text": "Rabi' al-Awwal"
+      },
+      {
+        "label": "C",
+        "text": "Safar"
+      },
+      {
+        "label": "D",
+        "text": "Muharram"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "quantitative-1.docx#Q30",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Data Analysis",
+    "kind": "image",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "The figure shows the farm’s production over 7 years. The total production is 720 tons, and the production in the 3rd and 5th years is 80 tons altogether. By which year did the farm’s total production reach 440 tons?"
+      }
+    ],
+    "image": "/questions/quantitative/test-1/q31-pie-chart-years.png",
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "The third year"
+      },
+      {
+        "label": "B",
+        "text": "The fourth year"
+      },
+      {
+        "label": "C",
+        "text": "The fifth year"
+      },
+      {
+        "label": "D",
+        "text": "The sixth year"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "quantitative-1.docx#Q31",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Data Analysis",
+    "kind": "image",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "Based on the figure below, what was the percentage decrease in industries from 2001 to 2003?"
+      }
+    ],
+    "image": "/questions/quantitative/test-1/q32-data-table-expenses.png",
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "tex": "5\\%"
+      },
+      {
+        "label": "B",
+        "tex": "10\\%"
+      },
+      {
+        "label": "C",
+        "tex": "20\\%"
+      },
+      {
+        "label": "D",
+        "tex": "15\\%"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "quantitative-1.docx#Q32",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Data Analysis",
+    "kind": "image",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "Which year range has car production closest to the production in 2001–2005?"
+      }
+    ],
+    "image": "/questions/quantitative/test-1/q33-bar-chart-car-production.png",
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "tex": "1775-1779"
+      },
+      {
+        "label": "B",
+        "tex": "1884-1890"
+      },
+      {
+        "label": "C",
+        "tex": "1850-1870"
+      },
+      {
+        "label": "D",
+        "tex": "1907-1914"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "quantitative-1.docx#Q33",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Data Analysis",
+    "kind": "image",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "If a company sold 1 million vehicles in total, how many trucks and 4×4s did it sell in the same year?"
+      }
+    ],
+    "image": "/questions/quantitative/test-1/q34-pie-chart-vehicle-types.png",
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "20000"
+      },
+      {
+        "label": "B",
+        "text": "333000"
+      },
+      {
+        "label": "C",
+        "text": "300000"
+      },
+      {
+        "label": "D",
+        "text": "150000"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "quantitative-1.docx#Q34",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Speed - Time - Distance",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "Emad traveled 220 km in 3 hours at a constant speed. How many hours will he need to travel 1100 km at the same speed?"
+      }
+    ],
+    "image": null,
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "18"
+      },
+      {
+        "label": "B",
+        "text": "10"
+      },
+      {
+        "label": "C",
+        "text": "12"
+      },
+      {
+        "label": "D",
+        "text": "15"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "quantitative-1.docx#Q35",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Fractions",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "Compare:"
+      }
+    ],
+    "image": null,
+    "compareTable": {
+      "columns": [
+        "A",
+        "B"
+      ],
+      "rows": [
+        [
+          {
+            "segments": [
+              {
+                "type": "tex",
+                "text": "\\frac{1}{2}+\\frac{1}{3}"
+              }
+            ]
+          },
+          {
+            "segments": [
+              {
+                "type": "tex",
+                "text": "\\frac{1}{3+2}"
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    "options": [
+      {
+        "label": "A",
+        "text": "A is greater"
+      },
+      {
+        "label": "B",
+        "text": "B is greater"
+      },
+      {
+        "label": "C",
+        "text": "Equal"
+      },
+      {
+        "label": "D",
+        "text": "Not enough info"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "quantitative-1.docx#Q36",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Division",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "When 9 is divided by "
+      },
+      {
+        "type": "tex",
+        "text": "x"
+      },
+      {
+        "type": "text",
+        "text": ", the remainder is 2. Find a possible value of "
+      },
+      {
+        "type": "tex",
+        "text": "x"
+      },
+      {
+        "type": "text",
+        "text": "."
+      }
+    ],
+    "image": null,
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "5"
+      },
+      {
+        "label": "B",
+        "text": "6"
+      },
+      {
+        "label": "C",
+        "text": "7"
+      },
+      {
+        "label": "D",
+        "text": "9"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "quantitative-1.docx#Q37",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Roots",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "Compare:"
+      }
+    ],
+    "image": null,
+    "compareTable": {
+      "columns": [
+        "A",
+        "B"
+      ],
+      "rows": [
+        [
+          {
+            "segments": [
+              {
+                "type": "tex",
+                "text": "\\sqrt{99}"
+              }
+            ]
+          },
+          {
+            "segments": [
+              {
+                "type": "tex",
+                "text": "\\sqrt{11}+\\sqrt{51}"
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    "options": [
+      {
+        "label": "A",
+        "text": "A is greater"
+      },
+      {
+        "label": "B",
+        "text": "B is greater"
+      },
+      {
+        "label": "C",
+        "text": "Equal"
+      },
+      {
+        "label": "D",
+        "text": "Not enough info"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "quantitative-1.docx#Q38",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Statistics",
+    "kind": "image",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "Which number, if added to the table, would change the range?"
+      }
+    ],
+    "image": "/questions/quantitative/test-1/q39-number-grid.png",
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "3"
+      },
+      {
+        "label": "B",
+        "text": "6"
+      },
+      {
+        "label": "C",
+        "text": "4"
+      },
+      {
+        "label": "D",
+        "text": "7"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "quantitative-1.docx#Q39",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Numbers & Order of Operations",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "When writing numbers from 1 to 200, how many times does the digit 5 appear?"
+      }
+    ],
+    "image": null,
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "20"
+      },
+      {
+        "label": "B",
+        "text": "30"
+      },
+      {
+        "label": "C",
+        "text": "40"
+      },
+      {
+        "label": "D",
+        "text": "50"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "quantitative-1.docx#Q40",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Exponents",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "What is the value of x, if "
+      },
+      {
+        "type": "tex",
+        "text": "{ x}^{2 }={3}^{-4}"
+      }
+    ],
+    "image": null,
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "tex": "\\pm \\frac{1}{9}"
+      },
+      {
+        "label": "B",
+        "tex": "-\\frac{1}{9}"
+      },
+      {
+        "label": "C",
+        "text": "9"
+      },
+      {
+        "label": "D",
+        "text": "81"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "quantitative-1.docx#Q41",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Polygons & Quadrilaterals",
+    "kind": "image",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "What is the measure of the larger interior angle at vertex "
+      },
+      {
+        "type": "tex",
+        "text": "R?"
+      }
+    ],
+    "image": "/questions/quantitative/test-1/q42-polygon-angles.png",
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "164°"
+      },
+      {
+        "label": "B",
+        "text": "188°"
+      },
+      {
+        "label": "C",
+        "text": "204°"
+      },
+      {
+        "label": "D",
+        "text": "196°"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "quantitative-1.docx#Q42",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Exponents",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "tex",
+        "text": "{1}^{100}+{1}^{0}= ?"
+      },
+      {
+        "type": "text",
+        "text": " "
+      }
+    ],
+    "image": null,
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "2"
+      },
+      {
+        "label": "B",
+        "text": "10"
+      },
+      {
+        "label": "C",
+        "text": "3"
+      },
+      {
+        "label": "D",
+        "text": "5"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "quantitative-1.docx#Q43",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Equations & Inequalities",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "If "
+      },
+      {
+        "type": "tex",
+        "text": "\\frac{1}{2x+1}=\\frac{1}{x+2}"
+      },
+      {
+        "type": "text",
+        "text": ", find the value of x."
+      }
+    ],
+    "image": null,
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "1"
+      },
+      {
+        "label": "B",
+        "text": "2"
+      },
+      {
+        "label": "C",
+        "text": "-3"
+      },
+      {
+        "label": "D",
+        "text": "-2"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "quantitative-1.docx#Q44",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Division",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "What is the remainder of 29 divided by 3?"
+      }
+    ],
+    "image": null,
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "3"
+      },
+      {
+        "label": "B",
+        "text": "1"
+      },
+      {
+        "label": "C",
+        "text": "2"
+      },
+      {
+        "label": "D",
+        "text": "7"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "quantitative-1.docx#Q45",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Fractions",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "Which of the following values is the greatest?"
+      }
+    ],
+    "image": null,
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "tex": "\\frac{\\frac{\\frac{1}{8}}{1}}{2}"
+      },
+      {
+        "label": "B",
+        "tex": "\\frac{\\frac{\\frac{3}{5}}{5}}{3}"
+      },
+      {
+        "label": "C",
+        "tex": "\\frac{13}{22}"
+      },
+      {
+        "label": "D",
+        "tex": "\\frac{18}{48}"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "quantitative-1.docx#Q46",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Algebraic Expressions",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "If we multiply "
+      },
+      {
+        "type": "tex",
+        "text": "x"
+      },
+      {
+        "type": "text",
+        "text": " by itself, then add twice "
+      },
+      {
+        "type": "tex",
+        "text": "x"
+      },
+      {
+        "type": "text",
+        "text": ", we get:"
+      }
+    ],
+    "image": null,
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "tex": "2{x}^{2}"
+      },
+      {
+        "label": "B",
+        "tex": "{x}^{2}+2x"
+      },
+      {
+        "label": "C",
+        "tex": "x+2x"
+      },
+      {
+        "label": "D",
+        "tex": "x(x+1)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "quantitative-1.docx#Q47",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Equations & Inequalities",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "If a number is divided by 4 and then 4 is added to the quotient, the result is 8. What is that number?"
+      }
+    ],
+    "image": null,
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "25"
+      },
+      {
+        "label": "B",
+        "text": "35"
+      },
+      {
+        "label": "C",
+        "text": "16"
+      },
+      {
+        "label": "D",
+        "text": "54"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "quantitative-1.docx#Q48",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Equations & Inequalities",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "If "
+      },
+      {
+        "type": "tex",
+        "text": "8x=64"
+      },
+      {
+        "type": "text",
+        "text": ", find "
+      },
+      {
+        "type": "tex",
+        "text": "4x"
+      },
+      {
+        "type": "text",
+        "text": "."
+      }
+    ],
+    "image": null,
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "8"
+      },
+      {
+        "label": "B",
+        "text": "14"
+      },
+      {
+        "label": "C",
+        "text": "22"
+      },
+      {
+        "label": "D",
+        "text": "32"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "quantitative-1.docx#Q49",
+    "reviewStatus": "final"
+  },
+  {
+    "specificCategory": "Percentages & Ratios",
+    "kind": "text",
+    "prompt": [
+      {
+        "type": "text",
+        "text": "If the ratio of "
+      },
+      {
+        "type": "tex",
+        "text": "x"
+      },
+      {
+        "type": "text",
+        "text": " to "
+      },
+      {
+        "type": "tex",
+        "text": "{x}^{2}"
+      },
+      {
+        "type": "text",
+        "text": " is "
+      },
+      {
+        "type": "tex",
+        "text": "4:40"
+      },
+      {
+        "type": "text",
+        "text": ", find the value of "
+      },
+      {
+        "type": "tex",
+        "text": "x"
+      },
+      {
+        "type": "text",
+        "text": "."
+      }
+    ],
+    "image": null,
+    "compareTable": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "10"
+      },
+      {
+        "label": "B",
+        "text": "5"
+      },
+      {
+        "label": "C",
+        "text": "21"
+      },
+      {
+        "label": "D",
+        "text": "4"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "quantitative-1.docx#Q50",
+    "reviewStatus": "final"
+  }
+]

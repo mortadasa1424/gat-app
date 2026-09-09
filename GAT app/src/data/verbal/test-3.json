@@ -1,0 +1,2050 @@
+[
+  {
+    "id": "V3-001",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Walk: Run",
+    "options": [
+      {
+        "label": "A",
+        "text": "Speak: Shout"
+      },
+      {
+        "label": "B",
+        "text": "Speak: Word"
+      },
+      {
+        "label": "C",
+        "text": "Hear: Listen"
+      },
+      {
+        "label": "D",
+        "text": "Talk: Friend"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-3.docx#Q1",
+    "sourceQuestionNumber": 1,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-002",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Cry: Sadness",
+    "options": [
+      {
+        "label": "A",
+        "text": "Smile: Teeth"
+      },
+      {
+        "label": "B",
+        "text": "Shout: Voice"
+      },
+      {
+        "label": "C",
+        "text": "Gasp: Surprise"
+      },
+      {
+        "label": "D",
+        "text": "Joke: laugh"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-3.docx#Q2",
+    "sourceQuestionNumber": 2,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-003",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Happiness: Delight",
+    "options": [
+      {
+        "label": "A",
+        "text": "Trash: Garbage"
+      },
+      {
+        "label": "B",
+        "text": "Trash: Bin"
+      },
+      {
+        "label": "C",
+        "text": "Garbage: Truck"
+      },
+      {
+        "label": "D",
+        "text": "Waste: Basket"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-3.docx#Q3",
+    "sourceQuestionNumber": 3,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-004",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Library: Read",
+    "options": [
+      {
+        "label": "A",
+        "text": "Gym: Trainer"
+      },
+      {
+        "label": "B",
+        "text": "Gym: Exercise"
+      },
+      {
+        "label": "C",
+        "text": "Exercise: Health"
+      },
+      {
+        "label": "D",
+        "text": "Library: Books"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-3.docx#Q4",
+    "sourceQuestionNumber": 4,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-005",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Chew: Swallow",
+    "options": [
+      {
+        "label": "A",
+        "text": "Heat: Boil"
+      },
+      {
+        "label": "B",
+        "text": "Shake: Shivering"
+      },
+      {
+        "label": "C",
+        "text": "Think: Thought"
+      },
+      {
+        "label": "D",
+        "text": "Eat: Chew"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-3.docx#Q5",
+    "sourceQuestionNumber": 5,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-006",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Brave: Coward",
+    "options": [
+      {
+        "label": "A",
+        "text": "Inside: Room"
+      },
+      {
+        "label": "B",
+        "text": "Outside: Garden"
+      },
+      {
+        "label": "C",
+        "text": "Plateau: Trough"
+      },
+      {
+        "label": "D",
+        "text": "Open: Door"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-3.docx#Q6",
+    "sourceQuestionNumber": 6,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-007",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Exercise: Strength",
+    "options": [
+      {
+        "label": "A",
+        "text": "Laziness: Sleep"
+      },
+      {
+        "label": "B",
+        "text": "Failure: Success"
+      },
+      {
+        "label": "C",
+        "text": "Effort: Work"
+      },
+      {
+        "label": "D",
+        "text": "Cavity: Pain"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "verbal-3.docx#Q7",
+    "sourceQuestionNumber": 7,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-008",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Eagle: Hawk",
+    "options": [
+      {
+        "label": "A",
+        "text": "Rice: Field"
+      },
+      {
+        "label": "B",
+        "text": "Rice: Wheat"
+      },
+      {
+        "label": "C",
+        "text": "Wheat: Bread"
+      },
+      {
+        "label": "D",
+        "text": "Grain: Food"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-3.docx#Q8",
+    "sourceQuestionNumber": 8,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-009",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Pony: Horse",
+    "options": [
+      {
+        "label": "A",
+        "text": "Cheese: Milk"
+      },
+      {
+        "label": "B",
+        "text": "Bread: Food"
+      },
+      {
+        "label": "C",
+        "text": "Cheddar: Cheese"
+      },
+      {
+        "label": "D",
+        "text": "Dairy: Cheese"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-3.docx#Q9",
+    "sourceQuestionNumber": 9,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-010",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Plant: Watering",
+    "options": [
+      {
+        "label": "A",
+        "text": "Food: Eat"
+      },
+      {
+        "label": "B",
+        "text": "Shoes: Washing"
+      },
+      {
+        "label": "C",
+        "text": "Digging: Gold"
+      },
+      {
+        "label": "D",
+        "text": "Coin: Minting"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "verbal-3.docx#Q10",
+    "sourceQuestionNumber": 10,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-011",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Rodent: Squirrel",
+    "options": [
+      {
+        "label": "A",
+        "text": "Canine: Wolf"
+      },
+      {
+        "label": "B",
+        "text": "Bat: Bird"
+      },
+      {
+        "label": "C",
+        "text": "Trout: Fish"
+      },
+      {
+        "label": "D",
+        "text": "Elephant: Mammal"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-3.docx#Q11",
+    "sourceQuestionNumber": 11,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-012",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Hospital: Wing",
+    "options": [
+      {
+        "label": "A",
+        "text": "Anchor: Ship"
+      },
+      {
+        "label": "B",
+        "text": "Forest: Land"
+      },
+      {
+        "label": "C",
+        "text": "Literature: Tragedy"
+      },
+      {
+        "label": "D",
+        "text": "Window: Room"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-3.docx#Q12",
+    "sourceQuestionNumber": 12,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-013",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Mammal: Human",
+    "options": [
+      {
+        "label": "A",
+        "text": "Mercedes: Car"
+      },
+      {
+        "label": "B",
+        "text": "Vehicle: Truck"
+      },
+      {
+        "label": "C",
+        "text": "Strawberry: Fruit"
+      },
+      {
+        "label": "D",
+        "text": "Lettuce: Vegetable"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-3.docx#Q13",
+    "sourceQuestionNumber": 13,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-014",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Suggest: Demand",
+    "options": [
+      {
+        "label": "A",
+        "text": "Dig: Bury"
+      },
+      {
+        "label": "B",
+        "text": "Revise: Memorize"
+      },
+      {
+        "label": "C",
+        "text": "Believe: Support"
+      },
+      {
+        "label": "D",
+        "text": "Take: Grab"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "verbal-3.docx#Q14",
+    "sourceQuestionNumber": 14,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-015",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Protect: Abandon",
+    "options": [
+      {
+        "label": "A",
+        "text": "Admit: Deny"
+      },
+      {
+        "label": "B",
+        "text": "Talk: Write"
+      },
+      {
+        "label": "C",
+        "text": "Protect: Conserve"
+      },
+      {
+        "label": "D",
+        "text": "Save/Protect"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-3.docx#Q15",
+    "sourceQuestionNumber": 15,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-016",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Attack: Defend",
+    "options": [
+      {
+        "label": "A",
+        "text": "Rain: Umbrella"
+      },
+      {
+        "label": "B",
+        "text": "Random: Systematic"
+      },
+      {
+        "label": "C",
+        "text": "Cook: Stove"
+      },
+      {
+        "label": "D",
+        "text": "Student: Classroom"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-3.docx#Q16",
+    "sourceQuestionNumber": 16,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-017",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "In families, it is ______ for children to have exactly the ______ personality, even when they grow up together.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(normal / shared)"
+      },
+      {
+        "label": "B",
+        "text": "(common / large)"
+      },
+      {
+        "label": "C",
+        "text": "(seldom / same)"
+      },
+      {
+        "label": "D",
+        "text": "(rare / small)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-3.docx#Q17",
+    "sourceQuestionNumber": 17,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-018",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "When the area of ______ widens, the area of ______ narrows.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(austerity / prosperity)"
+      },
+      {
+        "label": "B",
+        "text": "(savings / prosperity)"
+      },
+      {
+        "label": "C",
+        "text": "(luxury / savings)"
+      },
+      {
+        "label": "D",
+        "text": "(consumption / production)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-3.docx#Q18",
+    "sourceQuestionNumber": 18,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-019",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "I was looking for my ______, but it was on my desk all the ______.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(phone / morning)"
+      },
+      {
+        "label": "B",
+        "text": "(notebook / time)"
+      },
+      {
+        "label": "C",
+        "text": "(wallet / night)"
+      },
+      {
+        "label": "D",
+        "text": "(bag / week)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-3.docx#Q19",
+    "sourceQuestionNumber": 19,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-020",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "The power of life isn’t determined by its ______, but rather by the power it ______.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(length / takes)"
+      },
+      {
+        "label": "B",
+        "text": "(age / holds)"
+      },
+      {
+        "label": "C",
+        "text": "(longevity / gives)"
+      },
+      {
+        "label": "D",
+        "text": "(duration / keeps)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-3.docx#Q20",
+    "sourceQuestionNumber": 20,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-021",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Grand Canyon in Arizona is amazing to see in person. Photos and videos are beautiful, but they do not do it ______ the true experience is hard to fully ______.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(service / explain)"
+      },
+      {
+        "label": "B",
+        "text": "(honor / imagine)"
+      },
+      {
+        "label": "C",
+        "text": "(credit / describe)"
+      },
+      {
+        "label": "D",
+        "text": "(justice / comprehend)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "verbal-3.docx#Q21",
+    "sourceQuestionNumber": 21,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-022",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "The biggest ______ to teaching is boredom which is ______ by the deadliness of the classroom.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(rival / motivated)"
+      },
+      {
+        "label": "B",
+        "text": "(challenge / caused)"
+      },
+      {
+        "label": "C",
+        "text": "(threat / reduced)"
+      },
+      {
+        "label": "D",
+        "text": "(barrier / solved)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-3.docx#Q22",
+    "sourceQuestionNumber": 22,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-023",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Although it’s one of London’s newest ______. The London Eye is still one of the most famous ______.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(buildings, landmarks)"
+      },
+      {
+        "label": "B",
+        "text": "(museums, attractions)"
+      },
+      {
+        "label": "C",
+        "text": "(structures, monuments)"
+      },
+      {
+        "label": "D",
+        "text": "(Landmarks, attractions)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "verbal-3.docx#Q23",
+    "sourceQuestionNumber": 23,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-024",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "The English teacher gave us ______ assignments this semester ,so she's going to give us ______ assignments next semester.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(too many / fewer)"
+      },
+      {
+        "label": "B",
+        "text": "(too few / more)"
+      },
+      {
+        "label": "C",
+        "text": "(many / much)"
+      },
+      {
+        "label": "D",
+        "text": "(enough / extra)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-3.docx#Q24",
+    "sourceQuestionNumber": 24,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-025",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "______ on the dental chair, with tubes and tools attached to his mouth, Ali took out his phone and began ______.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(Sitting / waiting)"
+      },
+      {
+        "label": "B",
+        "text": "(Reclined / typing)"
+      },
+      {
+        "label": "C",
+        "text": "(Resting / talking)"
+      },
+      {
+        "label": "D",
+        "text": "(Leaning / texting)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-3.docx#Q25",
+    "sourceQuestionNumber": 25,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-026",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "General ______ airports are smaller airports that process private, business, commercial and ______ flights.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(transport / domestic)"
+      },
+      {
+        "label": "B",
+        "text": "(public / scheduled)"
+      },
+      {
+        "label": "C",
+        "text": "(aviation / charter)"
+      },
+      {
+        "label": "D",
+        "text": "(regional / cargo)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-3.docx#Q26",
+    "sourceQuestionNumber": 26,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-027",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Many Gulf countries are looking for new ______, something like how Eastern European countries have become popular ______.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(investments / market)"
+      },
+      {
+        "label": "B",
+        "text": "(industries / region)"
+      },
+      {
+        "label": "C",
+        "text": "(resources / route)"
+      },
+      {
+        "label": "D",
+        "text": "(attractions / destination)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "verbal-3.docx#Q27",
+    "sourceQuestionNumber": 27,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-028",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "A lot of natural disasters have been happening like earthquakes, tsunamis, and volcanic ______ under the ocean can reach the ______ of a flying jet.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(eruptions / speed)"
+      },
+      {
+        "label": "B",
+        "text": "(storms / height)"
+      },
+      {
+        "label": "C",
+        "text": "(movements / weight)"
+      },
+      {
+        "label": "D",
+        "text": "(cracks / shape)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-3.docx#Q28",
+    "sourceQuestionNumber": 28,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-029",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "A gentle tap was all it took to break the ______ glass.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(clear)"
+      },
+      {
+        "label": "B",
+        "text": "(fragile)"
+      },
+      {
+        "label": "C",
+        "text": "(tinted)"
+      },
+      {
+        "label": "D",
+        "text": "(decorative)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-3.docx#Q29",
+    "sourceQuestionNumber": 29,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-030",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Alligators are scary, but they have nothing on their cousins the ______ crocodile that will devour anything in its ______.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(massive / river)"
+      },
+      {
+        "label": "B",
+        "text": "(dangerous / habitat)"
+      },
+      {
+        "label": "C",
+        "text": "(fearsome / path)"
+      },
+      {
+        "label": "D",
+        "text": "(wild / territory)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-3.docx#Q30",
+    "sourceQuestionNumber": 30,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-031",
+    "generalCategory": "Contextual Error",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Attempting to repair the product may result in injury. In the event of a (hardware), contact a (qualified) technician. (Remove) the (battery) and/or AC adapter.",
+    "options": [
+      {
+        "label": "A",
+        "text": "hardware"
+      },
+      {
+        "label": "B",
+        "text": "remove"
+      },
+      {
+        "label": "C",
+        "text": "qualified"
+      },
+      {
+        "label": "D",
+        "text": "battery"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-3.docx#Q31",
+    "sourceQuestionNumber": 31,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-032",
+    "generalCategory": "Contextual Error",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Students have (access) to programs across nine colleges offered by a highly qualified and (educational) faculty. UAEU offers a wide (range) of undergraduate and graduate programs, unique in the UAE, with different (combination) of disciplines.",
+    "options": [
+      {
+        "label": "A",
+        "text": "educational"
+      },
+      {
+        "label": "B",
+        "text": "combination"
+      },
+      {
+        "label": "C",
+        "text": "access"
+      },
+      {
+        "label": "D",
+        "text": "range"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-3.docx#Q32",
+    "sourceQuestionNumber": 32,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-033",
+    "generalCategory": "Contextual Error",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Gandhi was a key (factor) in Indian history. After studying law in (Britain), he (returned) to India and soon became one of the (leaders) of the movement for independence from British rule.",
+    "options": [
+      {
+        "label": "A",
+        "text": "factor"
+      },
+      {
+        "label": "B",
+        "text": "leaders"
+      },
+      {
+        "label": "C",
+        "text": "returned"
+      },
+      {
+        "label": "D",
+        "text": "Britain"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-3.docx#Q33",
+    "sourceQuestionNumber": 33,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-034",
+    "generalCategory": "Contextual Error",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "(Researchers) say that letting out (anger) is bad but (suppressing) it is also bad. It is shown that people who do have a more (fragility) rate than normal people.",
+    "options": [
+      {
+        "label": "A",
+        "text": "fragility"
+      },
+      {
+        "label": "B",
+        "text": "Researchers"
+      },
+      {
+        "label": "C",
+        "text": "anger"
+      },
+      {
+        "label": "D",
+        "text": "suppressing"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-3.docx#Q34",
+    "sourceQuestionNumber": 34,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-035",
+    "generalCategory": "Contextual Error",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Students have many career (opinions) to choose from, and many graduates are (faced) with the (challenging) task of (picking) a major that suits their interests and skills.",
+    "options": [
+      {
+        "label": "A",
+        "text": "opinions"
+      },
+      {
+        "label": "B",
+        "text": "faced"
+      },
+      {
+        "label": "C",
+        "text": "challenging"
+      },
+      {
+        "label": "D",
+        "text": "picking"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-3.docx#Q35",
+    "sourceQuestionNumber": 35,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-036",
+    "generalCategory": "Contextual Error",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "The (reintroduction) of wolves has been widely debated for years. These (beloved) beasts once (roamed) across much of the Earth, from the United States and Canada to (mainland) Europe and Asia.",
+    "options": [
+      {
+        "label": "A",
+        "text": "beloved"
+      },
+      {
+        "label": "B",
+        "text": "mainland"
+      },
+      {
+        "label": "C",
+        "text": "roamed"
+      },
+      {
+        "label": "D",
+        "text": "reintroduction"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-3.docx#Q36",
+    "sourceQuestionNumber": 36,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-037",
+    "generalCategory": "Contextual Error",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "In 1958, computer scientist Herbert Simon made a statement that was both (extraordinarily) wrong and (profoundly) correct: we have invented machines that will hopefully (corrupt) with science and computers. While these (statements) may not have been accurate at the time, they were important in theory.",
+    "options": [
+      {
+        "label": "A",
+        "text": "extraordinarily"
+      },
+      {
+        "label": "B",
+        "text": "profoundly"
+      },
+      {
+        "label": "C",
+        "text": "corrupt"
+      },
+      {
+        "label": "D",
+        "text": "statements"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-3.docx#Q37",
+    "sourceQuestionNumber": 37,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-038",
+    "generalCategory": "Contextual Error",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Rousseau was a (philosopher) who wanted to live a simple life in the countryside to (reduce) his philosophy, avoiding the (luxuries) and corruption of the city which he believed slowed human (progress).",
+    "options": [
+      {
+        "label": "A",
+        "text": "reduce"
+      },
+      {
+        "label": "B",
+        "text": "progress"
+      },
+      {
+        "label": "C",
+        "text": "philosopher"
+      },
+      {
+        "label": "D",
+        "text": "luxuries"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-3.docx#Q38",
+    "sourceQuestionNumber": 38,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-039",
+    "generalCategory": "Contextual Error",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "News (serves) many important functions in society. It informs the public, helps shape opinion, and connects people with the wider world. It gives (instant) (consideration) to important information, and it can also be a source of financial support through (advertising), which helps newspapers and broadcasters continue to operate.",
+    "options": [
+      {
+        "label": "A",
+        "text": "advertising"
+      },
+      {
+        "label": "B",
+        "text": "serve"
+      },
+      {
+        "label": "C",
+        "text": "consideration"
+      },
+      {
+        "label": "D",
+        "text": "instant"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-3.docx#Q39",
+    "sourceQuestionNumber": 39,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-040",
+    "generalCategory": "Contextual Error",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Veganism is a (concept) and an (extension) of vegetarianism and has a (uncertain) effect on animal welfare, the (environment), and human health, aiming to reduce suffering and promote a more sustainable lifestyle.",
+    "options": [
+      {
+        "label": "A",
+        "text": "uncertain"
+      },
+      {
+        "label": "B",
+        "text": "environment"
+      },
+      {
+        "label": "C",
+        "text": "extension"
+      },
+      {
+        "label": "D",
+        "text": "concept"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-3.docx#Q40",
+    "sourceQuestionNumber": 40,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V3-041",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "What is the closest meaning of the word \"generates\"?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Produces"
+      },
+      {
+        "label": "B",
+        "text": "Spends"
+      },
+      {
+        "label": "C",
+        "text": "Borrows"
+      },
+      {
+        "label": "D",
+        "text": "Loses"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-3.docx#Q45",
+    "sourceQuestionNumber": 45,
+    "reviewStatus": "final",
+    "passageId": "verbal-3-passage-01"
+  },
+  {
+    "id": "V3-042",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "How is the GDP calculated?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Per month"
+      },
+      {
+        "label": "B",
+        "text": "Per year"
+      },
+      {
+        "label": "C",
+        "text": "Per day"
+      },
+      {
+        "label": "D",
+        "text": "Per decade"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-3.docx#Q46",
+    "sourceQuestionNumber": 46,
+    "reviewStatus": "final",
+    "passageId": "verbal-3-passage-01"
+  },
+  {
+    "id": "V3-043",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "What does “it” refer to in paragraph (1)?",
+    "options": [
+      {
+        "label": "A",
+        "text": "The Economy"
+      },
+      {
+        "label": "B",
+        "text": "1000$"
+      },
+      {
+        "label": "C",
+        "text": "Macroeconomics"
+      },
+      {
+        "label": "D",
+        "text": "GDP"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-3.docx#Q47",
+    "sourceQuestionNumber": 47,
+    "reviewStatus": "final",
+    "passageId": "verbal-3-passage-01"
+  },
+  {
+    "id": "V3-044",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "What can we take from this passage?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Microeconomics and macroeconomics have to be studied together to be understood"
+      },
+      {
+        "label": "B",
+        "text": "A country’s exports or production depend on its location"
+      },
+      {
+        "label": "C",
+        "text": "Microeconomics is only about prices in shops"
+      },
+      {
+        "label": "D",
+        "text": "Macroeconomics is only about one person’s choices"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-3.docx#Q48",
+    "sourceQuestionNumber": 48,
+    "reviewStatus": "final",
+    "passageId": "verbal-3-passage-01"
+  },
+  {
+    "id": "V3-045",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "What's the closest meaning to “evolve” in paragraph (1)?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Develop"
+      },
+      {
+        "label": "B",
+        "text": "Stay the same"
+      },
+      {
+        "label": "C",
+        "text": "Get boring"
+      },
+      {
+        "label": "D",
+        "text": "Become chaos"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-3.docx#Q49",
+    "sourceQuestionNumber": 49,
+    "reviewStatus": "final",
+    "passageId": "verbal-3-passage-02"
+  },
+  {
+    "id": "V3-046",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "What does the first paragraph talk about?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Teaching is boring and everything is the same"
+      },
+      {
+        "label": "B",
+        "text": "The many surprises/potentials being a teacher brings you"
+      },
+      {
+        "label": "C",
+        "text": "Teaching helps you learn new things everyday"
+      },
+      {
+        "label": "D",
+        "text": "Students can help teachers become better"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-3.docx#Q50",
+    "sourceQuestionNumber": 50,
+    "reviewStatus": "final",
+    "passageId": "verbal-3-passage-02"
+  },
+  {
+    "id": "V3-047",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "What does the second paragraph talk about?",
+    "options": [
+      {
+        "label": "A",
+        "text": "How teaching can be challenging to teachers"
+      },
+      {
+        "label": "B",
+        "text": "How teaching has only joy and no frustration"
+      },
+      {
+        "label": "C",
+        "text": "Why students always feel motivated and friendly"
+      },
+      {
+        "label": "D",
+        "text": "How teachers never need help or resources"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-3.docx#Q51",
+    "sourceQuestionNumber": 51,
+    "reviewStatus": "final",
+    "passageId": "verbal-3-passage-02"
+  },
+  {
+    "id": "V3-048",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "What does “novelty” mean?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Courage"
+      },
+      {
+        "label": "B",
+        "text": "Safety"
+      },
+      {
+        "label": "C",
+        "text": "Surprise"
+      },
+      {
+        "label": "D",
+        "text": "Freedom"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-3.docx#Q52",
+    "sourceQuestionNumber": 52,
+    "reviewStatus": "final",
+    "passageId": "verbal-3-passage-02"
+  },
+  {
+    "id": "V3-049",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "What does the word “one” in paragraph 1 refer to?",
+    "options": [
+      {
+        "label": "A",
+        "text": "An event"
+      },
+      {
+        "label": "B",
+        "text": "Teaching"
+      },
+      {
+        "label": "C",
+        "text": "A student"
+      },
+      {
+        "label": "D",
+        "text": "An insight"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "verbal-3.docx#Q53",
+    "sourceQuestionNumber": 53,
+    "reviewStatus": "final",
+    "passageId": "verbal-3-passage-02"
+  },
+  {
+    "id": "V3-050",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "According to the passage, what can sometimes happen even when teachers have good intentions?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Their actions may have unintended negative results."
+      },
+      {
+        "label": "B",
+        "text": "Students will always respect them more."
+      },
+      {
+        "label": "C",
+        "text": "Their classes will become easier to manage."
+      },
+      {
+        "label": "D",
+        "text": "Students will always understand their lessons."
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-3.docx#Q54",
+    "sourceQuestionNumber": 54,
+    "reviewStatus": "final",
+    "passageId": "verbal-3-passage-02"
+  },
+  {
+    "id": "V3-051",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "What is the main idea of paragraph 4?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Teachers encounter students who all think in the same way."
+      },
+      {
+        "label": "B",
+        "text": "Teachers should take responsibility for becoming the best teachers they can be."
+      },
+      {
+        "label": "C",
+        "text": "Teachers should depend entirely on other people for improvement."
+      },
+      {
+        "label": "D",
+        "text": "Good teachers do not need professional knowledge or resources."
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-3.docx#Q55",
+    "sourceQuestionNumber": 55,
+    "reviewStatus": "final",
+    "passageId": "verbal-3-passage-02"
+  },
+  {
+    "id": "V3-052",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "What can be understood from paragraph 1 about the relationship between teachers and students?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Teachers should avoid learning about individual students."
+      },
+      {
+        "label": "B",
+        "text": "Students are mainly responsible for improving teachers’ skills."
+      },
+      {
+        "label": "C",
+        "text": "Teachers can learn more about their students through classroom interaction."
+      },
+      {
+        "label": "D",
+        "text": "Students and teachers usually understand one another immediately."
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-3.docx#Q56",
+    "sourceQuestionNumber": 56,
+    "reviewStatus": "final",
+    "passageId": "verbal-3-passage-02"
+  },
+  {
+    "id": "V3-053",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "What is the author’s attitude toward teaching in paragraph 1?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Angry and disappointed"
+      },
+      {
+        "label": "B",
+        "text": "Worried and pessimistic"
+      },
+      {
+        "label": "C",
+        "text": "Indifferent and uninterested"
+      },
+      {
+        "label": "D",
+        "text": "Positive and enthusiastic"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "verbal-3.docx#Q57",
+    "sourceQuestionNumber": 57,
+    "reviewStatus": "final",
+    "passageId": "verbal-3-passage-02"
+  },
+  {
+    "id": "V3-054",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Whose lives does the author refer to in the phrase “students’ lives”?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Teachers’"
+      },
+      {
+        "label": "B",
+        "text": "Students’"
+      },
+      {
+        "label": "C",
+        "text": "Parents’"
+      },
+      {
+        "label": "D",
+        "text": "Administrators’"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-3.docx#Q58",
+    "sourceQuestionNumber": 58,
+    "reviewStatus": "final",
+    "passageId": "verbal-3-passage-02"
+  },
+  {
+    "id": "V3-055",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "What does “they” refer to in paragraph (2)?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Businesses"
+      },
+      {
+        "label": "B",
+        "text": "Managers"
+      },
+      {
+        "label": "C",
+        "text": "Buyers"
+      },
+      {
+        "label": "D",
+        "text": "Employees"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-3.docx#Q59",
+    "sourceQuestionNumber": 59,
+    "reviewStatus": "final",
+    "passageId": "verbal-3-passage-03"
+  },
+  {
+    "id": "V3-056",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "What does “their” refer to in paragraph (1)?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Businesses"
+      },
+      {
+        "label": "B",
+        "text": "Managers"
+      },
+      {
+        "label": "C",
+        "text": "Buyers"
+      },
+      {
+        "label": "D",
+        "text": "Sellers"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-3.docx#Q60",
+    "sourceQuestionNumber": 60,
+    "reviewStatus": "final",
+    "passageId": "verbal-3-passage-03"
+  },
+  {
+    "id": "V3-057",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Who determines the values for the business?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Buyers"
+      },
+      {
+        "label": "B",
+        "text": "Economies"
+      },
+      {
+        "label": "C",
+        "text": "Company"
+      },
+      {
+        "label": "D",
+        "text": "Consumers"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "verbal-3.docx#Q61",
+    "sourceQuestionNumber": 61,
+    "reviewStatus": "final",
+    "passageId": "verbal-3-passage-03"
+  },
+  {
+    "id": "V3-058",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "What is the main idea of the passage?",
+    "options": [
+      {
+        "label": "A",
+        "text": "How markets work in general"
+      },
+      {
+        "label": "B",
+        "text": "Communicating is one of the factors in running a business"
+      },
+      {
+        "label": "C",
+        "text": "How to run a business in general"
+      },
+      {
+        "label": "D",
+        "text": "How to hire workers for a business"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-3.docx#Q62",
+    "sourceQuestionNumber": 62,
+    "reviewStatus": "final",
+    "passageId": "verbal-3-passage-03"
+  }
+]

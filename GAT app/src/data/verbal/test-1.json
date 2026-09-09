@@ -1,0 +1,1834 @@
+[
+  {
+    "id": "V1-001",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Wax: Candle",
+    "options": [
+      {
+        "label": "A",
+        "text": "Grinder: Coffee"
+      },
+      {
+        "label": "B",
+        "text": "Cup: Tea"
+      },
+      {
+        "label": "C",
+        "text": "Plate: Fork"
+      },
+      {
+        "label": "D",
+        "text": "Chair: Table"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-1.docx#Q1",
+    "sourceQuestionNumber": 1,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-002",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Exercise: Sweaty",
+    "options": [
+      {
+        "label": "A",
+        "text": "Sleep: Tired"
+      },
+      {
+        "label": "B",
+        "text": "Cook: Heat"
+      },
+      {
+        "label": "C",
+        "text": "Read: Quiet"
+      },
+      {
+        "label": "D",
+        "text": "Study: Book"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-1.docx#Q2",
+    "sourceQuestionNumber": 2,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-003",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Travel: Journey",
+    "options": [
+      {
+        "label": "A",
+        "text": "Travel: Ticket"
+      },
+      {
+        "label": "B",
+        "text": "Move: Box"
+      },
+      {
+        "label": "C",
+        "text": "Move: Relocate"
+      },
+      {
+        "label": "D",
+        "text": "Journey: Road"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-1.docx#Q3",
+    "sourceQuestionNumber": 3,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-004",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Map: Navigation",
+    "options": [
+      {
+        "label": "A",
+        "text": "Pen: Drawing"
+      },
+      {
+        "label": "B",
+        "text": "Scalpel: Surgery"
+      },
+      {
+        "label": "C",
+        "text": "Helmet: Head"
+      },
+      {
+        "label": "D",
+        "text": "Car: Garage"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-1.docx#Q4",
+    "sourceQuestionNumber": 4,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-005",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Screen: Monitor",
+    "options": [
+      {
+        "label": "A",
+        "text": "Charger: Phone"
+      },
+      {
+        "label": "B",
+        "text": "App: Phone"
+      },
+      {
+        "label": "C",
+        "text": "Keyboard: Typing"
+      },
+      {
+        "label": "D",
+        "text": "Battery: Phone"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "verbal-1.docx#Q5",
+    "sourceQuestionNumber": 5,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-006",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Offend: Insult",
+    "options": [
+      {
+        "label": "A",
+        "text": "Valley: River"
+      },
+      {
+        "label": "B",
+        "text": "Peak: Summit"
+      },
+      {
+        "label": "C",
+        "text": "Mountain: Climb"
+      },
+      {
+        "label": "D",
+        "text": "Hill: Tree"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-1.docx#Q6",
+    "sourceQuestionNumber": 6,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-007",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Plane: Hangar",
+    "options": [
+      {
+        "label": "A",
+        "text": "Bird: Nest"
+      },
+      {
+        "label": "B",
+        "text": "Car: Wheel"
+      },
+      {
+        "label": "C",
+        "text": "Turtle: Shell"
+      },
+      {
+        "label": "D",
+        "text": "Pilot: Cockpit"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-1.docx#Q7",
+    "sourceQuestionNumber": 7,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-008",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Coffee: Cream",
+    "options": [
+      {
+        "label": "A",
+        "text": "Coffee: Cup"
+      },
+      {
+        "label": "B",
+        "text": "Shirt: Tie"
+      },
+      {
+        "label": "C",
+        "text": "Shirt: Button"
+      },
+      {
+        "label": "D",
+        "text": "Tea: Matcha"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-1.docx#Q8",
+    "sourceQuestionNumber": 8,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-009",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Diamond: Mining",
+    "options": [
+      {
+        "label": "A",
+        "text": "Fish: Water"
+      },
+      {
+        "label": "B",
+        "text": "Wheat: Bread"
+      },
+      {
+        "label": "C",
+        "text": "Gold: Smelting"
+      },
+      {
+        "label": "D",
+        "text": "Pearls: Shelling"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "verbal-1.docx#Q9",
+    "sourceQuestionNumber": 9,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-010",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Shower: Clean",
+    "options": [
+      {
+        "label": "A",
+        "text": "Cover: Protect"
+      },
+      {
+        "label": "B",
+        "text": "Towel: Bathroom"
+      },
+      {
+        "label": "C",
+        "text": "Soap: Bottle"
+      },
+      {
+        "label": "D",
+        "text": "Door: Handle"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-1.docx#Q10",
+    "sourceQuestionNumber": 10,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-011",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Pen: Paper",
+    "options": [
+      {
+        "label": "A",
+        "text": "Towel: Closet"
+      },
+      {
+        "label": "B",
+        "text": "Cup: Shelf"
+      },
+      {
+        "label": "C",
+        "text": "Soap: Water"
+      },
+      {
+        "label": "D",
+        "text": "Chair: Wood"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-1.docx#Q11",
+    "sourceQuestionNumber": 11,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-012",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Pamphlet: Book",
+    "options": [
+      {
+        "label": "A",
+        "text": "Bed: Pillow"
+      },
+      {
+        "label": "B",
+        "text": "Stool: Chair"
+      },
+      {
+        "label": "C",
+        "text": "Table: Wood"
+      },
+      {
+        "label": "D",
+        "text": "Sofa: Cushion"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-1.docx#Q12",
+    "sourceQuestionNumber": 12,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-013",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Winter: Cold",
+    "options": [
+      {
+        "label": "A",
+        "text": "Playground: Swing"
+      },
+      {
+        "label": "B",
+        "text": "Desert: Green"
+      },
+      {
+        "label": "C",
+        "text": "Park: Trees"
+      },
+      {
+        "label": "D",
+        "text": "Playground: Green"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "verbal-1.docx#Q13",
+    "sourceQuestionNumber": 13,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-014",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Illness: Virus",
+    "options": [
+      {
+        "label": "A",
+        "text": "Fever: Thermometer"
+      },
+      {
+        "label": "B",
+        "text": "Trauma: Accident"
+      },
+      {
+        "label": "C",
+        "text": "Doctor: Hospital"
+      },
+      {
+        "label": "D",
+        "text": "Infection: Medicine"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-1.docx#Q14",
+    "sourceQuestionNumber": 14,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-015",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Eye: Face",
+    "options": [
+      {
+        "label": "A",
+        "text": "City: Country"
+      },
+      {
+        "label": "B",
+        "text": "City: Neighborhood"
+      },
+      {
+        "label": "C",
+        "text": "Citizen: Country"
+      },
+      {
+        "label": "D",
+        "text": "Map: Country"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-1.docx#Q15",
+    "sourceQuestionNumber": 15,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-016",
+    "generalCategory": "Analogy",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Screen: Laptop",
+    "options": [
+      {
+        "label": "A",
+        "text": "House: Apartment"
+      },
+      {
+        "label": "B",
+        "text": "Door: Window"
+      },
+      {
+        "label": "C",
+        "text": "Fin: Fish"
+      },
+      {
+        "label": "D",
+        "text": "Building: City"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-1.docx#Q16",
+    "sourceQuestionNumber": 16,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-017",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "If at first you don’t ______, try a little ______.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(finish / patience)"
+      },
+      {
+        "label": "B",
+        "text": "(improve / effort)"
+      },
+      {
+        "label": "C",
+        "text": "(succeed / ardor)"
+      },
+      {
+        "label": "D",
+        "text": "(win / practice)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-1.docx#Q17",
+    "sourceQuestionNumber": 17,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-018",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "I spent an hour searching for my ______, but it turned out it was on my desk all the ______.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(glasses / afternoon)"
+      },
+      {
+        "label": "B",
+        "text": "(phone / morning)"
+      },
+      {
+        "label": "C",
+        "text": "(notebook / time)"
+      },
+      {
+        "label": "D",
+        "text": "(wallet / evening)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-1.docx#Q18",
+    "sourceQuestionNumber": 18,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-019",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "If there are no more ______, you can start ______ your test.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(questions / taking)"
+      },
+      {
+        "label": "B",
+        "text": "(answers / correcting)"
+      },
+      {
+        "label": "C",
+        "text": "(papers / reading)"
+      },
+      {
+        "label": "D",
+        "text": "(students / leaving)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-1.docx#Q19",
+    "sourceQuestionNumber": 19,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-020",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "After a year ______ people make a New Year ______.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(Ends / resolution)"
+      },
+      {
+        "label": "B",
+        "text": "(starts / promise)"
+      },
+      {
+        "label": "C",
+        "text": "(changes / celebration)"
+      },
+      {
+        "label": "D",
+        "text": "(passes / plan)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-1.docx#Q20",
+    "sourceQuestionNumber": 20,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-021",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "A few dozen Mathematicians and ______ gathered to have a meeting about computer programs on the ______ of Dartmouth college.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(scientists / campus)"
+      },
+      {
+        "label": "B",
+        "text": "(students / library)"
+      },
+      {
+        "label": "C",
+        "text": "(teachers / classroom)"
+      },
+      {
+        "label": "D",
+        "text": "(engineers / laboratory)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-1.docx#Q21",
+    "sourceQuestionNumber": 21,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-022",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "In July 2017, Sarah Al Mohhak joined an ______ group of people who climbed mountains in every ______.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(active / country)"
+      },
+      {
+        "label": "B",
+        "text": "(exclusive / region)"
+      },
+      {
+        "label": "C",
+        "text": "(international / nation)"
+      },
+      {
+        "label": "D",
+        "text": "(elite / continent)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "verbal-1.docx#Q22",
+    "sourceQuestionNumber": 22,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-023",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Fish have ______ tails, sea ______ have horizontal.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(vertical / mammals)"
+      },
+      {
+        "label": "B",
+        "text": "(horizontal / mammals)"
+      },
+      {
+        "label": "C",
+        "text": "(vertical / reptiles)"
+      },
+      {
+        "label": "D",
+        "text": "(horizontal / fish)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-1.docx#Q23",
+    "sourceQuestionNumber": 23,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-024",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "The person who does the most ______ after the fender bender is usually the one that caused the ______.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(complaining / traffic)"
+      },
+      {
+        "label": "B",
+        "text": "(arguing / damage)"
+      },
+      {
+        "label": "C",
+        "text": "(talking / accident)"
+      },
+      {
+        "label": "D",
+        "text": "(shouting / delay)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-1.docx#Q24",
+    "sourceQuestionNumber": 24,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-025",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "If you want to set the price for a knitted sweater, multiply the cost of the ______  by three, it should make a good hourly wage while still making the price ______.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(fabric / expensive)"
+      },
+      {
+        "label": "B",
+        "text": "(tools / low)"
+      },
+      {
+        "label": "C",
+        "text": "(materials / affordable)"
+      },
+      {
+        "label": "D",
+        "text": "(design / attractive)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-1.docx#Q25",
+    "sourceQuestionNumber": 25,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-026",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Don't buy extra ______ until you can be sure your ______ will pay it back in 3 months.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(materials / profits)"
+      },
+      {
+        "label": "B",
+        "text": "(equipment / business)"
+      },
+      {
+        "label": "C",
+        "text": "(stock / savings)"
+      },
+      {
+        "label": "D",
+        "text": "(furniture / salary)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-1.docx#Q26",
+    "sourceQuestionNumber": 26,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-027",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Be careful when writing a ______; make sure not to use words you have to ______.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(report / repeat)"
+      },
+      {
+        "label": "B",
+        "text": "(message / translate)"
+      },
+      {
+        "label": "C",
+        "text": "(paragraph / memorize)"
+      },
+      {
+        "label": "D",
+        "text": "(speech / look up)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "verbal-1.docx#Q27",
+    "sourceQuestionNumber": 27,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-028",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "My father said I needed a ______ to come with me to the conference because I was not old enough to go ______, so I brought my friend with me.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(Companion / alone)"
+      },
+      {
+        "label": "B",
+        "text": "(chaperone / there)"
+      },
+      {
+        "label": "C",
+        "text": "(guardian / overseas)"
+      },
+      {
+        "label": "D",
+        "text": "(relative / early)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-1.docx#Q28",
+    "sourceQuestionNumber": 28,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-029",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "There has never been a ______ knife made of bad ______.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(pointed / iron)"
+      },
+      {
+        "label": "B",
+        "text": "(good / steel)"
+      },
+      {
+        "label": "C",
+        "text": "(golden / silver)"
+      },
+      {
+        "label": "D",
+        "text": "(dull / wood)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-1.docx#Q29",
+    "sourceQuestionNumber": 29,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-030",
+    "generalCategory": "Sentence Completion",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Camping is such a good ______ activity to do in your ______ time.",
+    "options": [
+      {
+        "label": "A",
+        "text": "(indoor / free)"
+      },
+      {
+        "label": "B",
+        "text": "(daily / working)"
+      },
+      {
+        "label": "C",
+        "text": "(outdoor / Free)"
+      },
+      {
+        "label": "D",
+        "text": "(urban / study)"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-1.docx#Q30",
+    "sourceQuestionNumber": 30,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-031",
+    "generalCategory": "Contextual Error",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "The documentarists were (frustrated) about the lack of (awareness) of poverty in the US, so they decided to film an (experiment) where they'd live on the minimum (money) for a month.",
+    "options": [
+      {
+        "label": "A",
+        "text": "frustrated"
+      },
+      {
+        "label": "B",
+        "text": "awareness"
+      },
+      {
+        "label": "C",
+        "text": "experiment"
+      },
+      {
+        "label": "D",
+        "text": "money"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "verbal-1.docx#Q31",
+    "sourceQuestionNumber": 31,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-032",
+    "generalCategory": "Contextual Error",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "My job keeps me incredibly (fit); I (carry) heavy packages (out) of the storage area and (hold) them onto the delivery truck every day.",
+    "options": [
+      {
+        "label": "A",
+        "text": "fit"
+      },
+      {
+        "label": "B",
+        "text": "carry"
+      },
+      {
+        "label": "C",
+        "text": "out"
+      },
+      {
+        "label": "D",
+        "text": "hold"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "verbal-1.docx#Q32",
+    "sourceQuestionNumber": 32,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-033",
+    "generalCategory": "Contextual Error",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "The (Brazilian) city of Minas Gerais is no (ordinary) city, it has the best (transport) system in the world. The mayor and council began (recognizing) the system in 2007.",
+    "options": [
+      {
+        "label": "A",
+        "text": "ordinary"
+      },
+      {
+        "label": "B",
+        "text": "transport"
+      },
+      {
+        "label": "C",
+        "text": "recognizing"
+      },
+      {
+        "label": "D",
+        "text": "Brazilian"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-1.docx#Q33",
+    "sourceQuestionNumber": 33,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-034",
+    "generalCategory": "Contextual Error",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "I work in a (local) newspaper, I give (clues). My dream is to work in an (international) newspaper (firm).",
+    "options": [
+      {
+        "label": "A",
+        "text": "local"
+      },
+      {
+        "label": "B",
+        "text": "clues"
+      },
+      {
+        "label": "C",
+        "text": "international"
+      },
+      {
+        "label": "D",
+        "text": "firm"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-1.docx#Q34",
+    "sourceQuestionNumber": 34,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-035",
+    "generalCategory": "Contextual Error",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Increased (urbanization) and infrastructure development, which has (expanded) lifestyle patterns, has also affected energy levels, which explains why overall (satisfaction) is (declining) among residents.",
+    "options": [
+      {
+        "label": "A",
+        "text": "expanded"
+      },
+      {
+        "label": "B",
+        "text": "satisfaction"
+      },
+      {
+        "label": "C",
+        "text": "declining"
+      },
+      {
+        "label": "D",
+        "text": "urbanization"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-1.docx#Q35",
+    "sourceQuestionNumber": 35,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-036",
+    "generalCategory": "Contextual Error",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "During the early years of the universe, (almost) inconceivable violence raged through the (cosmos), yet this (tranquility) only managed to (produce) a small number of atoms.",
+    "options": [
+      {
+        "label": "A",
+        "text": "almost"
+      },
+      {
+        "label": "B",
+        "text": "cosmos"
+      },
+      {
+        "label": "C",
+        "text": "tranquility"
+      },
+      {
+        "label": "D",
+        "text": "produce"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-1.docx#Q36",
+    "sourceQuestionNumber": 36,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-037",
+    "generalCategory": "Contextual Error",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "\"I arrive on earth as a meteor and leave as a (thunderbolt)!\" A quote said by Maupassant to Jose Maria de Heredia. This quote in fact doesn't reflect his charming (solemnity) because in his professional life which was for about 10 years, he wrote poems and books, but he then sank into the (abyss) of (darkness).",
+    "options": [
+      {
+        "label": "A",
+        "text": "thunderbolt"
+      },
+      {
+        "label": "B",
+        "text": "solemnity"
+      },
+      {
+        "label": "C",
+        "text": "abyss"
+      },
+      {
+        "label": "D",
+        "text": "darkness"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-1.docx#Q37",
+    "sourceQuestionNumber": 37,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-038",
+    "generalCategory": "Contextual Error",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "People wonder why there are (homogenous) explanations to the same thing. The (reason) is that each one of these explanations (caters) to a set of readers, who have real ideas that drive widely (different) from each other.",
+    "options": [
+      {
+        "label": "A",
+        "text": "homogenous"
+      },
+      {
+        "label": "B",
+        "text": "reason"
+      },
+      {
+        "label": "C",
+        "text": "caters"
+      },
+      {
+        "label": "D",
+        "text": "different"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-1.docx#Q38",
+    "sourceQuestionNumber": 38,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-039",
+    "generalCategory": "Contextual Error",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Although my book is intended mainly for the entertainment of boys and girls, I hope it will not be (spurned) by men and women on that (accent), for part of my plan has been to try to pleasantly remind adults of what they once were themselves, and of how they felt and thought and talked, and what (queer) enterprises they (engage) with.",
+    "options": [
+      {
+        "label": "A",
+        "text": "spurned"
+      },
+      {
+        "label": "B",
+        "text": "accent"
+      },
+      {
+        "label": "C",
+        "text": "queer"
+      },
+      {
+        "label": "D",
+        "text": "engage"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-1.docx#Q39",
+    "sourceQuestionNumber": 39,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-040",
+    "generalCategory": "Contextual Error",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "The revival of the Europeans, Arabian (doctors) and philosophers (attributed) knowledge that Europeans learn from even in the twelfth century, and (concentrated) their knowledge for when they go home which (facilitated) the progress of science.",
+    "options": [
+      {
+        "label": "A",
+        "text": "doctors"
+      },
+      {
+        "label": "B",
+        "text": "attributed"
+      },
+      {
+        "label": "C",
+        "text": "concentrated"
+      },
+      {
+        "label": "D",
+        "text": "facilitated"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-1.docx#Q40",
+    "sourceQuestionNumber": 40,
+    "reviewStatus": "final"
+  },
+  {
+    "id": "V1-041",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Few practitioners of alternative medicine…",
+    "options": [
+      {
+        "label": "A",
+        "text": "Consider their therapies to be complete replacements for modern medicine."
+      },
+      {
+        "label": "B",
+        "text": "Believe their therapies only work with surgery."
+      },
+      {
+        "label": "C",
+        "text": "Use alternative medicine only for emergencies."
+      },
+      {
+        "label": "D",
+        "text": "Think modern medicine is always unnecessary."
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-1.docx#Q45",
+    "sourceQuestionNumber": 45,
+    "reviewStatus": "final",
+    "passageId": "verbal-1-passage-01"
+  },
+  {
+    "id": "V1-042",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Alternative therapies…",
+    "options": [
+      {
+        "label": "A",
+        "text": "Are rejected by most doctors worldwide."
+      },
+      {
+        "label": "B",
+        "text": "Are becoming more popular with many doctors."
+      },
+      {
+        "label": "C",
+        "text": "Have completely replaced hospital treatment."
+      },
+      {
+        "label": "D",
+        "text": "Are only used in countries without science."
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-1.docx#Q46",
+    "sourceQuestionNumber": 46,
+    "reviewStatus": "final",
+    "passageId": "verbal-1-passage-01"
+  },
+  {
+    "id": "V1-043",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Western medicine…",
+    "options": [
+      {
+        "label": "A",
+        "text": "Has never changed over time."
+      },
+      {
+        "label": "B",
+        "text": "Was created in ancient times and stayed the same."
+      },
+      {
+        "label": "C",
+        "text": "Has existed for a comparatively short time."
+      },
+      {
+        "label": "D",
+        "text": "Is based mainly on herbs and spiritual healing."
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-1.docx#Q47",
+    "sourceQuestionNumber": 47,
+    "reviewStatus": "final",
+    "passageId": "verbal-1-passage-01"
+  },
+  {
+    "id": "V1-044",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "The World Health Organization…",
+    "options": [
+      {
+        "label": "A",
+        "text": "Refuses to recognize any traditional medicine."
+      },
+      {
+        "label": "B",
+        "text": "Says alternative medicine should be banned."
+      },
+      {
+        "label": "C",
+        "text": "Only supports modern hospitals and drugs."
+      },
+      {
+        "label": "D",
+        "text": "Will support effective traditional knowledge and skills."
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "verbal-1.docx#Q48",
+    "sourceQuestionNumber": 48,
+    "reviewStatus": "final",
+    "passageId": "verbal-1-passage-01"
+  },
+  {
+    "id": "V1-045",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "How do doctors feel about alternative medicine?",
+    "options": [
+      {
+        "label": "A",
+        "text": "They’re suspicious."
+      },
+      {
+        "label": "B",
+        "text": "They are always fully supportive."
+      },
+      {
+        "label": "C",
+        "text": "They don’t know it exists."
+      },
+      {
+        "label": "D",
+        "text": "They prefer it to modern medicine."
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-1.docx#Q49",
+    "sourceQuestionNumber": 49,
+    "reviewStatus": "final",
+    "passageId": "verbal-1-passage-01"
+  },
+  {
+    "id": "V1-046",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Why is alternative medicine becoming more popular?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Because it is always cheaper than modern treatment."
+      },
+      {
+        "label": "B",
+        "text": "Because people are realizing the limitations of science."
+      },
+      {
+        "label": "C",
+        "text": "Because modern medicine has completely disappeared."
+      },
+      {
+        "label": "D",
+        "text": "Because doctors have stopped using technology."
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "sourceRef": "verbal-1.docx#Q50",
+    "sourceQuestionNumber": 50,
+    "reviewStatus": "final",
+    "passageId": "verbal-1-passage-01"
+  },
+  {
+    "id": "V1-047",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "How does the WHO feel about alternative medicine?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Negative"
+      },
+      {
+        "label": "B",
+        "text": "Uninterested"
+      },
+      {
+        "label": "C",
+        "text": "Favorable"
+      },
+      {
+        "label": "D",
+        "text": "Angry"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-1.docx#Q51",
+    "sourceQuestionNumber": 51,
+    "reviewStatus": "final",
+    "passageId": "verbal-1-passage-01"
+  },
+  {
+    "id": "V1-048",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "What was mainly used as alternative medicine before modern medicine was developed?",
+    "options": [
+      {
+        "label": "A",
+        "text": "X-rays"
+      },
+      {
+        "label": "B",
+        "text": "Antibiotics"
+      },
+      {
+        "label": "C",
+        "text": "Vaccines"
+      },
+      {
+        "label": "D",
+        "text": "Herbs"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "sourceRef": "verbal-1.docx#Q52",
+    "sourceQuestionNumber": 52,
+    "reviewStatus": "final",
+    "passageId": "verbal-1-passage-01"
+  },
+  {
+    "id": "V1-049",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "What is the main idea of the passage?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Biology is composed of a broad range of studies"
+      },
+      {
+        "label": "B",
+        "text": "In the past they mainly focused on studying microbiology"
+      },
+      {
+        "label": "C",
+        "text": "Biology is only about studying tiny cells"
+      },
+      {
+        "label": "D",
+        "text": "Biology is mainly about finding cures for cancer"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-1.docx#Q53",
+    "sourceQuestionNumber": 53,
+    "reviewStatus": "final",
+    "passageId": "verbal-1-passage-02"
+  },
+  {
+    "id": "V1-050",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "From the passage, what can you tell is part of biology?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Open heart surgery"
+      },
+      {
+        "label": "B",
+        "text": "Organic farming"
+      },
+      {
+        "label": "C",
+        "text": "Protecting the planet"
+      },
+      {
+        "label": "D",
+        "text": "Oil digging"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-1.docx#Q54",
+    "sourceQuestionNumber": 54,
+    "reviewStatus": "final",
+    "passageId": "verbal-1-passage-02"
+  },
+  {
+    "id": "V1-051",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "Based on the passage what’s biology about?",
+    "options": [
+      {
+        "label": "A",
+        "text": "The study of biology is wide and broad"
+      },
+      {
+        "label": "B",
+        "text": "Biology only focuses on human diseases"
+      },
+      {
+        "label": "C",
+        "text": "Biology is the study of machines and technology"
+      },
+      {
+        "label": "D",
+        "text": "Biology is mainly about digging for natural resources"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "sourceRef": "verbal-1.docx#Q55",
+    "sourceQuestionNumber": 55,
+    "reviewStatus": "final",
+    "passageId": "verbal-1-passage-02"
+  },
+  {
+    "id": "V1-052",
+    "generalCategory": "Reading Comprehension",
+    "specificCategory": "",
+    "kind": "text-en",
+    "questionText": "What do biologists do?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Work in agriculture only"
+      },
+      {
+        "label": "B",
+        "text": "Perform open heart surgeries"
+      },
+      {
+        "label": "C",
+        "text": "planet caring"
+      },
+      {
+        "label": "D",
+        "text": "Dig for oil underground"
+      }
+    ],
+    "answerLabels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "sourceRef": "verbal-1.docx#Q56",
+    "sourceQuestionNumber": 56,
+    "reviewStatus": "final",
+    "passageId": "verbal-1-passage-02"
+  }
+]

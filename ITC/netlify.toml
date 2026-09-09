@@ -1,0 +1,23 @@
+# Netlify build configuration — Leen ITC Practice App
+# Deploy from source: Netlify runs `npm install && npm run build` and publishes dist/.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# SPA fallback — every route serves index.html (client-side app).
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Long-cache the hashed asset bundle; assets are content-hashed by Vite.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

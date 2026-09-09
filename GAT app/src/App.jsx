@@ -1,0 +1,289 @@
+import { useState, useEffect, useCallback } from "react";
+import Home from "./components/Home.jsx";
+import SectionSelect from "./components/SectionSelect.jsx";
+import Quiz from "./components/Quiz.jsx";
+import Results from "./components/Results.jsx";
+import Review from "./components/Review.jsx";
+import PerformanceReport from "./components/PerformanceReport.jsx";
+import LeadForm from "./components/LeadForm.jsx";
+import PopupAd from "./components/PopupAd.jsx";
+import { getTestQuestions, getQuestionsByIds, TEST_META } from "./data/tests.js";
+import { Sound } from "./lib/sound.js";
+import { getStr, setStr, getJSON, setJSON, remove, getSessionStr, setSessionStr } from "./lib/storage.js";
+import { DEFAULT_TEST_MINUTES, WHATSAPP_URL } from "./config/marketing.js";
+import { FaWhatsapp } from "react-icons/fa";
+import "./styles/app.css";
+
+const LS = {
+  theme: "leen_gat_theme",
+  lead: "leen_gat_lead_completed",
+  active: "leen_gat_active_attempt_v1",
+  openAdShown: "leen_gat_open_ad_shown",
+};
+
+export default function App() {
+  const [screen, setScreen] = useState("home"); // home|select|lead|quiz|results|report|review
+  const [pickedSection, setPickedSection] = useState(null); // quantitative | verbal
+  const [session, setSession] = useState(null);
+  const [attempt, setAttempt] = useState(null);
+  const [reviewRes, setReviewRes] = useState(null);
+  const [reportRes, setReportRes] = useState(null);
+  const [pending, setPending] = useState(null);
+  const [resumePrompt, setResumePrompt] = useState(null);
+  const [leaveConfirm, setLeaveConfirm] = useState(false);
+  const [homeReturnConfirm, setHomeReturnConfirm] = useState(null);
+  const [practiceMistakesPrompt, setPracticeMistakesPrompt] = useState(null);
+  const [showOpenAd, setShowOpenAd] = useState(false);
+  const [showFinishAd, setShowFinishAd] = useState(false);
+
+  const [dark, setDark] = useState(() => getStr(LS.theme, "dark") !== "light");
+  const [soundOn, setSoundOn] = useState(true);
+
+  useEffect(() => { Sound.setEnabled(soundOn); }, [soundOn]);
+  useEffect(() => { document.body.classList.toggle("light", !dark); setStr(LS.theme, dark ? "dark" : "light"); }, [dark]);
+  useEffect(() => {
+    const unlock = () => { Sound.unlock(); window.removeEventListener("pointerdown", unlock); };
+    window.addEventListener("pointerdown", unlock);
+  }, []);
+
+  // Promotional popup once per browser session — sessionStorage (not
+  // localStorage) so it re-triggers every time the student closes and
+  // reopens the browser/tab, not just on their very first-ever visit.
+  // Skipped whenever there's an unfinished attempt to resume (below) — the ad's
+  // overlay sits above the resume modal (z-popup > z-overlay) and would otherwise
+  // hide the "continue your test?" prompt every time it's due to appear.
+  useEffect(() => {
+    if (getSessionStr(LS.openAdShown, "") === "true") return;
+    const saved = getJSON(LS.active, null);
+    if (saved && saved.questionIds?.length) return;
+    setSessionStr(LS.openAdShown, "true");
+    setShowOpenAd(true);
+  }, []);
+
+  // Resume-interrupted-attempt prompt — checked fresh on every app load (not
+  // just the first visit ever), so it reliably asks again each time the
+  // student re-enters the site with an unfinished test still saved.
+  useEffect(() => {
+    const saved = getJSON(LS.active, null);
+    if (saved && saved.questionIds?.length) setResumePrompt(saved);
+  }, []);
+
+  // Show the finish-ad 5s after landing on results, so the student sees their
+  // score first. Keyed on `attempt` (set once per submission by finishAttempt),
+  // not on the Results component's own lifecycle, so a Results re-render can't
+  // re-trigger it — and the timeout is cleaned up on unmount or a new attempt.
+  useEffect(() => {
+    if (!attempt) return;
+    const t = setTimeout(() => setShowFinishAd(true), 5000);
+    return () => clearTimeout(t);
+  }, [attempt]);
+
+  const leadDone = () => getStr(LS.lead, "") === "true";
+
+  // ---- start flow ----
+  // Timer is optional (student toggles it on the start screen, default OFF).
+  // When enabled, every test uses the same unified 60-minute
+  // (DEFAULT_TEST_MINUTES) overall timer — never a per-question timer.
+  const requestStart = (testKey, timed) => {
+    const meta = TEST_META[testKey];
+    const intent = { testKey, section: meta.section, timed, minutes: DEFAULT_TEST_MINUTES, testTitle: meta.title };
+    if (!leadDone()) { setPending(intent); setScreen("lead"); return; }
+    beginAttempt(intent);
+  };
+
+  // Deadline-based timer: a fresh attempt gets `deadline = now + minutes`.
+  // Resuming (restoreState.deadline present) reuses that exact deadline so
+  // refreshing/leaving-and-returning can never grant extra time — remaining
+  // time is always derived from `deadline - Date.now()`, never stored as a
+  // decrementing counter.
+  const beginAttempt = (intent, restoreState = null) => {
+    const questions = restoreState?.questions || getTestQuestions(intent.testKey);
+    const deadline = intent.timed
+      ? (restoreState?.deadline || Date.now() + intent.minutes * 60000)
+      : null;
+    const sess = {
+      ...intent, questions, deadline,
+      initialState: { ...(restoreState?.state || {}), questions, onState: onQuizState },
+    };
+    setSession(sess);
+    setScreen("quiz");
+    saveActive(intent, questions, restoreState?.state || {}, deadline);
+  };
+
+  const saveActive = (intent, questions, state, deadline) => {
+    setJSON(LS.active, {
+      testKey: intent.testKey, section: intent.section, timed: intent.timed, minutes: intent.minutes,
+      testTitle: intent.testTitle, questionIds: questions.map((q) => q.id), state, deadline,
+    });
+  };
+
+  const onQuizState = useCallback((live) => {
+    const saved = getJSON(LS.active, null);
+    if (saved) setJSON(LS.active, { ...saved, state: live });
+  }, []);
+
+  const finishAttempt = (att) => {
+    const finished = {
+      ...att,
+      testKey: session?.testKey || att.testKey,
+      testTitle: session?.testTitle || att.testTitle,
+    };
+    remove(LS.active);
+    setAttempt(finished);
+    setScreen("results");
+  };
+
+  // ---- lead complete ----
+  const onLeadComplete = () => {
+    setStr(LS.lead, "true");
+    if (pending) { const p = pending; setPending(null); beginAttempt(p); }
+    else setScreen("home");
+  };
+
+  // ---- resume prompt actions ----
+  const doResume = () => {
+    const s = resumePrompt; setResumePrompt(null);
+    const intent = { testKey: s.testKey, section: s.section, timed: s.timed, minutes: s.minutes, testTitle: s.testTitle };
+    const questions = getQuestionsByIds(s.questionIds || []);
+    beginAttempt(intent, { questions: questions.length ? questions : getTestQuestions(s.testKey), state: s.state, deadline: s.deadline });
+  };
+  const discardResume = () => { setResumePrompt(null); remove(LS.active); };
+
+  // ---- practice mistakes ----
+  const practiceMistakes = (res) => {
+    const wrongRows = res.rows.filter((r) => r.status === "incorrect" || r.status === "unanswered");
+    const wrongIds = wrongRows.map((r) => r.q?.id).filter(Boolean);
+    const freshById = Object.fromEntries(getQuestionsByIds(wrongIds).map((q) => [q.id, q]));
+    const wrong = wrongRows.map((r) => freshById[r.q?.id] || r.q).filter(Boolean);
+    const sess = {
+      testKey: attempt.testKey || "practice", timed: false, minutes: 0, deadline: null, questions: wrong,
+      testTitle: "Practice Mistakes", initialState: { onState: () => {}, idx: 0, answers: {}, marked: {} },
+    };
+    setSession(sess); setScreen("quiz");
+  };
+
+  const goHome = () => { setScreen("home"); setSession(null); setPickedSection(null); };
+  const askLeave = () => setLeaveConfirm(true);
+  const confirmLeave = () => { setLeaveConfirm(false); goHome(); };
+  const askHomeReturn = (source) => setHomeReturnConfirm(source);
+  const confirmHomeReturn = () => { setHomeReturnConfirm(null); goHome(); };
+  const requestPracticeMistakes = (res) => setPracticeMistakesPrompt(res);
+  const confirmPracticeMistakes = () => {
+    const res = practiceMistakesPrompt;
+    setPracticeMistakesPrompt(null);
+    if (res) practiceMistakes(res);
+  };
+
+  return (
+    <div className="app-root">
+      <div className="aurora"><span className="b1" /><span className="b2" /><span className="b3" /><span className="b4" /></div>
+      <div className="grain" />
+      <a className="wa-float global-wa" href={WHATSAPP_URL} target="_blank" rel="noreferrer" aria-label="WhatsApp">
+        <FaWhatsapp size={26} aria-hidden="true" />
+      </a>
+
+      {screen === "home" && (
+        <Home
+          dark={dark} onToggleDark={() => setDark((d) => !d)}
+          soundOn={soundOn} onToggleSound={() => setSoundOn((s) => !s)}
+          onPickQuant={() => { setPickedSection("quantitative"); setScreen("select"); }}
+          onPickVerbal={() => { setPickedSection("verbal"); setScreen("select"); }}
+        />
+      )}
+
+      {screen === "select" && (
+        <SectionSelect
+          section={pickedSection}
+          dark={dark} onToggleDark={() => setDark((d) => !d)}
+          soundOn={soundOn} onToggleSound={() => setSoundOn((s) => !s)}
+          onHome={goHome}
+          onStart={(testKey, timed) => requestStart(testKey, timed)}
+        />
+      )}
+
+      {screen === "lead" && (
+        <LeadForm
+          dark={dark} onToggleDark={() => setDark((d) => !d)}
+          soundOn={soundOn} onToggleSound={() => setSoundOn((s) => !s)}
+          onComplete={onLeadComplete} onHome={goHome}
+        />
+      )}
+
+      {screen === "quiz" && session && (
+        <Quiz
+          questions={session.questions} testTitle={session.testTitle}
+          deadline={session.deadline} totalMinutes={session.minutes}
+          dark={dark} onToggleDark={() => setDark((d) => !d)}
+          soundOn={soundOn} onToggleSound={() => setSoundOn((s) => !s)}
+          onFinish={finishAttempt} onHome={askLeave}
+          initialState={session.initialState}
+        />
+      )}
+
+      {screen === "results" && attempt && (
+        <Results
+          attempt={attempt}
+          dark={dark} onToggleDark={() => setDark((d) => !d)}
+          soundOn={soundOn} onToggleSound={() => setSoundOn((s) => !s)}
+          onHome={() => askHomeReturn("results")}
+          onReport={(res) => { setReportRes(res); setScreen("report"); }}
+          onReview={(res) => { setReviewRes(res); setScreen("review"); }}
+          onPracticeMistakes={requestPracticeMistakes}
+        />
+      )}
+
+      {screen === "report" && reportRes && (
+        <PerformanceReport
+          res={reportRes}
+          dark={dark} onToggleDark={() => setDark((d) => !d)}
+          soundOn={soundOn} onToggleSound={() => setSoundOn((s) => !s)}
+          onHome={() => askHomeReturn("report")}
+          onBack={() => setScreen("results")}
+        />
+      )}
+
+      {screen === "review" && reviewRes && (
+        <Review
+          res={reviewRes}
+          dark={dark} onToggleDark={() => setDark((d) => !d)}
+          soundOn={soundOn} onToggleSound={() => setSoundOn((s) => !s)}
+          onHome={() => askHomeReturn("review")}
+          onBack={() => setScreen("results")}
+        />
+      )}
+
+      {showOpenAd && <PopupAd variant="open" onClose={() => setShowOpenAd(false)} />}
+      {showFinishAd && <PopupAd variant="finish" onClose={() => setShowFinishAd(false)} />}
+
+      {resumePrompt && (
+        <Modal title="Resume Attempt" body={`You left ${resumePrompt.testTitle} unfinished. Would you like to continue your attempt?`}
+          yes="Resume" no="Start Over" onYes={doResume} onNo={discardResume} />
+      )}
+      {leaveConfirm && (
+        <Modal title="Leave the test?" yes="Yes" no="No" onYes={confirmLeave} onNo={() => setLeaveConfirm(false)} />
+      )}
+      {homeReturnConfirm && (
+        <Modal title="Return to the main menu?" yes="Yes" no="No" onYes={confirmHomeReturn} onNo={() => setHomeReturnConfirm(null)} />
+      )}
+      {practiceMistakesPrompt && (
+        <Modal title="Retake this test?" body="This will replay the questions you left unanswered or answered incorrectly."
+          bodyClassName="modal-comment" yes="Yes" no="No" onYes={confirmPracticeMistakes} onNo={() => setPracticeMistakesPrompt(null)} />
+      )}
+    </div>
+  );
+}
+
+function Modal({ title, body, bodyClassName = "", yes, no, onYes, onNo }) {
+  return (
+    <div className="overlay">
+      <div className="modal">
+        <h3>{title}</h3>
+        {body && <p className={bodyClassName}>{body}</p>}
+        <div className="modal-acts">
+          <button className="btn-primary" onClick={() => { Sound.tap(); onYes(); }}>{yes}</button>
+          <button className="btn-ghost" onClick={() => { Sound.tap(); onNo(); }}>{no}</button>
+        </div>
+      </div>
+    </div>
+  );
+}

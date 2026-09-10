@@ -57,9 +57,24 @@ export default function PopupAd({ variant = "open", onClose }) {
     };
     tryPlay();
 
+    // Plays once (no loop) and stays frozen on its last frame rather than
+    // resetting to the first — a few engines can briefly blank/reset the
+    // displayed frame right at the exact duration timestamp when playback
+    // ends, so nudge back a fraction of a frame to pin on the last real
+    // rendered frame instead of that edge. currentTime is never set to 0
+    // here — only ever backward from the end. Reopening the popup already
+    // starts from the beginning on its own, since PopupAd (and this
+    // <video>) fully remounts fresh each time the popup opens.
+    const holdLastFrame = () => {
+      v.pause();
+      if (Number.isFinite(v.duration)) v.currentTime = Math.max(0, v.duration - 0.033);
+    };
+    v.addEventListener("ended", holdLastFrame);
+
     return () => {
       v.removeEventListener("loadedmetadata", retryOnce);
       v.removeEventListener("canplay", retryOnce);
+      v.removeEventListener("ended", holdLastFrame);
     };
   }, []);
 
@@ -84,7 +99,6 @@ export default function PopupAd({ variant = "open", onClose }) {
             className="ad-pop-video"
             src={PROMO_ASSETS.promoVideo}
             autoPlay
-            loop
             muted
             defaultMuted
             playsInline

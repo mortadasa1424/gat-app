@@ -1,4 +1,5 @@
 import { createPortal } from "react-dom";
+import { useLayoutEffect, useRef } from "react";
 import { Sound } from "../lib/sound.js";
 import { COURSE_URL, PROMO_ASSETS } from "../config/marketing.js";
 import { X } from "./icons.jsx";
@@ -17,6 +18,51 @@ import { X } from "./icons.jsx";
 // would otherwise re-anchor position:fixed descendants to that ancestor
 // instead of the viewport) and of app-root's own stacking context.
 export default function PopupAd({ variant = "open", onClose }) {
+  const videoRef = useRef(null);
+
+  // Cross-browser muted autoplay: PopupAd fully (re)mounts every time the
+  // popup opens (App.jsx conditionally renders it), so this effect's own
+  // mount is exactly "whenever the popup becomes visible" — no extra
+  // open/close state needed here. useLayoutEffect (not useEffect) so
+  // .muted/.defaultMuted are forced on the element before the browser gets
+  // a chance to paint/evaluate autoplay, closing the one real cross-engine
+  // gap: the muted="" JSX attribute alone is reliable on a fresh mount in
+  // every browser we target, but forcing the DOM property directly removes
+  // any doubt rather than trusting each engine's attribute-to-property sync.
+  useLayoutEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+
+    v.muted = true;
+    v.defaultMuted = true;
+
+    // Retry at most once, only if the first attempt is actually rejected
+    // (not "sometimes retry forever") — typically because the element
+    // wasn't far enough along (no metadata yet) for that specific engine
+    // to honor play() synchronously. Whichever readiness event fires
+    // first retries; the flag stops the other one from firing a second
+    // attempt. No console output either way — a rejected autoplay is an
+    // expected, silent outcome, not an error.
+    let retried = false;
+    const retryOnce = () => {
+      if (retried) return;
+      retried = true;
+      v.play().catch(() => {});
+    };
+    const tryPlay = () => {
+      v.play()?.catch(() => {
+        v.addEventListener("loadedmetadata", retryOnce, { once: true });
+        v.addEventListener("canplay", retryOnce, { once: true });
+      });
+    };
+    tryPlay();
+
+    return () => {
+      v.removeEventListener("loadedmetadata", retryOnce);
+      v.removeEventListener("canplay", retryOnce);
+    };
+  }, []);
+
   const closeAd = () => { Sound.tap(); onClose?.(); };
   const openCourse = () => {
     Sound.tap();
@@ -34,11 +80,13 @@ export default function PopupAd({ variant = "open", onClose }) {
 
         <button className="ad-pop-media ad-pop-video-btn" type="button" aria-label="Enroll in the GAT course" onClick={openCourse}>
           <video
+            ref={videoRef}
             className="ad-pop-video"
             src={PROMO_ASSETS.promoVideo}
             autoPlay
             loop
             muted
+            defaultMuted
             playsInline
             webkit-playsinline="true"
             disablePictureInPicture

@@ -4655,8 +4655,22 @@ body.light .home-lede{color:#342f57}
 
 /* The split-view question pane is much narrower than a full-width card, so
    forcing the standard two-column answer grid crushes long Verbal option
-   text into unreadable slivers. Single column here at every width. */
+   text into unreadable slivers. Single column here at every width by
+   default (this also keeps the desktop split-view, where the pane is
+   permanently narrow, exactly as it was). */
 .q-split-question .opts.opts-two-col{grid-template-columns:1fr!important}
+
+/* On mobile the split pane runs full-width (passage and question stack),
+   so when every option is short enough (.opts-rc-compact, set in
+   QuestionCard.jsx from actual option text length — never a hardcoded
+   question id) a 2x2 grid fits comfortably and cuts scrolling. Long
+   options never get this class, so they keep the single-column fallback
+   above. Bounded to <1024px so desktop split-view is untouched. */
+@media (max-width:1023.98px){
+  .q-split-question .opts.opts-two-col.opts-rc-compact{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+}
 
 /* ============================================================
    PHASE 3.1 — QUIZ POLISH
@@ -5016,6 +5030,45 @@ body:not(.light) .review .opt.wrong{background:rgba(255,90,106,.16)}
   box-shadow:none!important;filter:none!important;opacity:1!important;
   cursor:not-allowed!important;transform:none!important;
 }
+
+/* ---- Start Test button only: stronger disabled -> enabled contrast ----
+   Scoped to .select-start-btn (unique to SectionSelect's Start Test
+   button) via a compound selector, so no other .btn-primary button is
+   touched. Disabled keeps the same glass language but with a more
+   visible light-purple tint and more readable muted text; enabled
+   becomes a noticeably darker, richer purple with higher text contrast
+   so it reads unmistakably as the primary action once a test is picked. */
+.btn-primary.select-start-btn{
+  background:rgba(124,92,240,.52)!important;
+  border-color:rgba(206,190,255,.88)!important;
+  box-shadow:0 14px 30px -14px rgba(90,62,214,.85)!important;
+}
+.btn-primary.select-start-btn:hover{
+  background:rgba(124,92,240,.62)!important;
+  border-color:rgba(216,202,255,.95)!important;
+}
+.btn-primary.select-start-btn:active{background:rgba(124,92,240,.62)!important}
+.btn-primary.select-start-btn:disabled{
+  background:rgba(147,116,255,.16)!important;
+  border-color:rgba(186,163,255,.30)!important;
+  color:rgba(244,243,255,.62)!important;
+}
+body.light .btn-primary.select-start-btn{
+  background:rgba(90,62,214,.26)!important;
+  border-color:rgba(90,62,214,.62)!important;
+  color:#2a1a6e!important;
+  box-shadow:0 12px 28px -16px rgba(90,62,214,.42)!important;
+}
+body.light .btn-primary.select-start-btn:hover{
+  background:rgba(90,62,214,.34)!important;
+  border-color:rgba(90,62,214,.76)!important;
+}
+body.light .btn-primary.select-start-btn:disabled{
+  background:rgba(124,92,240,.13)!important;
+  border-color:rgba(90,62,214,.22)!important;
+  color:rgba(26,20,56,.58)!important;
+}
+
 /* Quiz nav row (Next / Submit Test) and the navigator's inline Submit
    share the same primary token but keep their own min-height (already
    tuned per breakpoint above) — recolor only, no size properties here. */

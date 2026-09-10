@@ -242,10 +242,11 @@ function OptionRow({ opt, index, state, disabled, onPick, sizeOverride = null })
   );
 }
 
-function OptionsList({ options, optState, revealed, onPick, sizeOverride }) {
+function OptionsList({ options, optState, revealed, onPick, sizeOverride, extraClass = "" }) {
   if (!options?.length) return null;
+  const cls = ["opts", "opts-two-col", extraClass].filter(Boolean).join(" ");
   return (
-    <div className="opts opts-two-col">
+    <div className={cls}>
       {options.map((opt, i) => (
         <OptionRow key={i} opt={opt} index={i} state={optState(i)} disabled={revealed}
           onPick={onPick} sizeOverride={sizeOverride} />
@@ -277,6 +278,14 @@ export default function QuestionCard({
   // question kind (including non-passage Verbal) keeps the original
   // single-column structure untouched below.
   if (passage) {
+    // On mobile the split pane is full-width, so a 2x2 answer grid reads
+    // fine as long as every option is short — reuse the same content-length
+    // classification already used to size math options, rather than a
+    // fixed/hardcoded per-question rule. Any option long enough to need
+    // smaller text (opt-long/opt-xlong) falls back to the single-column
+    // list so its text never gets crushed. Desktop split-view is untouched
+    // by this — the narrow desktop pane always stays single column.
+    const rcCompact = groupOptionSizeClass(q.options || []) === "";
     return (
       <div className="card q-split-card">
         {meta}
@@ -285,7 +294,8 @@ export default function QuestionCard({
           <PassagePane passage={passage} />
           <div className="q-split-question">
             <QuestionText q={q} />
-            <OptionsList options={q.options} optState={optState} revealed={revealed} onPick={onPick} sizeOverride={null} />
+            <OptionsList options={q.options} optState={optState} revealed={revealed} onPick={onPick}
+              sizeOverride={null} extraClass={rcCompact ? "opts-rc-compact" : ""} />
           </div>
         </div>
         {navigation}

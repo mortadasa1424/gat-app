@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+
+# Microsoft Office lock files (created while a .docx/.xlsx is open)
+~$*
+
+# Local env files (none currently used, but never commit if added)
+.env
+.env.local
+.env.*.local

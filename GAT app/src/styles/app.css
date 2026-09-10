@@ -549,7 +549,7 @@ body.light .aurora span{mix-blend-mode:multiply;opacity:.5}
 /* ============================================================
    OVERLAYS (nav grid, modals, pause)
    ============================================================ */
-.overlay{position:fixed;inset:0;width:100vw;height:100vh;height:100dvh;z-index:100;display:grid;place-items:center;padding:24px;
+.overlay{position:fixed;inset:0;width:100vw;height:100vh;height:100dvh;height:100svh;z-index:100;display:grid;place-items:center;padding:24px;
   background:rgba(8,5,22,.7);backdrop-filter:blur(8px);animation:fadeIn .25s}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 .overlay-sheet{position:fixed;inset:0;z-index:100;background:rgba(8,5,22,.6);backdrop-filter:blur(6px);animation:fadeIn .25s}
@@ -560,7 +560,9 @@ body.light .aurora span{mix-blend-mode:multiply;opacity:.5}
 .modal h3{margin:0 0 8px;font-size:1.22rem;font-weight:800}
 .modal p{color:var(--txt-dim);margin:0 0 20px;font-size:.92rem;line-height:1.6}
 .modal p.modal-comment{color:var(--txt-mute);font-size:.82rem;line-height:1.55;margin-top:-2px}
-body.light .modal p.modal-comment{color:#8d879f}
+/* #6b6585 (not the lighter --txt-mute token) so this secondary caption
+   still clears 4.5:1 contrast against the light-theme modal surface. */
+body.light .modal p.modal-comment{color:#6b6585}
 .modal-acts{display:flex;flex-direction:column;gap:10px}
 .modal-icon{font-size:2.6rem;margin-bottom:8px;animation:iconBob 2.5s ease-in-out infinite}
 
@@ -569,7 +571,7 @@ body.light .modal p.modal-comment{color:#8d879f}
 .btn-ghost:hover{color:var(--txt);border-color:var(--glass-brd-2);background:var(--glass)}
 
 .navpanel{position:absolute;top:70px;left:50%;transform:translateX(-50%);width:calc(100% - 36px);max-width:444px;
-  max-height:72vh;overflow-y:auto;border-radius:var(--r-xl);padding:20px;
+  max-height:72vh;max-height:72dvh;max-height:72svh;overflow-y:auto;border-radius:var(--r-xl);padding:20px;
   background:linear-gradient(180deg,var(--bg-2),var(--bg-1));border:1px solid var(--glass-brd-2);
   box-shadow:0 40px 90px -30px #000;animation:modalPop .35s var(--ease-back)}
 .navpanel-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
@@ -3780,13 +3782,12 @@ body:not(.light) .home-icon-btn:hover{
   top:0!important;left:0!important;right:0!important;
   /* Explicit height (not inset:0's implicit one) for the same reason as
      .app-root above: this is itself position:fixed, so on iOS Chrome its
-     box can otherwise be computed against a taller-than-visible viewport,
-     independently of whatever .app-root/.screen do. --app-viewport-height
-     (measured live from window.visualViewport, see main.jsx) wins last,
-     since it's the real rendering-surface size rather than a CSS engine's
-     estimate of it. */
+     box can otherwise be computed against a taller-than-visible viewport
+     independently of whatever .app-root/.screen do. 100svh (CSS-native,
+     the browser's own small-viewport reading) is the most reliable unit
+     here; the vh/dvh declarations before it are just the standard
+     progressive-enhancement fallback for browsers without svh support. */
   height:100vh!important;height:100dvh!important;height:100svh!important;
-  height:var(--app-viewport-height,100svh)!important;
   z-index:10000!important;
   display:flex!important;
   align-items:center!important;
@@ -3841,26 +3842,31 @@ body:not(.light) .home-icon-btn:hover{
 }
 .ad-pop-close{
   position:absolute!important;
-  top:14px!important;
-  inset-inline-end:14px!important;
+  top:8px!important;
+  inset-inline-end:8px!important;
   z-index:4!important;
-  width:42px!important;
-  height:42px!important;
-  border:1px solid rgba(255,255,255,.22)!important;
-  border-radius:14px!important;
+  width:34px!important;
+  height:34px!important;
+  border:0!important;
+  border-radius:50%!important;
   cursor:pointer!important;
   display:grid!important;
   place-items:center!important;
   color:var(--txt)!important;
-  background:rgba(255,255,255,.11)!important;
-  backdrop-filter:blur(10px)!important;
-  -webkit-backdrop-filter:blur(10px)!important;
+  background:transparent!important;
+  backdrop-filter:none!important;
+  -webkit-backdrop-filter:none!important;
+  box-shadow:none!important;
   font-size:1.7rem!important;
   line-height:1!important;
   font-weight:800!important;
-  transition:transform .2s var(--ease-back),background .2s!important;
+  /* No visible circle/fill behind the icon (per the video-popup redesign) —
+     a drop-shadow on the glyph itself is what keeps it legible over an
+     arbitrary, unpredictable video frame instead of a background box. */
+  filter:drop-shadow(0 1px 3px rgba(0,0,0,.85)) drop-shadow(0 0 4px rgba(0,0,0,.55))!important;
+  transition:transform .2s var(--ease-back),opacity .2s!important;
 }
-.ad-pop-close:hover{transform:translateY(-2px) scale(1.04)!important;background:rgba(255,255,255,.18)!important;}
+.ad-pop-close:hover{transform:translateY(-1px) scale(1.08)!important;opacity:.85!important;}
 .ad-pop-content{
   position:relative!important;
   z-index:2!important;
@@ -3909,7 +3915,7 @@ body:not(.light) .home-icon-btn:hover{
 .ad-pop-timer{font-size:.82rem!important;font-weight:800!important;color:var(--txt-mute)!important;}
 @keyframes adOverlayIn{from{opacity:0}to{opacity:1}}
 @keyframes adCardIn{from{opacity:0;transform:translateY(22px) scale(.94);filter:blur(10px)}to{opacity:1;transform:none;filter:none}}
-@media (max-width:420px){.ad-pop-card{width:80vw!important;height:80vh!important;height:80dvh!important;height:80svh!important;border-radius:24px!important}.ad-pop-content{padding:70px 18px 30px!important;overflow-y:auto!important;max-height:100%!important}.ad-pop-close{width:38px!important;height:38px!important}.ad-pop-placeholder{border-radius:22px!important;padding:24px 14px!important}}
+@media (max-width:420px){.ad-pop-card{width:80vw!important;height:80vh!important;height:80dvh!important;height:80svh!important;border-radius:24px!important}.ad-pop-content{padding:70px 18px 30px!important;overflow-y:auto!important;max-height:100%!important}.ad-pop-close{width:32px!important;height:32px!important}.ad-pop-placeholder{border-radius:22px!important;padding:24px 14px!important}}
 
 /* 2026-06-10 — final image footer banner */
 .footer-ad-banner{
@@ -3965,16 +3971,16 @@ body:not(.light) .home-icon-btn:hover{
   content:none!important;
 }
 .ad-pop-close{
-  left:14px!important;
+  left:6px!important;
   right:auto!important;
   inset-inline-start:auto!important;
   inset-inline-end:auto!important;
-  top:14px!important;
+  top:6px!important;
   z-index:8!important;
   color:#ffffff!important;
-  background:rgba(0,0,0,.42)!important;
-  border:1px solid rgba(255,255,255,.55)!important;
-  box-shadow:0 14px 32px -18px rgba(0,0,0,.85)!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
 }
 /* Restored to full-bleed fill: the card keeps its large, media-ready
    aspect-ratio-locked size (see .ad-pop-card.open-ad/.finish-ad below) so
@@ -3991,27 +3997,52 @@ body:not(.light) .home-icon-btn:hover{
   justify-content:center!important;
   background:#071024!important;
 }
-/* The placeholder (text + "Register Your Interest" button — what actually
-   renders today, since PROMO_ASSETS.openPopupVideo/finishPopupImage are
-   both null) inherits .ad-pop-media's position:absolute;inset:0, so its
-   own content fills the full card. .ad-pop-media clips with overflow:hidden
-   for the video/image variants' rounded corners; the placeholder's text
-   content needs to scroll instead of being silently clipped if it's ever
-   taller than the card, so override just that one property here, scoped
-   to the placeholder specifically (higher specificity than .ad-pop-media
-   alone) rather than changing the shared rule. */
+/* Unused now that the popup is video-only (PopupAd.jsx no longer renders a
+   .ad-pop-placeholder branch) — left in place rather than deleted since
+   nothing references it and it's harmless dead CSS. */
 .ad-pop-media.ad-pop-placeholder{
   overflow-y:auto!important;
   -webkit-overflow-scrolling:touch!important;
 }
+/* Intrinsic sizing only: width/height auto so the video renders at its own
+   natural size (scaled down proportionally by the vh-based max-height cap
+   below, mirrored on .ad-pop-card.open-ad/.finish-ad so the card always
+   shrink-wraps to the same box) — never stretched, squashed, or cropped to
+   fill a preset shape. */
 .ad-pop-video{
   display:block!important;
-  width:100%!important;
-  height:100%!important;
+  width:auto!important;
+  height:auto!important;
+  max-width:100%!important;
+  max-height:86vh!important;
+  max-height:86dvh!important;
+  max-height:86svh!important;
   object-fit:contain!important;
   cursor:pointer!important;
   background:#071024!important;
   -webkit-tap-highlight-color:transparent!important;
+}
+/* The button wrapping the video used to rely on the card's old fixed
+   aspect-ratio box (position:absolute;inset:0 filling it edge to edge).
+   The card now shrink-wraps the video itself, so the button just needs to
+   be a plain, unstyled, content-sized wrapper around it. */
+.ad-pop-video-btn{
+  position:static!important;
+  inset:auto!important;
+  width:auto!important;
+  height:auto!important;
+  display:inline-block!important;
+  line-height:0!important;
+  padding:0!important;
+  margin:0!important;
+  border:0!important;
+  background:transparent!important;
+  cursor:pointer!important;
+  -webkit-tap-highlight-color:transparent!important;
+}
+.ad-pop-video-btn:focus-visible{
+  outline:3px solid rgba(255,255,255,.95)!important;
+  outline-offset:3px!important;
 }
 .ad-pop-finish-frame{
   position:relative!important;
@@ -4048,9 +4079,9 @@ body:not(.light) .home-icon-btn:hover{
 }
 @media (max-width:420px){
   .ad-pop-close{
-    left:12px!important;
+    left:4px!important;
     right:auto!important;
-    top:12px!important;
+    top:4px!important;
   }
   .ad-pop-finish-frame{
     width:100%!important;
@@ -4130,41 +4161,35 @@ body:not(.light) .home-icon-btn:hover{
   outline:2px solid #ffffff!important;
   outline-offset:3px!important;
 }
-/* Large, media-ready portrait size — restored (not the content-based
-   min(92vw,420px)/height:auto sizing from the previous commit): this
-   popup is meant to hold a future vertical promo video, so it keeps its
-   9:16 aspect-ratio shape regardless of whether the current placeholder
-   text is small. max-height:100% (of .ad-pop-overlay's own real box) is
-   kept as a safety ceiling only — it doesn't shrink the card under normal
-   conditions, it just guarantees the card can never render taller than
-   the actually-visible overlay. overflow-y:auto on the card is the actual
-   fallback if content ever does exceed that ceiling. */
+/* Content-driven size: the card no longer forces a fixed aspect-ratio box.
+   It's an inline-block shrink-wrapper capped only by max-width/max-height,
+   so it always hugs whatever size the <video> inside actually renders at
+   (see .ad-pop-video's own auto width/height + matching 86vh cap above) —
+   the box shape follows the video's real proportions, never the reverse.
+   The max-width/max-height values are ceilings only, not targets: on
+   desktop they keep a very large monitor from blowing the popup up huge;
+   on mobile, max-width:100% (the flex item's available width inside
+   .ad-pop-overlay's own padding, see above) plus the overlay's centering
+   keeps safe side margins automatically at any viewport size, so no
+   separate small-screen width override is needed. */
 .ad-pop-card.open-ad,
 .ad-pop-card.finish-ad{
-  width:min(92vw,48.375vh,540px)!important;
-  width:min(92vw,48.375dvh,540px)!important;
-  width:min(92vw,48.375svh,540px)!important;
+  display:inline-block!important;
+  width:auto!important;
   height:auto!important;
-  aspect-ratio:9/16!important;
-  max-width:540px!important;
+  aspect-ratio:auto!important;
+  max-width:min(540px,100%)!important;
   max-height:86vh!important;
   max-height:86dvh!important;
   max-height:86svh!important;
   max-height:100%!important;
   min-width:0!important;
   min-height:0!important;
-  overflow-y:auto!important;
-  -webkit-overflow-scrolling:touch!important;
-}
-.ad-pop-card.open-ad .ad-pop-video{
-  object-fit:cover!important;
+  overflow:hidden!important;
 }
 @media (max-width:420px){
   .ad-pop-card.open-ad,
   .ad-pop-card.finish-ad{
-    width:min(94vw,50.625vh)!important;
-    width:min(94vw,50.625dvh)!important;
-    width:min(94vw,50.625svh)!important;
     max-height:90vh!important;
     max-height:90dvh!important;
     max-height:90svh!important;
@@ -5272,7 +5297,216 @@ body:not(.light) .home-icon-btn:hover{background:var(--btn-icon-bg-hover)!import
     height:auto!important;
     min-height:100vh!important;
     min-height:100dvh!important;
+    min-height:100svh!important;
     overflow-x:hidden!important;
     overflow-y:visible!important;
   }
+}
+
+/* ============================================================
+   PHASE 6 — SHORT-VIEWPORT-HEIGHT DESKTOP COMPACTNESS
+   A MacBook at 100% zoom already looks right (PHASE 3.2/3.4/4's plain
+   min-width:1024px / min-width:900px desktop rules above). Some Windows
+   laptops report a much shorter usable CSS viewport height at 100% zoom
+   (e.g. ~650-700px on a 1366x768 display once OS taskbar + browser
+   chrome are subtracted) — the same desktop layout then needs vertical
+   scrolling to reach Previous/Next, even for an ordinary question.
+   These three progressive `max-height` tiers add extra compactness ONLY
+   when a desktop-width viewport is also short, stacking on top of (not
+   replacing) the existing desktop rules above:
+     900px and shorter  -> light compacting
+     800px and shorter  -> + medium compacting
+     700px and shorter  -> + more aggressive compacting
+   Every selector here is a new, more specific (or later-declared
+   !important) rule scoped with .quiz / .exam-select / .results and a
+   min-width guard matching that screen's own desktop breakpoint — no
+   existing selector above is edited, so:
+     - viewports taller than 900px (a normal MacBook) render byte-for-
+       byte identical to before this section was added.
+     - mobile (<1024px for Quiz, <900px for Section Select/Results)
+       never matches any rule here and is completely unaffected.
+   No CSS zoom, no transform:scale — genuine responsive CSS. Question/
+   answer typography is not reduced. Any max-height added to a question
+   image/diagram rule below always keeps width:auto + height:auto (or
+   both dimensions scaled together), matching the safe proportional-
+   scaling pattern PHASE 3.2 already established for .quiz .q-diagram-img
+   above — geometry and images are scaled down as a whole, never
+   stretched/squashed on one axis independently.
+   ============================================================ */
+
+/* ---- QUIZ (desktop breakpoint: 1024px) — highest priority ----
+   Rebalanced per follow-up feedback: the question image was cut too
+   aggressively while option boxes/Previous/Next stayed comparatively
+   large. Vertical space here is now spent primarily on the QUESTION
+   IMAGE — it grows noticeably tier over tier — while answer-option
+   boxes, their A/B/C/D tags, Previous/Next, and the Mark for Review
+   chip shrink further to make room. Image sizing still only ever sets
+   a max-height/max-width ceiling on an element whose width AND height
+   both resolve to auto (or scale together), so the original aspect
+   ratio is always preserved — never stretched, squashed, or cropped. */
+@media (min-width:1024px) and (max-height:900px){
+  .quiz.screen{padding-top:8px!important;padding-bottom:8px!important}
+  .quiz-header{padding:6px 0!important;margin-bottom:8px!important}
+  .quiz-header .icon-btn{width:36px!important;height:36px!important}
+  .quiz-sidebar{top:56px!important;max-height:calc(100vh - 56px - 12px)!important}
+
+  .quiz .card{padding:14px 18px!important}
+  .quiz .card-body{gap:6px!important}
+  .quiz .card-tools{margin-bottom:6px!important}
+  .quiz .card-tools .flag-btn.compact{min-height:32px!important;padding:5px 10px!important}
+
+  /* Question image/diagram: proportional only — width/height stay auto,
+     only the max-height/max-width ceiling changes per tier, so the browser
+     always scales both axes together (no distortion, no cropping). */
+  .quiz .q-image-wrap{max-width:420px!important;margin:0 auto 6px!important}
+  .quiz .q-diagram-img{max-height:32vh!important}
+  .quiz .q-svg{min-height:200px!important}
+  .quiz .q-svg svg{width:auto!important;height:auto!important;max-width:min(100%,440px)!important;max-height:32vh!important}
+  /* Math-card geometry SVGs had no max-height at all above (unbounded on
+     every desktop width) — bounding it here also switches width from a
+     fixed px value to auto+max-width, the same safe pattern used for
+     .q-diagram-img, so the figure always scales both axes together. */
+  .quiz .math-card .q-svg svg{width:auto!important;max-width:min(100%,480px)!important;height:auto!important;max-height:34vh!important}
+
+  .quiz .opts{margin-top:7px!important;gap:7px!important}
+  .quiz .opts.opts-two-col .opt{min-height:clamp(40px,5.4vh,48px)!important;padding:clamp(6px,1.4vw,9px)!important}
+  .quiz .math-card .opts.opts-two-col .opt{min-height:clamp(40px,5.2vh,46px)!important;padding:clamp(6px,1.4vw,9px)!important}
+  .quiz .math-card .opts .opt.opt-oneline-math{height:clamp(40px,5.2vh,46px)!important;min-height:0!important;max-height:46px!important;padding:clamp(5px,1.2vw,7px)!important}
+  .quiz .opts.opts-two-col .opt .opt-tag{width:26px!important;height:26px!important;font-size:.76rem!important}
+
+  .quiz .card-nav-row{margin-top:7px!important}
+  .quiz .card-nav-row .nav-btn{min-height:42px!important}
+  .quiz .appfooter{margin-top:6px!important}
+
+  .navpanel-inline{padding:12px!important}
+  .navpanel-inline .nav-grid{gap:5px!important}
+  .navpanel-inline .nav-cell{max-width:25px!important}
+}
+@media (min-width:1024px) and (max-height:800px){
+  .quiz-header{padding:4px 0!important;margin-bottom:6px!important}
+  .quiz-header .icon-btn{width:34px!important;height:34px!important}
+  .quiz-sidebar{top:48px!important;max-height:calc(100vh - 48px - 10px)!important}
+
+  .quiz .card{padding:12px 16px!important}
+  .quiz .card-body{gap:5px!important}
+  .quiz .card-tools .flag-btn.compact{min-height:30px!important;padding:4px 9px!important}
+
+  .quiz .q-image-wrap{max-width:360px!important}
+  .quiz .q-diagram-img{max-height:28vh!important}
+  .quiz .q-svg{min-height:170px!important}
+  .quiz .q-svg svg{max-width:min(100%,380px)!important;max-height:28vh!important}
+  .quiz .math-card .q-svg svg{max-width:min(100%,420px)!important;max-height:29vh!important}
+
+  .quiz .opts{margin-top:6px!important;gap:6px!important}
+  .quiz .opts.opts-two-col .opt{min-height:clamp(38px,5vh,44px)!important;padding:clamp(6px,1.3vw,8px)!important}
+  .quiz .math-card .opts.opts-two-col .opt{min-height:clamp(38px,4.8vh,42px)!important;padding:clamp(6px,1.3vw,8px)!important}
+  .quiz .math-card .opts .opt.opt-oneline-math{height:clamp(38px,4.8vh,42px)!important;max-height:42px!important}
+  .quiz .opts.opts-two-col .opt .opt-tag{width:24px!important;height:24px!important;font-size:.72rem!important}
+
+  .quiz .card-nav-row{margin-top:6px!important}
+  .quiz .card-nav-row .nav-btn{min-height:40px!important}
+
+  .navpanel-inline{padding:10px!important}
+  .navpanel-inline .navpanel-head{margin-bottom:6px!important}
+  .navpanel-inline .nav-legend{margin-bottom:7px!important}
+  .navpanel-inline .nav-grid{gap:4px!important}
+  .navpanel-inline .nav-cell{max-width:23px!important;font-size:.62rem!important}
+  .navpanel-summary{margin-top:8px!important;padding-top:8px!important}
+}
+@media (min-width:1024px) and (max-height:700px){
+  .quiz.screen{padding-top:6px!important;padding-bottom:6px!important}
+  .quiz-header{padding:3px 0!important;margin-bottom:5px!important}
+  .quiz-sidebar{top:44px!important;max-height:calc(100vh - 44px - 8px)!important}
+
+  .quiz .card{padding:10px 14px!important}
+  .quiz .card-body{gap:4px!important}
+  .quiz .card-tools{margin-bottom:4px!important}
+  .quiz .card-tools .flag-btn.compact{min-height:28px!important;padding:4px 8px!important}
+
+  .quiz .q-image-wrap{max-width:300px!important}
+  .quiz .q-diagram-img{max-height:24vh!important}
+  .quiz .q-svg{min-height:140px!important}
+  .quiz .q-svg svg{max-width:min(100%,320px)!important;max-height:24vh!important}
+  .quiz .math-card .q-svg svg{max-width:min(100%,360px)!important;max-height:25vh!important}
+
+  .quiz .opts{margin-top:5px!important;gap:5px!important}
+  .quiz .opts.opts-two-col .opt{min-height:clamp(36px,4.6vh,40px)!important;padding:clamp(5px,1.2vw,7px)!important}
+  .quiz .math-card .opts.opts-two-col .opt{min-height:clamp(36px,4.4vh,38px)!important;padding:clamp(5px,1.2vw,7px)!important}
+  .quiz .math-card .opts .opt.opt-oneline-math{height:clamp(36px,4.4vh,38px)!important;max-height:38px!important}
+  .quiz .opts.opts-two-col .opt .opt-tag{width:22px!important;height:22px!important;font-size:.68rem!important}
+
+  .quiz .card-nav-row{margin-top:5px!important}
+  .quiz .card-nav-row .nav-btn{min-height:38px!important}
+  .quiz .appfooter{margin-top:4px!important}
+
+  .navpanel-inline{padding:9px!important}
+  .navpanel-inline .nav-grid{gap:4px!important}
+  .navpanel-inline .nav-cell{max-width:22px!important}
+}
+
+/* ---- SECTION SELECTION (own desktop breakpoint: 900px) ---- */
+@media (min-width:900px) and (max-height:900px){
+  .exam-select .appbar{min-height:40px!important;padding:2px 0 4px!important}
+  .exam-select .appbar .icon-btn{width:36px!important;height:36px!important}
+  .exam-select .main-logo{margin-top:0!important;margin-bottom:6px!important}
+
+  .select.exam-select.screen{padding-block:16px!important}
+  .select-title{margin-bottom:14px!important}
+  .tests-grid{gap:10px!important}
+  .select.exam-select .tile{min-height:92px!important;padding:11px 14px!important}
+  .select-action-panel{margin-top:12px!important;padding:14px 18px!important}
+  .select-start-btn{min-height:46px!important}
+  .exam-select .appfooter{margin-top:6px!important;padding-top:4px!important}
+}
+@media (min-width:900px) and (max-height:800px){
+  .exam-select .main-logo img{width:72px!important}
+
+  .select.exam-select.screen{padding-block:12px!important}
+  .select-title{margin-bottom:10px!important}
+  .tests-grid{gap:8px!important}
+  .select.exam-select .tile{min-height:80px!important;padding:10px 12px!important}
+  .select-action-panel{margin-top:10px!important;padding:12px 16px!important}
+  .select-start-btn{min-height:44px!important}
+}
+@media (min-width:900px) and (max-height:700px){
+  .select.exam-select.screen{padding-block:10px!important}
+  .select.exam-select .tile{min-height:72px!important}
+  .select-action-panel{padding:10px 14px!important}
+}
+
+/* ---- RESULTS (own desktop breakpoint: 900px) ---- */
+@media (min-width:900px) and (max-height:900px){
+  .results .appbar{min-height:40px!important;padding:2px 0 4px!important}
+  .results .appbar .icon-btn{width:36px!important;height:36px!important}
+  .results .main-logo{margin-top:0!important;margin-bottom:6px!important}
+
+  .results.screen{padding-top:10px!important;padding-bottom:10px!important}
+  .res-title{padding:4px 0 10px!important}
+  .results-scroll{padding-bottom:14px!important}
+  .results-layout{gap:24px!important;margin-top:10px!important}
+  .results-primary{padding-right:16px!important}
+  /* Score ring: width/height always changed together so it stays a circle. */
+  .ring{width:172px!important;height:172px!important}
+  .ring svg{width:172px!important;height:172px!important}
+  .res-badges{margin-top:14px!important}
+  .res-actions{gap:8px!important;margin-bottom:10px!important}
+  .res-actions .btn-primary{padding:12px!important}
+}
+@media (min-width:900px) and (max-height:800px){
+  .results.screen{padding-top:8px!important;padding-bottom:8px!important}
+  .res-title{padding:3px 0 8px!important}
+  .results-scroll{padding-bottom:10px!important}
+  .results-layout{gap:18px!important;margin-top:8px!important}
+  .results-primary{padding-right:14px!important}
+  .ring{width:150px!important;height:150px!important}
+  .ring svg{width:150px!important;height:150px!important}
+  .res-badges{margin-top:10px!important}
+  .res-actions{gap:7px!important;margin-bottom:8px!important}
+  .res-actions .btn-primary{padding:11px!important}
+}
+@media (min-width:900px) and (max-height:700px){
+  .results.screen{padding-top:6px!important;padding-bottom:6px!important}
+  .results-layout{gap:14px!important}
+  .ring{width:132px!important;height:132px!important}
+  .ring svg{width:132px!important;height:132px!important}
 }

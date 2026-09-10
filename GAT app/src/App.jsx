@@ -70,7 +70,7 @@ export default function App() {
   useEffect(() => {
     if (getSessionStr(LS.openAdShown, "") === "true") return;
     const saved = getJSON(LS.active, null);
-    if (saved && saved.questionIds?.length) return;
+    if (saved && Array.isArray(saved.questionIds) && saved.questionIds.length) return;
     setSessionStr(LS.openAdShown, "true");
     const t = setTimeout(() => setAdPopup("open"), 2000);
     return () => clearTimeout(t);
@@ -81,7 +81,7 @@ export default function App() {
   // student re-enters the site with an unfinished test still saved.
   useEffect(() => {
     const saved = getJSON(LS.active, null);
-    if (saved && saved.questionIds?.length) setResumePrompt(saved);
+    if (saved && Array.isArray(saved.questionIds) && saved.questionIds.length) setResumePrompt(saved);
   }, []);
 
   // Show the finish-ad 5s after landing on results, so the student sees their
@@ -194,7 +194,7 @@ export default function App() {
     <div className="app-root">
       <div className="aurora"><span className="b1" /><span className="b2" /><span className="b3" /><span className="b4" /></div>
       <div className="grain" />
-      <a className="wa-float global-wa" href={WHATSAPP_URL} target="_blank" rel="noreferrer" aria-label="WhatsApp">
+      <a className="wa-float global-wa" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
         <FaWhatsapp size={26} aria-hidden="true" />
       </a>
 
@@ -290,7 +290,7 @@ export default function App() {
 
 function Modal({ title, body, bodyClassName = "", yes, no, onYes, onNo }) {
   return (
-    <div className="overlay">
+    <div className="overlay" role="dialog" aria-modal="true" aria-label={title}>
       <div className="modal">
         <h3>{title}</h3>
         {body && <p className={bodyClassName}>{body}</p>}

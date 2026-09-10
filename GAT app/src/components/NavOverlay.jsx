@@ -17,7 +17,13 @@ export default function NavOverlay({ total, current, answers, marked, onJump, on
   const remainingCount = Math.max(0, total - answeredCount);
 
   const panel = (
-    <div className={inline ? "navpanel navpanel-inline" : "navpanel"} onClick={inline ? undefined : (e) => e.stopPropagation()}>
+    <div
+      className={inline ? "navpanel navpanel-inline" : "navpanel"}
+      onClick={inline ? undefined : (e) => e.stopPropagation()}
+      role={inline ? undefined : "dialog"}
+      aria-modal={inline ? undefined : "true"}
+      aria-label={inline ? undefined : "Navigate Questions"}
+    >
       <div className="navpanel-head">
         <h3><LayoutGrid size={18} aria-hidden="true" /> {inline ? "Navigator" : "Navigate Questions"}</h3>
         {!inline && (

@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import QuestionCard from "./QuestionCard.jsx";
 import NavOverlay from "./NavOverlay.jsx";
@@ -9,7 +9,14 @@ import { Flag, LayoutGrid, Pause, Home as HomeIcon, Sun, Moon, Volume2, VolumeX,
 export default function Quiz({
   questions, testTitle, deadline, totalMinutes, dark, onToggleDark, soundOn, onToggleSound, onFinish, onHome, initialState,
 }) {
-  const [idx, setIdx] = useState(initialState?.idx || 0);
+  // A resumed attempt's saved index can outlive the question set it pointed
+  // at (e.g. a corrupted/mismatched save) — clamp it into range so a stale
+  // index can never index past the end of `questions` and crash the render.
+  const [idx, setIdx] = useState(() => {
+    const saved = Number(initialState?.idx);
+    const max = Math.max(questions.length - 1, 0);
+    return Number.isFinite(saved) ? Math.min(Math.max(saved, 0), max) : 0;
+  });
   const [answers, setAnswers] = useState(initialState?.answers || {});
   const [marked, setMarked] = useState(initialState?.marked || {});
   const [showNav, setShowNav] = useState(false);
@@ -168,7 +175,7 @@ export default function Quiz({
       )}
 
       {paused && !timeUp && (
-        <div className="overlay">
+        <div className="overlay" role="dialog" aria-modal="true" aria-label="Test Paused">
           <div className="pause-card">
             <div className="modal-icon"><Pause size={28} aria-hidden="true" /></div>
             <h3>Test Paused</h3>
@@ -184,7 +191,7 @@ export default function Quiz({
         // .screen container's own max-width/centering and of any ancestor
         // CSS between here and <body> — the same fix already used for
         // PopupAd's overlay (see PopupAd.jsx).
-        <div className="overlay">
+        <div className="overlay" role="dialog" aria-modal="true" aria-label="Submit this test?">
           <div className="modal">
             <div className="modal-icon"><Check size={26} aria-hidden="true" /></div>
             <h3>Submit this test?</h3>
@@ -204,7 +211,7 @@ export default function Quiz({
       <CourseFooter />
 
       {timeUp && (
-        <div className="overlay">
+        <div className="overlay" role="dialog" aria-modal="true" aria-label="Time's up">
           <div className="modal">
             <div className="modal-icon"><Clock size={26} aria-hidden="true" /></div>
             <h3>Time's up</h3>

@@ -54,6 +54,7 @@ function allQuestions() {
 }
 
 export function getQuestionsByIds(ids = []) {
+  if (!Array.isArray(ids)) return [];
   const byId = Object.fromEntries(allQuestions().map((q) => [q.id, q]));
   return ids.map((id) => byId[id]).filter(Boolean);
 }

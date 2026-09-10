@@ -8,8 +8,7 @@ export const WHATSAPP_NUMBER = "966557841489";
 export const WHATSAPP_URL = `https://api.whatsapp.com/send/?phone=${WHATSAPP_NUMBER}&text&type=phone_number&app_absent=0`;
 
 export const PROMO_ASSETS = {
-  openPopupVideo: null, // TODO: provide GAT opening popup video/image once available
-  finishPopupImage: null, // TODO: provide GAT finish-exam popup image once available
+  promoVideo: "/assets/marketing/vid.mp4",
   footerBanner: "/assets/marketing/gat-course-banner2.png",
 };
 

@@ -124,13 +124,13 @@ export default function LeadForm({ dark, onToggleDark, soundOn, onToggleSound, o
           </label>
 
           <label className="lead-field"><span>Grade Level</span>
-            <div className="lead-chips">
+            <div className="lead-chips" role="radiogroup" aria-label="Grade Level">
               {GRADE_LEVELS.map((g) => (
-                <button key={g} className={gradeLevel === g ? "on" : ""} onClick={() => { Sound.select(); setGradeLevel(g); }} type="button">{g}</button>
+                <button key={g} className={gradeLevel === g ? "on" : ""} onClick={() => { Sound.select(); setGradeLevel(g); }} type="button" role="radio" aria-checked={gradeLevel === g}>{g}</button>
               ))}
             </div></label>
 
-          {err && <div className="lead-error">{err}</div>}
+          {err && <div className="lead-error" role="alert">{err}</div>}
           <button className="btn-primary lead-submit" onClick={submit} disabled={sending}>{sending ? "Sending..." : "Start"}</button>
         </div>
       </div>

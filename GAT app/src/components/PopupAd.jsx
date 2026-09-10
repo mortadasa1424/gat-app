@@ -3,9 +3,12 @@ import { Sound } from "../lib/sound.js";
 import { COURSE_URL, PROMO_ASSETS } from "../config/marketing.js";
 import { X } from "./icons.jsx";
 
-// Simple image/placeholder promo popup. ITC's video-preload/blob-URL machinery
-// is intentionally not ported yet — there is no GAT promo video to preload.
-// Add that mechanism back if/when a GAT video asset is provided.
+// Video-only promo popup: the card is nothing but the GAT promo video.
+// Clicking anywhere on it opens the course link; the circular X only closes
+// the popup. The card has no fixed aspect-ratio of its own — it shrink-wraps
+// whatever the <video> renders at (see .ad-pop-card.open-ad/.finish-ad in
+// app.css), so the box always matches the video's real proportions instead
+// of forcing the video into a preset shape.
 //
 // Rendered via a portal straight onto document.body (not inside .app-root)
 // so its position:fixed overlay is always anchored to the true viewport,
@@ -14,8 +17,6 @@ import { X } from "./icons.jsx";
 // would otherwise re-anchor position:fixed descendants to that ancestor
 // instead of the viewport) and of app-root's own stacking context.
 export default function PopupAd({ variant = "open", onClose }) {
-  const asset = variant === "finish" ? PROMO_ASSETS.finishPopupImage : PROMO_ASSETS.openPopupVideo;
-
   const closeAd = () => { Sound.tap(); onClose?.(); };
   const openCourse = () => {
     Sound.tap();
@@ -28,19 +29,22 @@ export default function PopupAd({ variant = "open", onClose }) {
     <div className="ad-pop-overlay" role="dialog" aria-modal="true" aria-label="Advertisement">
       <div className={`ad-pop-card ${variant === "finish" ? "finish-ad" : "open-ad"}`}>
         <button className="ad-pop-close" type="button" aria-label="Close ad" onClick={closeAd}>
-          <X size={20} aria-hidden="true" />
+          <X size={15} aria-hidden="true" />
         </button>
 
-        {asset ? (
-          <button className="ad-pop-media ad-pop-image-ad" type="button" aria-label="Enroll in the GAT course" onClick={openCourse}>
-            <img className="ad-pop-finish-img" src={asset} alt="Join the GAT course" draggable="false" />
-          </button>
-        ) : (
-          <div className="ad-pop-media ad-pop-placeholder">
-            <p>The complete GAT course is coming soon</p>
-            <button className="btn-primary" type="button" onClick={openCourse}>Register Your Interest</button>
-          </div>
-        )}
+        <button className="ad-pop-media ad-pop-video-btn" type="button" aria-label="Enroll in the GAT course" onClick={openCourse}>
+          <video
+            className="ad-pop-video"
+            src={PROMO_ASSETS.promoVideo}
+            autoPlay
+            loop
+            muted
+            playsInline
+            webkit-playsinline="true"
+            disablePictureInPicture
+            preload="auto"
+          />
+        </button>
       </div>
     </div>,
     document.body

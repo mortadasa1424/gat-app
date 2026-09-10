@@ -10,7 +10,6 @@ export {
   Flag,
   LayoutGrid,
   MessageCircle,
-  ChevronLeft,
   ChevronRight,
   ChevronDown,
   X,

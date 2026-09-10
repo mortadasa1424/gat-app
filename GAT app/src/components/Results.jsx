@@ -25,7 +25,12 @@ export default function Results({ attempt, dark, onToggleDark, soundOn, onToggle
     let n = 0; const step = Math.max(1, Math.round(pct / 40));
     const ci = setInterval(() => { n = Math.min(n + step, pct); setShown(n); if (n >= pct) clearInterval(ci); }, 26);
     Sound.complete(pct);
-    if (pct >= 50) burst();
+    // The rest of the app's animations are CSS and already respect
+    // prefers-reduced-motion (app.css); this confetti burst is a canvas/
+    // requestAnimationFrame loop, which CSS can't neutralize, so it needs
+    // its own check.
+    const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+    if (pct >= 50 && !reduceMotion) burst();
     return () => { clearTimeout(t); clearInterval(ci); };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -89,7 +94,7 @@ export default function Results({ attempt, dark, onToggleDark, soundOn, onToggle
               {help && (
                 <div className="expander-body help-body">
                   <a className="help-link" href={COURSE_URL} target="_blank" rel="noopener noreferrer">Enroll in the GAT prep course</a>
-                  <a className="help-link wa-action" href={WHATSAPP_URL} target="_blank" rel="noreferrer">
+                  <a className="help-link wa-action" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                     <MessageCircle size={16} aria-hidden="true" /> Contact us on WhatsApp
                   </a>
                 </div>

@@ -9,7 +9,15 @@ export const WHATSAPP_URL = `https://api.whatsapp.com/send/?phone=${WHATSAPP_NUM
 
 export const PROMO_ASSETS = {
   promoVideo: "/assets/marketing/vid.mp4",
-  footerBanner: "/assets/marketing/gat-course-banner2.png",
+  // Footer promo banner rotates through all of these (see Home.jsx's
+  // Footer()). The banner box is a fixed size/shape (app.css) so the
+  // footer never jumps on a flip — any image not already that exact
+  // shape is center-cropped to fill it (object-fit:cover), never
+  // stretched.
+  footerBanners: [
+    "/assets/marketing/gat-course-banner2.png",
+    "/assets/marketing/national-day.jpg",
+  ],
 };
 
 // Unified overall test timer applied to every test (single timer, no

@@ -1,9 +1,11 @@
+import { useEffect, useState } from "react";
 import { Sound } from "../lib/sound.js";
 import { COURSE_URL, PROMO_ASSETS } from "../config/marketing.js";
 import { Home as HomeIcon, Sun, Moon, Volume2, VolumeX, ChevronRight, Calculator, BookOpen } from "./icons.jsx";
 
 const LIGHT_LOGO_URL = "/assets/brand/leen-logo.png";
 const DARK_LOGO_URL = "/assets/brand/leen-logo-dark.png";
+const BANNER_ROTATE_MS = 5000;
 
 export function getLeenLogoSrc(dark) {
   if (typeof dark === "boolean") return dark ? DARK_LOGO_URL : LIGHT_LOGO_URL;
@@ -84,11 +86,37 @@ export function MainLogo({ dark } = {}) {
 }
 
 export function Footer() {
-  if (!PROMO_ASSETS.footerBanner) return <CourseFooter />;
+  const banners = PROMO_ASSETS.footerBanners || [];
+  const [i, setI] = useState(0);
+
+  // Warm the browser cache for every banner as soon as the footer mounts,
+  // so switching to the next one is instant instead of a blank flash the
+  // first time it's shown.
+  useEffect(() => {
+    banners.forEach((src) => { const img = new Image(); img.src = src; });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    if (banners.length < 2) return;
+    const t = setInterval(() => setI((n) => (n + 1) % banners.length), BANNER_ROTATE_MS);
+    return () => clearInterval(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  if (banners.length === 0) return <CourseFooter />;
+  const current = banners[i];
+
   return (
     <footer className="appfooter ad-footer" aria-label="GAT course ad">
-      <a className="footer-ad-banner" href={COURSE_URL} target="_blank" rel="noopener noreferrer" aria-label="Enroll in the GAT course now">
-        <img className="footer-ad-img" src={PROMO_ASSETS.footerBanner} alt="GAT course" loading="eager" decoding="async" draggable="false" />
+      <a
+        className="footer-ad-banner"
+        href={COURSE_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Enroll in the GAT course now"
+      >
+        <img className="footer-ad-img" src={current} alt="GAT course" loading="eager" decoding="async" draggable="false" />
       </a>
     </footer>
   );

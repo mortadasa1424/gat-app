@@ -4272,15 +4272,18 @@ body:not(.light) .home-icon-btn:hover{
   z-index:-1!important;
 }
 
-/* GAT footer promo banner (gat-course-banner2.png is 1750x386, not the 5:1
-   ratio the rules above assume) — use the asset's real ratio + object-fit:
-   contain so it's always shown whole, never stretched or cropped. */
+/* GAT footer promo banner: one fixed box shape/size (gat-course-banner2.png's
+   own ratio, 1750x386) so the footer never resizes when the banner rotates
+   to a different image (see PROMO_ASSETS.footerBanners / Home.jsx's
+   Footer()) — object-fit:cover center-crops whichever image doesn't
+   already match that exact shape to fill it, rather than stretching it or
+   letterboxing/resizing the box per image. */
 .footer-ad-banner{
   aspect-ratio:1754/384!important;
   background:transparent!important;
 }
 .footer-ad-img{
-  object-fit:contain!important;
+  object-fit:cover!important;
 }
 
 /* Keep the footer banner clear of the fixed global WhatsApp button on

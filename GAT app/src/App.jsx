@@ -21,9 +21,18 @@ const LS = {
   openAdShown: "leen_gat_open_ad_shown",
 };
 
+// Deep link from the external entry page: ?section=quantitative|verbal opens
+// that section's test list directly instead of the home screen.
+const DEEP_LINK_SECTION = (() => {
+  try {
+    const s = new URLSearchParams(window.location.search).get("section");
+    return s === "quantitative" || s === "verbal" ? s : null;
+  } catch { return null; }
+})();
+
 export default function App() {
-  const [screen, setScreen] = useState("home"); // home|select|lead|quiz|results|report|review
-  const [pickedSection, setPickedSection] = useState(null); // quantitative | verbal
+  const [screen, setScreen] = useState(DEEP_LINK_SECTION ? "select" : "home"); // home|select|lead|quiz|results|report|review
+  const [pickedSection, setPickedSection] = useState(DEEP_LINK_SECTION); // quantitative | verbal
   const [session, setSession] = useState(null);
   const [attempt, setAttempt] = useState(null);
   const [reviewRes, setReviewRes] = useState(null);
@@ -45,6 +54,17 @@ export default function App() {
   // "dark" value (set by the toggle below) switches this to dark.
   const [dark, setDark] = useState(() => getStr(LS.theme, "light") === "dark");
   const [soundOn, setSoundOn] = useState(true);
+
+  // Drop ?section from the address bar once consumed, so a later refresh
+  // (e.g. after going Home) doesn't jump back into that section.
+  useEffect(() => {
+    if (!DEEP_LINK_SECTION) return;
+    try {
+      const url = new URL(window.location.href);
+      url.searchParams.delete("section");
+      window.history.replaceState(null, "", url.pathname + url.search + url.hash);
+    } catch { /* ignore */ }
+  }, []);
 
   useEffect(() => { Sound.setEnabled(soundOn); }, [soundOn]);
   useEffect(() => { document.body.classList.toggle("light", !dark); setStr(LS.theme, dark ? "dark" : "light"); }, [dark]);

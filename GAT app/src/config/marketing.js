@@ -16,7 +16,6 @@ export const PROMO_ASSETS = {
   // stretched.
   footerBanners: [
     "/assets/marketing/gat-course-banner2.png",
-    "/assets/marketing/national-day.jpg",
   ],
 };
 
